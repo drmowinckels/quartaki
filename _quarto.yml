@@ -1,0 +1,30 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "quartaki"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: 00_intro.qmd
+        text: Introduction
+      - href: 01_presentation.qmd
+        text: Workshop slides
+    right:
+      - href: https://github.com/drmowinckels/quartaki
+        icon: github
+      - href: https://drmowinckels.io
+        icon: globe
+      - href: https://twitter.com/DrMowinckels
+        icon: twitter
+
+format:
+  html:
+    theme: cosmo
+    css: lcbc-styles.scss
+    toc: true
+
+editor: visual
+

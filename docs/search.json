@@ -1,0 +1,457 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Quartaki",
+    "section": "",
+    "text": "There are increasing demands on scientific staff in preparing reports for governmental and public dissemination, as well as scientific dissemination. Creating reports is a time-consuming task, as it often requires switching between programs for writing, doing analyses and creating tables and figures, as well as other graphical and textual programs. Learning efficient tools in combining programming and report generation are becoming increasingly important to alleviate the manual and burdensome process of switching programs.\n\nQuarto is a second generation report framework based on the popular markdown plain text format. Combining writing in markdown with the ability to run code to format, analyse, and visualise data, all in the same place, creates a seamless environment for the researchers to produce reports.\n\nWhile this workshop will focus on using Quarto with R, it also has native abilities to interact with python, observable.js and Julia, without needing R installed. This makes Quarto a great tool to learn, no matter which language you focus on."
+  },
+  {
+    "objectID": "index.html#r-packages",
+    "href": "index.html#r-packages",
+    "title": "Quartaki",
+    "section": "R packages",
+    "text": "R packages\nIn addition to Quarto, a series of R packages will also be needed to show-case the ways we can use Quarto to generate reports.\n\n# Run in R\ninstall.packages(c(\n  \"tidyverse\",     # data-wrangling\n  \"broom\",         # model tidying\n  \"knitr\",         # table printing\n  \"kableExtra\",    # pretty table printing\n  \"palmerpenguins\" # dataset\n))\n\nIf you have problems getting things installed, please contact me, and I will try help you get sorted."
+  },
+  {
+    "objectID": "00_intro.html#next-generation-r-markdown",
+    "href": "00_intro.html#next-generation-r-markdown",
+    "title": "Quarto",
+    "section": "Next generation R Markdown",
+    "text": "Next generation R Markdown\n\nQuarto is a multi-language, next-generation version of R Markdown from RStudio, and includes dozens of new features and capabilities while at the same being able to render most existing Rmd files without modification."
+  },
+  {
+    "objectID": "00_intro.html#multi-lingual",
+    "href": "00_intro.html#multi-lingual",
+    "title": "Quarto",
+    "section": "Multi-lingual",
+    "text": "Multi-lingual\n\nCreate dynamic content with Python, R, Julia, and Observable.\nAuthor documents as plain text markdown or Jupyter notebooks.\nPublish high-quality articles, reports, presentations, websites, blogs, and books in HTML, PDF, MS Word, ePub, and more.\nAuthor with scientific markdown, including equations, citations, crossrefs, figure panels, callouts, advanced layout, and more."
+  },
+  {
+    "objectID": "00_intro.html#ide-agnostic",
+    "href": "00_intro.html#ide-agnostic",
+    "title": "Quarto",
+    "section": "IDE agnostic",
+    "text": "IDE agnostic\n\n\n\nRStudio integrated\nVs Code extensions\nJupyter notebooks\nText editor"
+  },
+  {
+    "objectID": "00_intro.html#quarto-extensions",
+    "href": "00_intro.html#quarto-extensions",
+    "title": "Quarto",
+    "section": "Quarto Extensions",
+    "text": "Quarto Extensions\nExtensions are a powerful way to modify and extend the behavior of Quarto.\n\nShortcodes for icons etc.\nPresentation themes\nJournal article templates"
+  },
+  {
+    "objectID": "00_intro.html#comprehensive-online-docs",
+    "href": "00_intro.html#comprehensive-online-docs",
+    "title": "Quarto",
+    "section": "Comprehensive online docs",
+    "text": "Comprehensive online docs\n\nUser guide\nReference list\nGallery of examples\nBlog with updates and show-cases"
+  },
+  {
+    "objectID": "00_intro.html#outline",
+    "href": "00_intro.html#outline",
+    "title": "Quarto",
+    "section": "Outline",
+    "text": "Outline\n\nElements of a qmd ( ~ 45 minutes)\nMaking our first html report ( ~ 45 minutes)\nCitations & cross-references ( ~ 30 minutes)\nMaking our first pdf report (~ 30 hour)\nLunch ( ~ 60 minutes)\nTesting journal templates ( ~ 45 minutes)\nMaking our first presentation ( ~ 45 minutes)"
+  },
+  {
+    "objectID": "00_intro.html#tools",
+    "href": "00_intro.html#tools",
+    "title": "Quarto",
+    "section": "Tools",
+    "text": "Tools\n\n\nBeing taught\n\nQuarto\nRStudio\nR\n\n\n\n\nNot taught\n\npython / julia / js\nvscode / jupyter\n\n\n\n\nUsing these tools, you will be able to follow along everything I do, and I can help when things go wrong\nIf you choose another setup, you are very welcome to that. But I will not be able to help as easily (or set aside time to do so), and you will need to think of your own code examples in other languages."
+  },
+  {
+    "objectID": "00_intro.html#text-formatting",
+    "href": "00_intro.html#text-formatting",
+    "title": "Quarto",
+    "section": "Text Formatting",
+    "text": "Text Formatting\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n*italics* and **bold**\nitalics and bold\n\n\nsuperscript^2^ / subscript~2~\nsuperscript2 / subscript2\n\n\n~~strikethrough~~\nstrikethrough\n\n\n`verbatim code`\nverbatim code\n\n\n\n\nSource: RStudio - Markdown basics"
+  },
+  {
+    "objectID": "00_intro.html#headings",
+    "href": "00_intro.html#headings",
+    "title": "Quarto",
+    "section": "Headings",
+    "text": "Headings\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n# Header 1\nHeader 1\n\n\n## Header 2\nHeader 2\n\n\n### Header 3\nHeader 3\n\n\n#### Header 4\nHeader 4\n\n\n##### Header 5\nHeader 5\n\n\n###### Header 6\nHeader 6\n\n\n\n\nSource: RStudio - Markdown basics"
+  },
+  {
+    "objectID": "00_intro.html#lists",
+    "href": "00_intro.html#lists",
+    "title": "Quarto",
+    "section": "Lists",
+    "text": "Lists\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n* unordered list\n    + sub-item 1\n    + sub-item 2\n        - sub-sub-item 1\n\nunordered list\n\nsub-item 1\nsub-item 2\n\nsub-sub-item 1\n\n\n\n\n\n\n\nSource: RStudio - Markdown basics"
+  },
+  {
+    "objectID": "00_intro.html#lists-1",
+    "href": "00_intro.html#lists-1",
+    "title": "Quarto",
+    "section": "Lists",
+    "text": "Lists\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n1. ordered list\n2. item 2\n    i) sub-item 1\n         A.  sub-sub-item 1\n\nordered list\nitem 2\n\nsub-item 1\n\nsub-sub-item 1\n\n\n\n\n\n\n\nSource: RStudio - Markdown basics"
+  },
+  {
+    "objectID": "00_intro.html#tables",
+    "href": "00_intro.html#tables",
+    "title": "Quarto",
+    "section": "Tables",
+    "text": "Tables\n\n\nMarkdown Syntax\n| Right | Left | Default | Center |\n|------:|:-----|---------|:------:|\n|   12  |  12  |    12   |    12  |\n|  123  |  123 |   123   |   123  |\n|    1  |    1 |     1   |     1  |\n\nOutput\n\n\n\nRight\nLeft\nDefault\nCenter\n\n\n\n\n12\n12\n12\n12\n\n\n123\n123\n123\n123\n\n\n1\n1\n1\n1\n\n\n\n\n\n\nSource: RStudio - Markdown basics"
+  },
+  {
+    "objectID": "00_intro.html#equations",
+    "href": "00_intro.html#equations",
+    "title": "Quarto",
+    "section": "Equations",
+    "text": "Equations\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\ninline math: $E = mc^{2}$\n\\(E=mc^{2}\\)\n\n\ndisplay math:\n\n$$E = mc^{2}$$\n\\[E = mc^{2}\\]\n\n\n\n\nSource: RStudio - Markdown basics"
+  },
+  {
+    "objectID": "00_intro.html#blocks",
+    "href": "00_intro.html#blocks",
+    "title": "Quarto",
+    "section": "Blocks",
+    "text": "Blocks\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n> Blockquote\n\nBlockquote\n\n\n\n| Line Block\n|   Spaces and newlines\n|   are preserved\nLine Block\n   Spaces and newlines\n   are preserved\n\n\n\n\nSource: RStudio - Markdown basics"
+  },
+  {
+    "objectID": "00_intro.html#links-images",
+    "href": "00_intro.html#links-images",
+    "title": "Quarto",
+    "section": "Links & Images",
+    "text": "Links & Images\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n<https://oslobrains.no>\nhttps://oslobrains.no\n\n\n[LCBC](https://oslobrains.no)\nLCBC\n\n\n![Caption](images/lcbc_logo_wide.png)\n\n\n\n[![Caption](images/lcbc_logo_wide.png)](https://oslobrains.no)\n\n\n\n\n\nSource: RStudio - Markdown basics"
+  },
+  {
+    "objectID": "00_intro.html#specials",
+    "href": "00_intro.html#specials",
+    "title": "Quarto",
+    "section": "Specials",
+    "text": "Specials\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\nendash: --\nendash: –\n\n\nemdash: ---\nemdash: —\n\n\nterm\n: definition\n\nterm\n\ndefinition\n\n\n\n\n\n\nSource: RStudio - Markdown basics"
+  },
+  {
+    "objectID": "00_intro.html#setting-up-the-document",
+    "href": "00_intro.html#setting-up-the-document",
+    "title": "Quarto",
+    "section": "Setting up the document",
+    "text": "Setting up the document\n\n\n---\ntitle: \"Document title\"\nauthor: \"Your Name\"\nexecute:\n  echo: false\nformat: html\n--- \n---\ntitle: \"Document title\"\nauthor: \"Your Name\"\nexecute:\n  echo: false\nformat: pdf\n--- \n---\ntitle: \"Document title\"\nauthor: \"Your Name\"\nexecute:\n  echo: false\nformat: revealjs\n--- \n\n\n\n\nSet up important document settings\nChanging format is easy\n\nsome settings might not work\n\nMany more options\n\nsome depending on output format\nsome depending on template"
+  },
+  {
+    "objectID": "00_intro.html#what-are-code-chunks",
+    "href": "00_intro.html#what-are-code-chunks",
+    "title": "Quarto",
+    "section": "What are code chunks?",
+    "text": "What are code chunks?\nPieces of code that will be execute on report rendering to include output in the report.\n\n\n#| label: code-example\n\nhist(mtcars$mpg)"
+  },
+  {
+    "objectID": "00_intro.html#what-are-code-chunks-1",
+    "href": "00_intro.html#what-are-code-chunks-1",
+    "title": "Quarto",
+    "section": "What are code chunks?",
+    "text": "What are code chunks?\nThese could also be inline code for incorporation into the text parts of a report.\n\n\nR Markdown | Quarto\n\n\nNumber of observations: `r nrow(mtcars)` . \n\n\n\n\n\n\nOutput\nNumber of observations: 32"
+  },
+  {
+    "objectID": "00_intro.html#how-does-that-work",
+    "href": "00_intro.html#how-does-that-work",
+    "title": "Quarto",
+    "section": "How does that work?",
+    "text": "How does that work?"
+  },
+  {
+    "objectID": "00_intro.html#r-markdown-vs.-quarto",
+    "href": "00_intro.html#r-markdown-vs.-quarto",
+    "title": "Quarto",
+    "section": "R markdown vs. Quarto",
+    "text": "R markdown vs. Quarto\nCode chunks can be provided inside the code chunk\n\n\n```{r} #| code-fold: true #| code-summary: “Show the code” ```\n\n```{r echo = TRUE, message = FALSE ```"
+  },
+  {
+    "objectID": "intro.html#next-generation-r-markdown",
+    "href": "intro.html#next-generation-r-markdown",
+    "title": "Quarto",
+    "section": "Next generation R Markdown",
+    "text": "Next generation R Markdown\n\nQuarto is a multi-language, next-generation version of R Markdown from RStudio, and includes dozens of new features and capabilities while at the same being able to render most existing Rmd files without modification."
+  },
+  {
+    "objectID": "intro.html#multi-lingual",
+    "href": "intro.html#multi-lingual",
+    "title": "Quarto",
+    "section": "Multi-lingual",
+    "text": "Multi-lingual\n\nCreate dynamic content with Python, R, Julia, and Observable.\nAuthor documents as plain text markdown or Jupyter notebooks.\nPublish high-quality articles, reports, presentations, websites, blogs, and books in HTML, PDF, MS Word, ePub, and more.\nAuthor with scientific markdown, including equations, citations, crossrefs, figure panels, callouts, advanced layout, and more."
+  },
+  {
+    "objectID": "intro.html#ide-agnostic",
+    "href": "intro.html#ide-agnostic",
+    "title": "Quarto",
+    "section": "IDE agnostic",
+    "text": "IDE agnostic\n\n\n\nRStudio integrated\nVs Code extensions\nJupyter notebooks\nText editor"
+  },
+  {
+    "objectID": "intro.html#quarto-extensions",
+    "href": "intro.html#quarto-extensions",
+    "title": "Quarto",
+    "section": "Quarto Extensions",
+    "text": "Quarto Extensions\nExtensions are a powerful way to modify and extend the behavior of Quarto.\n\nShortcodes for icons etc.\nPresentation themes\nJournal article templates"
+  },
+  {
+    "objectID": "intro.html#comprehensive-online-docs",
+    "href": "intro.html#comprehensive-online-docs",
+    "title": "Quarto",
+    "section": "Comprehensive online docs",
+    "text": "Comprehensive online docs\n\nUser guide\nReference list\nGallery of examples\nBlog with updates and show-cases"
+  },
+  {
+    "objectID": "intro.html#outline",
+    "href": "intro.html#outline",
+    "title": "Quarto",
+    "section": "Outline",
+    "text": "Outline\n\nElements of a qmd ( ~ 45 minutes)\nMaking our first html report ( ~ 45 minutes)\nCitations & cross-references ( ~ 30 minutes)\nMaking our first pdf report (~ 30 hour)\nLunch ( ~ 60 minutes)\nTesting journal templates ( ~ 45 minutes)\nMaking our first presentation ( ~ 45 minutes)"
+  },
+  {
+    "objectID": "intro.html#tools",
+    "href": "intro.html#tools",
+    "title": "Quarto",
+    "section": "Tools",
+    "text": "Tools\n\n\nBeing taught\n\nQuarto\nRStudio\nR\n\n\n\n\nNot taught\n\npython / julia / js\nvscode / jupyter\n\n\n\n\nUsing these tools, you will be able to follow along everything I do, and I can help when things go wrong\nIf you choose another setup, you are very welcome to that. But I will not be able to help as easily (or set aside time to do so), and you will need to think of your own code examples in other languages."
+  },
+  {
+    "objectID": "intro.html#text-formatting",
+    "href": "intro.html#text-formatting",
+    "title": "Quarto",
+    "section": "Text Formatting",
+    "text": "Text Formatting\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n*italics* and **bold**\nitalics and bold\n\n\nsuperscript^2^ / subscript~2~\nsuperscript2 / subscript2\n\n\n~~strikethrough~~\nstrikethrough\n\n\n`verbatim code`\nverbatim code\n\n\n\n\nSource: RStudio - Markdown basics"
+  },
+  {
+    "objectID": "intro.html#headings",
+    "href": "intro.html#headings",
+    "title": "Quarto",
+    "section": "Headings",
+    "text": "Headings\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n# Header 1\nHeader 1\n\n\n## Header 2\nHeader 2\n\n\n### Header 3\nHeader 3\n\n\n#### Header 4\nHeader 4\n\n\n##### Header 5\nHeader 5\n\n\n###### Header 6\nHeader 6\n\n\n\n\nSource: RStudio - Markdown basics"
+  },
+  {
+    "objectID": "intro.html#lists",
+    "href": "intro.html#lists",
+    "title": "Quarto",
+    "section": "Lists",
+    "text": "Lists\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n* unordered list\n    + sub-item 1\n    + sub-item 2\n        - sub-sub-item 1\n\nunordered list\n\nsub-item 1\nsub-item 2\n\nsub-sub-item 1\n\n\n\n\n\n\n\nSource: RStudio - Markdown basics"
+  },
+  {
+    "objectID": "intro.html#lists-1",
+    "href": "intro.html#lists-1",
+    "title": "Quarto",
+    "section": "Lists",
+    "text": "Lists\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n1. ordered list\n2. item 2\n    i) sub-item 1\n         A.  sub-sub-item 1\n\nordered list\nitem 2\n\nsub-item 1\n\nsub-sub-item 1\n\n\n\n\n\n\n\nSource: RStudio - Markdown basics"
+  },
+  {
+    "objectID": "intro.html#tables",
+    "href": "intro.html#tables",
+    "title": "Quarto",
+    "section": "Tables",
+    "text": "Tables\n\n\nMarkdown Syntax\n| Right | Left | Default | Center |\n|------:|:-----|---------|:------:|\n|   12  |  12  |    12   |    12  |\n|  123  |  123 |   123   |   123  |\n|    1  |    1 |     1   |     1  |\n\nOutput\n\n\n\nRight\nLeft\nDefault\nCenter\n\n\n\n\n12\n12\n12\n12\n\n\n123\n123\n123\n123\n\n\n1\n1\n1\n1\n\n\n\n\n\n\nSource: RStudio - Markdown basics"
+  },
+  {
+    "objectID": "intro.html#equations",
+    "href": "intro.html#equations",
+    "title": "Quarto",
+    "section": "Equations",
+    "text": "Equations\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\ninline math: $E = mc^{2}$\n\\(E=mc^{2}\\)\n\n\ndisplay math:\n\n$$E = mc^{2}$$\n\\[E = mc^{2}\\]\n\n\n\n\nSource: RStudio - Markdown basics"
+  },
+  {
+    "objectID": "intro.html#blocks",
+    "href": "intro.html#blocks",
+    "title": "Quarto",
+    "section": "Blocks",
+    "text": "Blocks\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n> Blockquote\n\nBlockquote\n\n\n\n| Line Block\n|   Spaces and newlines\n|   are preserved\nLine Block\n   Spaces and newlines\n   are preserved\n\n\n\n\nSource: RStudio - Markdown basics"
+  },
+  {
+    "objectID": "intro.html#links-images",
+    "href": "intro.html#links-images",
+    "title": "Quarto",
+    "section": "Links & Images",
+    "text": "Links & Images\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n<https://oslobrains.no>\nhttps://oslobrains.no\n\n\n[LCBC](https://oslobrains.no)\nLCBC\n\n\n![Caption](images/lcbc_logo_wide.png)\n\n\n\n[![Caption](images/lcbc_logo_wide.png)](https://oslobrains.no)\n\n\n\n\n\nSource: RStudio - Markdown basics"
+  },
+  {
+    "objectID": "intro.html#specials",
+    "href": "intro.html#specials",
+    "title": "Quarto",
+    "section": "Specials",
+    "text": "Specials\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\nendash: --\nendash: –\n\n\nemdash: ---\nemdash: —\n\n\nterm\n: definition\n\nterm\n\ndefinition\n\n\n\n\n\n\nSource: RStudio - Markdown basics"
+  },
+  {
+    "objectID": "intro.html#setting-up-the-document",
+    "href": "intro.html#setting-up-the-document",
+    "title": "Quarto",
+    "section": "Setting up the document",
+    "text": "Setting up the document\n\n\n---\ntitle: \"Document title\"\nauthor: \"Your Name\"\nexecute:\n  echo: false\nformat: html\n--- \n---\ntitle: \"Document title\"\nauthor: \"Your Name\"\nexecute:\n  echo: false\nformat: pdf\n--- \n---\ntitle: \"Document title\"\nauthor: \"Your Name\"\nexecute:\n  echo: false\nformat: revealjs\n--- \n\n\n\n\nSet up important document settings\nChanging format is easy\n\nsome settings might not work\n\nMany more options\n\nsome depending on output format\nsome depending on template"
+  },
+  {
+    "objectID": "intro.html#what-are-code-chunks",
+    "href": "intro.html#what-are-code-chunks",
+    "title": "Quarto",
+    "section": "What are code chunks?",
+    "text": "What are code chunks?\nPieces of code that will be execute on report rendering to include output in the report.\n\n\n#| label: code-example\n\nhist(mtcars$mpg)"
+  },
+  {
+    "objectID": "intro.html#what-are-code-chunks-1",
+    "href": "intro.html#what-are-code-chunks-1",
+    "title": "Quarto",
+    "section": "What are code chunks?",
+    "text": "What are code chunks?\nThese could also be inline code for incorporation into the text parts of a report.\n\n\nR Markdown | Quarto\n\n\nNumber of observations: `r nrow(mtcars)` . \n\n\n\n\n\n\nOutput\nNumber of observations: 32"
+  },
+  {
+    "objectID": "intro.html#how-does-that-work",
+    "href": "intro.html#how-does-that-work",
+    "title": "Quarto",
+    "section": "How does that work?",
+    "text": "How does that work?"
+  },
+  {
+    "objectID": "intro.html#r-markdown-vs.-quarto",
+    "href": "intro.html#r-markdown-vs.-quarto",
+    "title": "Quarto",
+    "section": "R markdown vs. Quarto",
+    "text": "R markdown vs. Quarto\nCode chunks can be provided inside the code chunk\n\n\n```{r} #| code-fold: true #| code-summary: “Show the code” ```\n\n```{r echo = TRUE, message = FALSE ```"
+  },
+  {
+    "objectID": "05_revealjs_example.html#inline-computation",
+    "href": "05_revealjs_example.html#inline-computation",
+    "title": "Palmer penguins",
+    "section": "Inline computation",
+    "text": "Inline computation\nLike the number of rows in the data being 344, and the number of female penguins being 165. We can also add footnotes1, and they will keep themselves numbered and placed correctly2\nwhich can be very convenientwithout us really needing to keep it all in mind."
+  },
+  {
+    "objectID": "05_revealjs_example.html#density",
+    "href": "05_revealjs_example.html#density",
+    "title": "Palmer penguins",
+    "section": "Density",
+    "text": "Density\n\n\nCode\npenguins |> \n  pivot_longer(contains(\"_\"),\n               names_to = c(\"part\",\n                            \"measure\",\n                            \"unit\"),\n               names_sep = \"_\",\n               values_to = \"value\") |> \n  ggplot(aes(x = value,\n             fill = species)) + \n  geom_density() +\n  facet_grid(part ~ measure, \n             scales = \"free\") +\n  scale_fill_viridis_d(alpha = .7) +\n  theme_minimal()\n\n\n\nFigure 2: Penguin density by species"
+  },
+  {
+    "objectID": "05_revealjs_example.html#summary",
+    "href": "05_revealjs_example.html#summary",
+    "title": "Palmer penguins",
+    "section": "summary",
+    "text": "summary\nA summary of the observed penguin data can be found in Table 1. For this cross-reference to work, we need to have the tbl- prefix in the label name of the chunk that creates the table. The number of the table will update if another table appears before it, meaning you no longer need to deal with number your content correctly."
+  },
+  {
+    "objectID": "05_revealjs_example.html#penguin-models",
+    "href": "05_revealjs_example.html#penguin-models",
+    "title": "Palmer penguins",
+    "section": "Penguin models",
+    "text": "Penguin models\n\n\nCode\npenguins |> \n  nest_by(species, island) |> \n  mutate(\n    model = list(lm(bill_length_mm ~ bill_depth_mm,\n                    data = data)),\n    table = list(broom::tidy(model))\n  ) |> \n  unnest(table) |> \n  select(-model, -data) |> \n  mutate(\n    term = str_replace_all(term, \"_\", \" \")\n  ) |> \n  kable(booktabs = TRUE, digits = 3,) |> \n  kable_classic() |> \n  add_footnote(\"Models were run independently on data from the different island and species.\",\n               notation = \"none\") |> \n  collapse_rows(1:2)\n\n\n\n\nTable 2:  Predicting bill length by bill depth, split by species and island. \n \n  \n    species \n    island \n    term \n    estimate \n    std.error \n    statistic \n    p.value \n  \n \n\n  \n    Adelie \n    Biscoe \n    (Intercept) \n    21.026 \n    5.238 \n    4.014 \n    0.000 \n  \n  \n    Adelie \n    Biscoe \n    bill depth mm \n    0.977 \n    0.285 \n    3.434 \n    0.001 \n  \n  \n    Adelie \n    Dream \n    (Intercept) \n    18.343 \n    4.662 \n    3.935 \n    0.000 \n  \n  \n    Adelie \n    Dream \n    bill depth mm \n    1.104 \n    0.255 \n    4.332 \n    0.000 \n  \n  \n    Adelie \n    Torgersen \n    (Intercept) \n    28.588 \n    5.774 \n    4.951 \n    0.000 \n  \n  \n    Adelie \n    Torgersen \n    bill depth mm \n    0.562 \n    0.313 \n    1.799 \n    0.078 \n  \n  \n    Chinstrap \n    Dream \n    (Intercept) \n    13.428 \n    5.057 \n    2.655 \n    0.010 \n  \n  \n    Chinstrap \n    Dream \n    bill depth mm \n    1.922 \n    0.274 \n    7.015 \n    0.000 \n  \n  \n    Gentoo \n    Biscoe \n    (Intercept) \n    17.230 \n    3.282 \n    5.250 \n    0.000 \n  \n  \n    Gentoo \n    Biscoe \n    bill depth mm \n    2.021 \n    0.219 \n    9.245 \n    0.000 \n  \n\n\n\n\n Models were run independently on data from the different island and species."
+  },
+  {
+    "objectID": "01_presentation.html#divs",
+    "href": "01_presentation.html#divs",
+    "title": "Quarto",
+    "section": "Divs",
+    "text": "Divs\nAdd classes, attributes, and other identifiers to content using Divs and Span in [Callout Blocks].\n\n\n::: {.border}\nThis content can be styled with a border\n:::\n\n<div class=\"border\">\n  <p>This content can be styled with a border</p>\n</div>\n\n\n\nSource: RStudio - HTML Basics\n\n\nDivs start with a fence containing at least three consecutive colons plus some attributes. The attributes may optionally be followed by another string of consecutive colons. The Div ends with another line containing a string of at least three consecutive colons. The Div should be separated by blank lines from preceding and following blocks. Divs may also be nested. For example"
+  },
+  {
+    "objectID": "01_presentation.html#divs-1",
+    "href": "01_presentation.html#divs-1",
+    "title": "Quarto",
+    "section": "Divs",
+    "text": "Divs\n\n\n::::: {#special .sidebar}\n\n::: {.warning}\nHere is a warning.\n:::\n\nMore content.\n:::::\n\n<div id=\"special\" class=\"sidebar\">\n  <div class=\"warning\">\n    <p>Here is a warning.</p>\n  </div>\n  <p>More content.</p>\n</div>\n\n\n\nSource: RStudio - Markdown basics\n\n\nFences without attributes are always closing fences. Unlike with fenced code blocks, the number of colons in the closing fence need not match the number in the opening fence. However, it can be helpful for visual clarity to use fences of different lengths to distinguish nested divs from their parents."
+  },
+  {
+    "objectID": "01_presentation.html#spans",
+    "href": "01_presentation.html#spans",
+    "title": "Quarto",
+    "section": "Spans",
+    "text": "Spans\n\n\n[This is *some text*]{.class key=\"val\"}\n\n<span class=\"class\" data-key=\"val\">\n  This is <em>some text</em>\n</span>\n\n\n\nSource: RStudio - HTML Basics\n\n\nA bracketed sequence of inlines, as one would use to begin a link, will be treated as a Span with attributes if it is followed immediately by attributes:"
+  },
+  {
+    "objectID": "01_presentation.html#css-and-filters",
+    "href": "01_presentation.html#css-and-filters",
+    "title": "Quarto",
+    "section": "css and filters",
+    "text": "css and filters\n\nStyle documents with css (cascading style sheets)\nParticulaly useful with divs and spans for special styling\nSee the Pandoc documentation on Divs and Spans for additional details.\n\n\nSource: RStudio - HTML Basics"
+  },
+  {
+    "objectID": "01_presentation.html#add-image",
+    "href": "01_presentation.html#add-image",
+    "title": "Quarto",
+    "section": "Add image",
+    "text": "Add image\nHave a look at Figure 1.\n\nFigure 1: Counter screenshot"
+  },
+  {
+    "objectID": "01_presentation.html#citation-control",
+    "href": "01_presentation.html#citation-control",
+    "title": "Quarto",
+    "section": "Citation control",
+    "text": "Citation control\n\n\n\n\n\n\n\nMarkdown Format\nOutput (author-date format)\n\n\n\n\nBlip blop bloop [see @biswal2010, pp. 33-35;\nalso @ggseg, chap. 1]\nBlip blop bloop [see Biswal et al. (2010), pp. 33-35; also , chap. 1]\n\n\nBlip blop bloop [@biswal2010, pp. 33-35,\n38-39 and passim]\nBlip blop bloop (Biswal et al. 2010, 33–35, 38–39 and passim)\n\n\nBlip blop bloop [@ggseg; @biswal2010].\nBlip blop bloop (Mowinckel and Vidal-Piñeiro 2019; Biswal et al. 2010).\n\n\nMowinckel says blah [-@ggseg]\nMowinckel says blah (2019)\n\n\n@biswal2010 says bloop.\nBiswal et al. (2010) says bloop."
+  },
+  {
+    "objectID": "01_presentation.html#yaml-settings",
+    "href": "01_presentation.html#yaml-settings",
+    "title": "Quarto",
+    "section": "yaml settings",
+    "text": "yaml settings\n\n\n\ncontrol file name containing the bibliography\ncontrol citation style with csl file\n\nCSL directory\nZotero style search\n\n\n\n\n\n---\nbibliography: references.bib\ncsl: nature.csl\n---"
+  },
+  {
+    "objectID": "01_presentation.html#redirect-reference-generation",
+    "href": "01_presentation.html#redirect-reference-generation",
+    "title": "Quarto",
+    "section": "Redirect reference generation",
+    "text": "Redirect reference generation\n\n::: {#refs}\n:::\n\nReferences\n\n\nBiswal, Bharat B., Maarten Mennes, Xi-Nian Nian Zuo, Suril Gohel, Clare Kelly, Stephen M. Smith, Christian F. Beckmann, et al. 2010. “Toward Discovery Science of Human Brain Function.” Proceedings of the National Academy of Sciences of the United States of America 107 (10): 4734–39. https://doi.org/0911855107 [pii];10.1073/pnas.0911855107 [doi].\n\n\nMowinckel, Athanasia M., and Didac Vidal-Piñeiro. 2019. “Visualisation of Brain Statistics with r-Packages Ggseg and Ggseg3d.”"
+  },
+  {
+    "objectID": "01_presentation.html#pdf-needs-tinytex",
+    "href": "01_presentation.html#pdf-needs-tinytex",
+    "title": "Quarto",
+    "section": "PDF needs tinytex!",
+    "text": "PDF needs tinytex!\nquarto install tool tinytex\n\nto render to pdf, we all need to have tinytex installed. This should be easily done with the command provided"
+  },
+  {
+    "objectID": "01_presentation.html#very-controlled-by-yaml",
+    "href": "01_presentation.html#very-controlled-by-yaml",
+    "title": "Quarto",
+    "section": "Very controlled by yaml",
+    "text": "Very controlled by yaml\n---\ntitle: \"My document\"\nformat:\n  pdf:\n    toc: true\n    toc-depth: 2\n    toc-title: Contents\n    number-sections: true\n    colorlinks: true\n    keep-tex: true\n---\n\nSource: RStudio - Quarto PDF basics"
+  },
+  {
+    "objectID": "01_presentation.html#authors-and-affiliations",
+    "href": "01_presentation.html#authors-and-affiliations",
+    "title": "Quarto",
+    "section": "Authors and affiliations",
+    "text": "Authors and affiliations\n\n\nauthor:\n  - name:\n      given: Norah\n      family: Jones\n      literal: Norah Jones\n      affiliations:\n        - ref: cmu\n        - ref: chicago\n    attributes:\n      corresponding: true\n\naffiliations:\n  - id: cmu\n    name: Carnegie Mellon University\n    city: Pittsburgh\n    state: PA\n  - id: chicago\n    name: University of Chicago\n    city: Chicago\n    state: IL\n\n\n\nSource: RStudio - Quarto Journal authors"
+  },
+  {
+    "objectID": "01_presentation.html#formats",
+    "href": "01_presentation.html#formats",
+    "title": "Quarto",
+    "section": "Formats",
+    "text": "Formats\n\nrevealjs — reveal.js (HTML)\npptx — PowerPoint (MS Office)\nbeamer — Beamer (LaTeX/PDF)"
+  },
+  {
+    "objectID": "01_presentation.html#slides-are-made-by-adding-headlines",
+    "href": "01_presentation.html#slides-are-made-by-adding-headlines",
+    "title": "Quarto",
+    "section": "Slides are made by adding headlines",
+    "text": "Slides are made by adding headlines\n---\ntitle: \"9 to 5\"\nauthor: \"Dolly Parton\"\nformat: revealjs\n---\n\n# Tumble out of bed \n\n- I stumble to the kitchen\n- Pour myself a cup of ambition\n- yawn and stretch and try to come to life\n\n## Jump in the shower \n\n- the blood starts pumpin'\n- Out on the street\n- the traffic starts jumpin'"
+  },
+  {
+    "objectID": "01_presentation.html#or-adding-horizontal-rules-no-header",
+    "href": "01_presentation.html#or-adding-horizontal-rules-no-header",
+    "title": "Quarto",
+    "section": "Or adding horizontal rules (no header)",
+    "text": "Or adding horizontal rules (no header)\n---\ntitle: \"9 to 5\"\nauthor: \"Dolly Parton\"\nformat: revealjs\n---\n\n# Tumble out of bed \n\n- I stumble to the kitchen\n- Pour myself a cup of ambition\n- yawn and stretch and try to come to life\n\n---\n\n- Jump in the shower \n- the blood starts pumpin'\n- Out on the street\n- the traffic starts jumpin'"
+  },
+  {
+    "objectID": "schedule.html",
+    "href": "schedule.html",
+    "title": "quartaki",
+    "section": "",
+    "text": "Elements of a qmd ( ~ 45 minutes)\nMaking our first html report ( ~ 45 minutes)\nCitations & cross-references ( ~ 30 minutes)\nMaking our first pdf report (~ 30 hour)\nLunch ( ~ 60 minutes)\nTesting journal templates ( ~ 45 minutes)\nMaking our first presentation ( ~ 45 minutes)"
+  },
+  {
+    "objectID": "01_presentation.html#athanasia-monika-mowinckel",
+    "href": "01_presentation.html#athanasia-monika-mowinckel",
+    "title": "Quarto",
+    "section": "Athanasia Monika Mowinckel",
+    "text": "Athanasia Monika Mowinckel\n\n\n\n\n\nAthanasia Monika Mowinckel\n\n\n\n\n\n\nStaff scientist /  Research Software Engineer at LCBC-UiO\nPhD in cognitive psychology\n\nSoftware Carpentry &  RStudio tidyverse Instructor\n\nR-Ladies Oslo &  R-Ladies Global team\n\n\n   DrMowinckels"
+  },
+  {
+    "objectID": "01_presentation.html#athanasia-monika-mowinckel-drmowinckels",
+    "href": "01_presentation.html#athanasia-monika-mowinckel-drmowinckels",
+    "title": "Quarto",
+    "section": "Athanasia Monika Mowinckel (DrMowinckels)",
+    "text": "Athanasia Monika Mowinckel (DrMowinckels)\n\n\n\n\n\nAthanasia Monika Mowinckel\n\n\n\n\n\n  \n\nStaff scientist /  Research Software Engineer\n\nPhD in cognitive psychology\n\nSoftware Carpentry &  RStudio tidyverse Instructor\n\nR-Ladies Oslo &  R-Ladies Global team"
+  }
+]

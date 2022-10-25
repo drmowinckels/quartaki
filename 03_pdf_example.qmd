@@ -1,0 +1,127 @@
+---
+title: "Palmer penguins"
+author: Athanasia Mo Mowinckel
+date: 2022-10-26
+format: 
+  pdf:
+    toc: true
+    toc-depth: 2
+    toc-title: Contents
+    html-math-method: katex
+    css: styles.css
+    anchor-sections: true
+    smooth-scroll: true
+    code-fold: true
+    code-summary: "Show the code"
+    embed-resources: true
+    self-contained-math: true
+editor: visual
+execute: 
+  warning: false
+  message: false
+  echo: false
+---
+
+```{r}
+#| include: false
+
+library(palmerpenguins)
+library(knitr)
+library(kableExtra)
+library(tidyverse)
+penguins <- penguins
+
+```
+
+\
+We can write text as normal, interspersed with code that outputs something. We can choose to have the code shown or hidden, or provide the reader with the option to see the code if they wish. We can also reference the figures @fig-penguin-smooth and @fig-penguin-density
+
+```{r}
+#| label: fig-penguin-smooth
+#| fig-cap: Penguin bill length and depth ratio by species
+
+ggplot(penguins,
+       aes(x = bill_length_mm,
+           y = bill_depth_mm)) +
+  geom_point(aes(colour = species)) +
+  geom_smooth(method = "lm", 
+              color = "black") +
+  geom_smooth(aes(colour = species), 
+              method = "lm") +
+  scale_colour_viridis_d(alpha = .7) +
+  theme_minimal()
+```
+
+And the order of the figures does not really matter. If you change the order to the figures, but keep their labels, no references will be broken in the report. We can also incorporate text derived from data to look as if it were "normal" text. Like the number of rows in the data being `r nrow(penguins)`, and the number of female penguins being `r filter(penguins, sex == "female") |> nrow()`. We can also add footnotes[^1], and they will keep themselves numbered and placed correctly[^2]
+
+[^1]: which can be very convenient
+
+[^2]: without us really needing to keep it all in mind.
+
+```{r}
+#| label: fig-penguin-density
+#| fig-cap: Penguin density by species
+
+penguins |> 
+  pivot_longer(contains("_"),
+               names_to = c("part",
+                            "measure",
+                            "unit"),
+               names_sep = "_",
+               values_to = "value") |> 
+  ggplot(aes(x = value,
+             fill = species)) + 
+  geom_density() +
+  facet_grid(part ~ measure, 
+             scales = "free") +
+  scale_fill_viridis_d(alpha = .7) +
+  theme_minimal()
+```
+
+A summary of the observed penguin data can be found in @tbl-penguins. For this cross-reference to work, we *need* to have the `tbl-` prefix in the label name of the chunk that creates the table. The number of the table will update if another table appears before it, meaning you no longer need to deal with number your content correctly.\
+
+```{r}
+#| label: tbl-penguins
+#| tbl-cap: Penguin summary
+
+penguins |> 
+  pivot_longer(contains("_"),
+               values_drop_na = TRUE) |> 
+  group_by(name, species) |> 
+  summarise(across(value, 
+                   list(Mean = mean, 
+                        SD = sd,
+                        Min = min,
+                        Max = max,
+                        N = length),
+                   .names = "{.fn}")) |> 
+  mutate(
+    name = str_replace_all(name, "_", " ")
+  ) |> 
+  kable(booktabs = TRUE, digits = 3) |> 
+  kable_classic() |> 
+  collapse_rows(1)
+```
+
+```{r}
+#| label: tbl-models
+#| tbl-cap: Predicting bill length by bill depth, split by species and island.
+
+penguins |> 
+  nest_by(species, island) |> 
+  mutate(
+    model = list(lm(bill_length_mm ~ bill_depth_mm,
+                    data = data)),
+    table = list(broom::tidy(model))
+  ) |> 
+  unnest(table) |> 
+  select(-model, -data) |> 
+  mutate(
+    term = str_replace_all(term, "_", " ")
+  ) |> 
+  kable(booktabs = TRUE, digits = 3,) |> 
+  kable_classic() |> 
+  add_footnote("Models were run independently on data from the different island and species.",
+               notation = "none") |> 
+  collapse_rows(1:2)
+```

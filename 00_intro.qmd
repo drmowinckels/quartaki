@@ -1,0 +1,437 @@
+---
+title: "Quarto"
+subtitle: "--- enables you to weave together content and executable code into a finished document --- "
+format:
+  revealjs: 
+    theme: [default, lcbc-styles.scss]
+    logo: images/lcbc_logo_wide.png
+    slide-number: c/t
+    incremental: true
+---
+
+## Next generation R Markdown {.center}
+
+> Quarto is a multi-language, [next-generation](https://quarto.org/docs/faq/rmarkdown.html) version of R Markdown from RStudio, and includes dozens of new features and capabilities while at the same being able to render most existing Rmd files without modification.
+
+## Multi-lingual {.center}
+
+-   Create dynamic content with [Python](https://quarto.org/docs/computations/python.html), [R](https://quarto.org/docs/computations/r.html), [Julia](https://quarto.org/docs/computations/julia.html), and [Observable](https://quarto.org/docs/computations/ojs.html).
+
+-   Author documents as plain text markdown or [Jupyter](https://jupyter.org/) notebooks.
+
+-   Publish high-quality articles, reports, presentations, websites, blogs, and books in HTML, PDF, MS Word, ePub, and more.
+
+-   Author with scientific markdown, including equations, citations, crossrefs, figure panels, callouts, advanced layout, and more.
+
+## IDE agnostic {.center}
+
+::: columns
+::: {.column width="50%"}
+-   RStudio integrated
+
+-   Vs Code extensions
+
+-   Jupyter notebooks
+
+-   Text editor
+:::
+
+::: {.column width="50%"}
+![](images/paste-CB1712F8.png){width="420"}
+
+\
+:::
+:::
+
+## Quarto Extensions {.center}
+
+Extensions are a powerful way to modify and extend the behavior of Quarto.
+
+-   [Shortcodes](https://quarto.org/docs/extensions/listing-filters.html) for icons etc.
+
+-   [Presentation themes](https://quarto.org/docs/extensions/listing-revealjs.html)
+
+-   [Journal article templates](https://quarto.org/docs/extensions/listing-journals.html)
+
+## Comprehensive online docs {.center}
+
+-   [User guide](https://quarto.org/docs/guide/)
+
+-   [Reference list](https://quarto.org/docs/reference/)
+
+-   [Gallery of examples](https://quarto.org/docs/gallery/)
+
+-   [Blog with updates and show-cases](https://quarto.org/docs/blog/)
+
+# This workshop
+
+## Outline {.center}
+
+-   Elements of a qmd ( \~ 45 minutes)
+
+-   Making our first html report ( \~ 45 minutes)
+
+-   Citations & cross-references ( \~ 30 minutes)
+
+-   Making our first pdf report (\~ 30 hour)
+
+-   Lunch ( \~ 60 minutes)
+
+-   Testing journal templates ( \~ 45 minutes)
+
+-   Making our first presentation ( \~ 45 minutes)
+
+## Tools {.center}
+
+::: columns
+::: {.column width="45%"}
+### Being taught
+
+-   Quarto
+
+-   RStudio
+
+-   R
+:::
+
+::: {.column width="10%"}
+:::
+
+::: {.column width="45%"}
+### Not taught
+
+-   python / julia / js
+
+-   vscode / jupyter
+:::
+:::
+
+::: notes
+Using these tools, you will be able to follow along everything I do, and I can help when things go wrong
+
+If you choose another setup, you are very welcome to that. But I will not be able to help as easily (or set aside time to do so), and you will need to think of your own code examples in other languages.
+:::
+
+# Markdown elements
+
+## Text Formatting {.center}
+
++-----------------------------------+-------------------------------+
+| Markdown Syntax                   | Output                        |
++===================================+===============================+
+|     *italics* and **bold**        | *italics* and **bold**        |
++-----------------------------------+-------------------------------+
+|     superscript^2^ / subscript~2~ | superscript^2^ / subscript~2~ |
++-----------------------------------+-------------------------------+
+|     ~~strikethrough~~             | ~~strikethrough~~             |
++-----------------------------------+-------------------------------+
+|     `verbatim code`               | `verbatim code`               |
++-----------------------------------+-------------------------------+
+
+::: footer
+Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html)
+:::
+
+## Headings {.center}
+
++---------------------+-----------------+
+| Markdown Syntax     | Output          |
++=====================+=================+
+|     # Header 1      | # Header 1      |
++---------------------+-----------------+
+|     ## Header 2     | ## Header 2     |
++---------------------+-----------------+
+|     ### Header 3    | ### Header 3    |
++---------------------+-----------------+
+|     #### Header 4   | #### Header 4   |
++---------------------+-----------------+
+|     ##### Header 5  | ##### Header 5  |
++---------------------+-----------------+
+|     ###### Header 6 | ###### Header 6 |
++---------------------+-----------------+
+
+::: footer
+Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html)
+:::
+
+## Lists {.center}
+
++------------------------------+-----------------------------+
+| Markdown Syntax              | Output                      |
++==============================+=============================+
+|     * unordered list         | -   unordered list          |
+|         + sub-item 1         |                             |
+|         + sub-item 2         |     -   sub-item 1          |
+|             - sub-sub-item 1 |                             |
+|                              |     -   sub-item 2          |
+|                              |                             |
+|                              |         -   sub-sub-item 1  |
++------------------------------+-----------------------------+
+
+::: footer
+Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html)
+:::
+
+## Lists {.center}
+
++---------------------------------+----------------------------+
+| Markdown Syntax                 | Output                     |
++=================================+============================+
+|     1. ordered list             | 1.  ordered list           |
+|     2. item 2                   |                            |
+|         i) sub-item 1           | 2.  item 2                 |
+|              A.  sub-sub-item 1 |                            |
+|                                 |     i)  sub-item 1         |
+|                                 |                            |
+|                                 |         A.  sub-sub-item 1 |
++---------------------------------+----------------------------+
+
+::: footer
+Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html)
+:::
+
+## Tables {.center}
+
+::: columns
+::: {.column width="50%"}
+#### Markdown Syntax
+
+    | Right | Left | Default | Center |
+    |------:|:-----|---------|:------:|
+    |   12  |  12  |    12   |    12  |
+    |  123  |  123 |   123   |   123  |
+    |    1  |    1 |     1   |     1  |
+:::
+
+::: {.column width="50%"}
+#### Output
+
+| Right | Left | Default | Center |
+|------:|:-----|---------|:------:|
+|    12 | 12   | 12      |   12   |
+|   123 | 123  | 123     |  123   |
+|     1 | 1    | 1       |   1    |
+:::
+:::
+
+::: footer
+Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html)
+:::
+
+## Equations {.center}
+
++-------------------------------+----------------+
+| Markdown Syntax               | Output         |
++===============================+================+
+|     inline math: $E = mc^{2}$ | $E=mc^{2}$     |
++-------------------------------+----------------+
+|     display math:             | $$E = mc^{2}$$ |
+|                               |                |
+|     $$E = mc^{2}$$            |                |
++-------------------------------+----------------+
+
+::: footer
+Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html)
+:::
+
+## Blocks {.center}
+
++-----------------------------+--------------------------+
+| Markdown Syntax             | Output                   |
++=============================+==========================+
+|     > Blockquote            | > Blockquote             |
++-----------------------------+--------------------------+
+|     | Line Block            | | Line Block             |
+|     |   Spaces and newlines | |    Spaces and newlines |
+|     |   are preserved       | |    are preserved       |
++-----------------------------+--------------------------+
+
+::: footer
+Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html)
+:::
+
+## Links & Images {.center}
+
++--------------------------------------------------------------------+----------------------------------------------------------------+
+| Markdown Syntax                                                    | Output                                                         |
++====================================================================+================================================================+
+|     <https://oslobrains.no>                                        | <https://oslobrains.no>                                        |
++--------------------------------------------------------------------+----------------------------------------------------------------+
+|     [LCBC](https://oslobrains.no)                                  | [LCBC](https://oslobrains.no)                                  |
++--------------------------------------------------------------------+----------------------------------------------------------------+
+|     ![Caption](images/lcbc_logo_wide.png)                          | ![Caption](images/lcbc_logo_wide.png)                          |
++--------------------------------------------------------------------+----------------------------------------------------------------+
+|     [![Caption](images/lcbc_logo_wide.png)](https://oslobrains.no) | [![Caption](images/lcbc_logo_wide.png)](https://oslobrains.no) |
++--------------------------------------------------------------------+----------------------------------------------------------------+
+
+::: footer
+Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html)
+:::
+
+## Specials {.center}
+
++------------------+-----------------+
+| Markdown Syntax  | Output          |
++==================+=================+
+|     endash: --   | endash: --      |
++------------------+-----------------+
+|     emdash: ---  | emdash: ---     |
++------------------+-----------------+
+|     term         | term            |
+|     : definition |                 |
+|                  | :   definition  |
++------------------+-----------------+
+
+::: footer
+Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html)
+:::
+
+# The header yaml
+
+## Setting up the document
+
+::: columns
+::: {.column width="32%"}
+``` yaml
+---
+title: "Document title"
+author: "Your Name"
+execute:
+  echo: false
+format: html
+--- 
+```
+
+``` yaml
+---
+title: "Document title"
+author: "Your Name"
+execute:
+  echo: false
+format: pdf
+--- 
+```
+
+``` yaml
+---
+title: "Document title"
+author: "Your Name"
+execute:
+  echo: false
+format: revealjs
+--- 
+```
+:::
+
+::: {.column width="10%"}
+:::
+
+::: {.column width="58%"}
+-   Set up important document settings
+-   Changing format is easy
+    -   some settings might not work
+-   Many more options
+    -   some depending on output format
+    -   some depending on template
+:::
+:::
+
+# Markdown flavours
+
+| Markdown type   | file extension | code chunks |
+|-----------------|----------------|-------------|
+| Plain markdown  | `.md`          | no          |
+| R markdown      | `.Rmd`         | yes         |
+| Quarto markdown | `.qmd`         | yes         |
+
+## What are code chunks?
+
+Pieces of code that will be execute *on report rendering* to include output in the report.
+
+::: columns
+::: {.column width="32%"}
+``` {{r}}
+#| label: code-example
+
+hist(mtcars$mpg)
+```
+:::
+
+::: {.column width="10%"}
+:::
+
+::: {.column width="58%"}
+```{r}
+#| label: code-example
+
+hist(mtcars$mpg)
+```
+:::
+:::
+
+## What are code chunks?
+
+These could also be *inline code* for incorporation into the text parts of a report.
+
+::: columns
+::: {.column width="45%"}
+### R Markdown \| Quarto
+
+```{=html}
+<div class="sourceCode">
+<pre class="sourceCode markdown">
+<code class="sourceCode markdown">
+Number of observations: &#96;r nrow(mtcars)&#96; . 
+</code>
+</pre>
+</div>
+```
+:::
+
+::: {.column width="10%"}
+:::
+
+::: {.column width="45%"}
+### Output
+
+Number of observations: `r nrow(mtcars)`
+:::
+:::
+
+## How does that work? {.center}
+
+![](images/rstudio-qmd-how-it-works.png)
+
+## R markdown vs. Quarto
+
+Code chunks can be provided inside the code chunk
+
+::: columns
+::: {.column width="50%"}
+**\`\`\`{r}** #\| code-fold: true #\| code-summary: "Show the code" **\`\`\`**
+:::
+
+::: {.column width="50%"}
+**\`\`\`{r** echo = TRUE, message = FALSE **\`\`\`**
+:::
+:::
+
+# Break {.center}
+
+```{r, echo = FALSE}
+countdown::countdown(
+  minutes = 10,
+  left = 0,
+  right = 0,
+  top = "50%",
+  padding = "50px",
+  margin = "10%",
+  font_size = "4em",
+  color_running_background  = "transparent",
+  color_finished_background = "#ffffff",
+  play_sound = TRUE,
+  warn_when = 30
+)
+```
+
+------------------------------------------------------------------------
