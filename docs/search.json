@@ -453,5 +453,12 @@
     "title": "Quarto",
     "section": "Athanasia Monika Mowinckel (DrMowinckels)",
     "text": "Athanasia Monika Mowinckel (DrMowinckels)\n\n\n\n\n\nAthanasia Monika Mowinckel\n\n\n\n\n\n  \n\nStaff scientist /  Research Software Engineer\n\nPhD in cognitive psychology\n\nSoftware Carpentry &  RStudio tidyverse Instructor\n\nR-Ladies Oslo &  R-Ladies Global team"
+  },
+  {
+    "objectID": "01_presentation.html#cross-references-1",
+    "href": "01_presentation.html#cross-references-1",
+    "title": "Quarto",
+    "section": "Cross-references",
+    "text": "Cross-references\n\n\n\nType\nPrefix\n\n\n\n\nFigures\nfig-\n\n\nTables\ntbl-\n\n\nEquations\neq-\n\n\nSections\nsec-\n\n\nCode listing\nlst-\n\n\nTheorem\nthm-"
   }
 ]

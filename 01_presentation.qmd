@@ -260,6 +260,17 @@ countdown::countdown(
 
 # Cross-references
 
+## Cross-references
+
+| Type         | Prefix |
+|--------------|--------|
+| Figures      | fig-   |
+| Tables       | tbl-   |
+| Equations    | eq-    |
+| Sections     | sec-   |
+| Code listing | lst-   |
+| Theorem      | thm-   |
+
 # Go to RStudio
 
 ::: notes
@@ -467,6 +478,24 @@ Source: RStudio - [Quarto PDF basics](https://quarto.org/docs/output-formats/pdf
 ```{r, echo = FALSE}
 countdown::countdown(
   minutes = 10,
+  left = 0,
+  right = 0,
+  top = "80%",
+  padding = "50px",
+  margin = "10%",
+  font_size = "4em",
+  color_running_background  = "transparent",
+  color_finished_background = "#ffffff",
+  play_sound = TRUE,
+  warn_when = 30
+)
+```
+
+# Lunch
+
+```{r, echo = FALSE}
+countdown::countdown(
+  minutes = 60,
   left = 0,
   right = 0,
   top = "80%",
@@ -717,10 +746,9 @@ countdown::countdown(
 
 -   [rOpenSci community](https://ropensci.org/community/)
 
-## Athanasia Monika Mowinckel 
+## Athanasia Monika Mowinckel
 
 ::: columns
-
 ::: {.column width="50%"}
 ![Athanasia Monika Mowinckel](https://drmowinckels.io/about/profile.png)
 :::
@@ -729,24 +757,13 @@ countdown::countdown(
 :::
 
 ::: {.column width="45%"}
-- Staff scientist / <br>
-   Research Software Engineer at
-   [LCBC-UiO](https://oslobrains.no)
-- PhD in cognitive psychology  
-- Software Carpentry & <br>
-  RStudio tidyverse Instructor   
-- R-Ladies Oslo & <br>
-  [R-Ladies Global team](www.rladies.org)
+-   Staff scientist / <br> Research Software Engineer at [LCBC-UiO](https://oslobrains.no)
+-   PhD in cognitive psychology\
+-   Software Carpentry & <br> RStudio tidyverse Instructor\
+-   R-Ladies Oslo & <br> [R-Ladies Global team](www.rladies.org)
 :::
 
 ::: footer
-[{{< fa brands twitter >}}](https://twitter.com/DrMowinckels)
-[{{< fa brands github >}}](https://github.com/DrMowinckels)
-[{{< fa globe >}}](https://drmowinckels.io/)
-DrMowinckels
+[{{< fa brands twitter >}}](https://twitter.com/DrMowinckels) [{{< fa brands github >}}](https://github.com/DrMowinckels) [{{< fa globe >}}](https://drmowinckels.io/) DrMowinckels
 :::
-
-
-
-
 :::
