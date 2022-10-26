@@ -114,7 +114,7 @@ A bracketed sequence of inlines, as one would use to begin a link, will be treat
 
 -   Style documents with css (cascading style sheets)
 
--   Particulaly useful with divs and spans for special styling
+-   Particularly useful with divs and spans for special styling
 
 -   See the Pandoc documentation on [Divs and Spans](https://pandoc.org/MANUAL.html#divs-and-spans) for additional details.
 
