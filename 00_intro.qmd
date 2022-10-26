@@ -274,6 +274,7 @@ Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-b
 
 ## Specials {.center}
 
+::: {.nonincremental}
 +------------------+----------------+
 | Markdown Syntax  | Output         |
 +==================+================+
@@ -285,6 +286,7 @@ Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-b
 |     : definition |                |
 |                  | :   definition |
 +------------------+----------------+
+:::
 
 ::: footer
 Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html)
