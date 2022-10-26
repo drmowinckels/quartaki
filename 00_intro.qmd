@@ -274,17 +274,17 @@ Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-b
 
 ## Specials {.center}
 
-+------------------+-----------------+
-| Markdown Syntax  | Output          |
-+==================+=================+
-|     endash: --   | endash: --      |
-+------------------+-----------------+
-|     emdash: ---  | emdash: ---     |
-+------------------+-----------------+
-|     term         | term            |
-|     : definition |                 |
-|                  | :   definition  |
-+------------------+-----------------+
++------------------+----------------+
+| Markdown Syntax  | Output         |
++==================+================+
+|     endash: --   | endash: --     |
++------------------+----------------+
+|     emdash: ---  | emdash: ---    |
++------------------+----------------+
+|     term         | term           |
+|     : definition |                |
+|                  | :   definition |
++------------------+----------------+
 
 ::: footer
 Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html)
