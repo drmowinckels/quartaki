@@ -159,7 +159,7 @@ format:
 More: [RStudio - HTML yaml](https://quarto.org/docs/output-formats/html-code.html)
 :::
 
-# Go to RStudio
+## Go to RStudio
 
 ::: notes
 -   File \> New File \> Quarto Document
@@ -169,9 +169,10 @@ More: [RStudio - HTML yaml](https://quarto.org/docs/output-formats/html-code.htm
 -   Run chunk by chunk
 -   Alter chunk code to see difference
 -   Alter output format
+-   Switch back to html format
 :::
 
-# Exercise
+## Exercise
 
 -   Create a list in your document, listing your favourite foods, at least the top three.
 
@@ -213,7 +214,7 @@ countdown::countdown(
 )
 ```
 
-# Go to RStudio
+## Go to RStudio
 
 ::: notes
 -   Show visual editor shortcuts and inserts
@@ -222,7 +223,7 @@ countdown::countdown(
 -   Alter yaml settings to show changes to doc
 :::
 
-# Exercise
+## Exercise
 
 ```{r, echo = FALSE}
 countdown::countdown(
@@ -271,13 +272,13 @@ countdown::countdown(
 | Code listing | lst-   |
 | Theorem      | thm-   |
 
-# Go to RStudio
+## Go to RStudio
 
 ::: notes
 -   Add cross-refs to tabs and figs
 :::
 
-# Exercise
+## Exercise
 
 -   Take a screenshot of the countdown timer, and add the image to your document.
 
@@ -363,6 +364,8 @@ bibliography: references.bib
 csl: nature.csl
 ---
 ```
+
+Currently, only Zotero is supported as a reference manager.
 :::
 :::
 
@@ -380,7 +383,7 @@ csl: nature.csl
 ::: {#refs}
 :::
 
-# Go to RStudio
+## Go to RStudio
 
 ::: notes
 -   Show the insert citation tool
@@ -389,91 +392,11 @@ csl: nature.csl
 -   inform about zotero and better bibtex integration
 :::
 
-# Exercise
+## Exercise
 
 -   Add a citation to an important paper in your field searching for its DOI
--   Cite it in text using three different ways of controlling citation appearance
+-   Cite it in text using three different ways of controlling citation appearance (1. standard, 2. name & year in parentheses, 3. year only)
 -   Redirect the reference generation to a specific spot in your document
--   if time and applicable: connect your zotero to RStudio
-
-```{r, echo = FALSE}
-countdown::countdown(
-  minutes = 10,
-  left = 0,
-  right = 0,
-  top = "80%",
-  padding = "50px",
-  margin = "10%",
-  font_size = "4em",
-  color_running_background  = "transparent",
-  color_finished_background = "#ffffff",
-  play_sound = TRUE,
-  warn_when = 30
-)
-```
-
-# Break
-
-```{r, echo = FALSE}
-countdown::countdown(
-  minutes = 5,
-  left = 0,
-  right = 0,
-  top = "80%",
-  padding = "50px",
-  margin = "10%",
-  font_size = "4em",
-  color_running_background  = "transparent",
-  color_finished_background = "#ffffff",
-  play_sound = TRUE,
-  warn_when = 30
-)
-```
-
-# PDF
-
-## PDF needs tinytex! {.center}
-
-``` bash
-quarto install tool tinytex
-```
-
-::: notes
-to render to pdf, we all need to have tinytex installed. This should be easily done with the command provided
-:::
-
-## Very controlled by yaml
-
-``` yaml
----
-title: "My document"
-format:
-  pdf:
-    toc: true
-    toc-depth: 2
-    toc-title: Contents
-    number-sections: true
-    colorlinks: true
-    keep-tex: true
----
-```
-
-::: footer
-Source: RStudio - [Quarto PDF basics](https://quarto.org/docs/output-formats/pdf-basics.html)
-:::
-
-# Go to RStudio
-
-::: notes
--   Change html document to pdf
--   try to render
--   what are differences?
-:::
-
-# Exercise
-
--   Add some headers, what does that do?
--   Add section numbering, what does that do?
 
 ```{r, echo = FALSE}
 countdown::countdown(
@@ -496,6 +419,75 @@ countdown::countdown(
 ```{r, echo = FALSE}
 countdown::countdown(
   minutes = 60,
+  left = 0,
+  right = 0,
+  top = "80%",
+  padding = "50px",
+  margin = "10%",
+  font_size = "4em",
+  color_running_background  = "transparent",
+  color_finished_background = "#ffffff",
+  play_sound = TRUE,
+  warn_when = 30
+)
+```
+
+# PDF
+
+## Very controlled by yaml
+
+``` yaml
+---
+title: "My document"
+format:
+  pdf:
+    toc: true
+    toc-depth: 2
+    toc-title: Contents
+    number-sections: true
+    colorlinks: true
+    keep-tex: true
+---
+```
+
+::: footer
+Source: RStudio - [Quarto PDF basics](https://quarto.org/docs/output-formats/pdf-basics.html)
+:::
+
+## Go to RStudio
+
+::: notes
+-   Change html document to pdf
+-   try to render
+-   what are differences?
+:::
+
+## Exercise
+
+-   Add some headers, what does that do?
+-   Add section numbering, what does that do?
+
+```{r, echo = FALSE}
+countdown::countdown(
+  minutes = 10,
+  left = 0,
+  right = 0,
+  top = "80%",
+  padding = "50px",
+  margin = "10%",
+  font_size = "4em",
+  color_running_background  = "transparent",
+  color_finished_background = "#ffffff",
+  play_sound = TRUE,
+  warn_when = 30
+)
+```
+
+# Break
+
+```{r, echo = FALSE}
+countdown::countdown(
+  minutes = 5,
   left = 0,
   right = 0,
   top = "80%",
@@ -552,7 +544,7 @@ affiliations:
 Source: [RStudio - Quarto Journal authors](https://quarto.org/docs/journals/authors.html)
 :::
 
-# Go to RStudio
+## Go to RStudio
 
 ::: notes
 -   get arxiv template\
@@ -566,7 +558,7 @@ Source: [RStudio - Quarto Journal authors](https://quarto.org/docs/journals/auth
     `quarto use template quarto-journals/plos`\`
 :::
 
-# Exercise
+## Exercise
 
 -   Adapt the plos template to include the same content as our pdf document
 
@@ -657,7 +649,7 @@ countdown::countdown(
     - Out on the street
     - the traffic starts jumpin'
 
-# Go to RStudio
+## Go to RStudio
 
 ::: notes
 -   use html document as basis, convert to revealjs
@@ -666,7 +658,7 @@ countdown::countdown(
 -   show tabset
 :::
 
-# Exercise
+## Exercise
 
 -   Adapt the remaining of the document so that you have distinct slides for all content
 -   Make a slide without a header
@@ -693,38 +685,6 @@ countdown::countdown(
 ```{r, echo = FALSE}
 countdown::countdown(
   minutes = 5,
-  left = 0,
-  right = 0,
-  top = "80%",
-  padding = "50px",
-  margin = "10%",
-  font_size = "4em",
-  color_running_background  = "transparent",
-  color_finished_background = "#ffffff",
-  play_sound = TRUE,
-  warn_when = 30
-)
-```
-
-# Go to RStudio
-
-::: notes
--   show incremental
--   show incremental entire document
--   show code fold
--   show code-fold entire document
--   show chalkboard
-:::
-
-# Exercise
-
--   Add a cross-reference and a citation
--   create and end slide
--   redirect the references to the next-to-last slide
-
-```{r, echo = FALSE}
-countdown::countdown(
-  minutes = 10,
   left = 0,
   right = 0,
   top = "80%",

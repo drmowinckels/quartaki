@@ -11,7 +11,7 @@
     "href": "index.html#r-packages",
     "title": "Quartaki",
     "section": "R packages",
-    "text": "R packages\nIn addition to Quarto, a series of R packages will also be needed to show-case the ways we can use Quarto to generate reports.\n\n# Run in R\ninstall.packages(c(\n  \"tidyverse\",     # data-wrangling\n  \"broom\",         # model tidying\n  \"knitr\",         # table printing\n  \"kableExtra\",    # pretty table printing\n  \"palmerpenguins\" # dataset\n))\n\nIf you have problems getting things installed, please contact me, and I will try help you get sorted."
+    "text": "R packages\nIn addition to Quarto, a series of R packages will also be needed to show-case the ways we can use Quarto to generate reports.\n\n# Run in R\ninstall.packages(c(\n  \"tidyverse\",     # data-wrangling\n  \"broom\",         # model tidying\n  \"knitr\",         # table printing\n  \"kableExtra\",    # pretty table printing\n  \"palmerpenguins\" # dataset\n))"
   },
   {
     "objectID": "00_intro.html#next-generation-r-markdown",
@@ -460,5 +460,19 @@
     "title": "Quarto",
     "section": "Cross-references",
     "text": "Cross-references\n\n\n\nType\nPrefix\n\n\n\n\nFigures\nfig-\n\n\nTables\ntbl-\n\n\nEquations\neq-\n\n\nSections\nsec-\n\n\nCode listing\nlst-\n\n\nTheorem\nthm-"
+  },
+  {
+    "objectID": "index.html#tinytex",
+    "href": "index.html#tinytex",
+    "title": "Quartaki",
+    "section": "Tinytex",
+    "text": "Tinytex\nWhen creating PDFs from Quarto, we need to have LaTeX installed for that conversion to happen. To install tinytex, open your RStudio and look for a tab called `Console`. Next to the console, there should be a tab called Terminal, and run the following command:\n\nquarto install tinytex\n\ntinytex is already installed and up to date.\n\n\nIf the terminal is not visible next to the console, you need to enable it. Go to Tools -> Terminal -> Move focus to Terminal and it should pop up."
+  },
+  {
+    "objectID": "index.html#troubleshooting",
+    "href": "index.html#troubleshooting",
+    "title": "Quartaki",
+    "section": "Troubleshooting",
+    "text": "Troubleshooting\nIf you have problems getting things installed, please contact me, and I will try help you get sorted."
   }
 ]
