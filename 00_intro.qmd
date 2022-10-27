@@ -156,17 +156,19 @@ Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-b
 
 ## Lists {.center}
 
-+------------------------------+-----------------------------+
-| Markdown Syntax              | Output                      |
-+==============================+=============================+
-|     * unordered list         | -   unordered list          |
-|         + sub-item 1         |                             |
-|         + sub-item 2         |     -   sub-item 1          |
-|             - sub-sub-item 1 |                             |
-|                              |     -   sub-item 2          |
-|                              |                             |
-|                              |         -   sub-sub-item 1  |
-+------------------------------+-----------------------------+
+::: {.nonincremental}
++------------------------------+----------------------------+
+| Markdown Syntax              | Output                     |
++==============================+============================+
+|     * unordered list         | -   unordered list         |
+|         + sub-item 1         |                            |
+|         + sub-item 2         |     -   sub-item 1         |
+|             - sub-sub-item 1 |                            |
+|                              |     -   sub-item 2         |
+|                              |                            |
+|                              |         -   sub-sub-item 1 |
++------------------------------+----------------------------+
+:::
 
 ::: footer
 Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html)
@@ -174,6 +176,7 @@ Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-b
 
 ## Lists {.center}
 
+::: {.nonincremental}
 +---------------------------------+----------------------------+
 | Markdown Syntax                 | Output                     |
 +=================================+============================+
@@ -185,6 +188,7 @@ Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-b
 |                                 |                            |
 |                                 |         A.  sub-sub-item 1 |
 +---------------------------------+----------------------------+
+:::
 
 ::: footer
 Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html)
@@ -270,17 +274,19 @@ Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-b
 
 ## Specials {.center}
 
-+------------------+-----------------+
-| Markdown Syntax  | Output          |
-+==================+=================+
-|     endash: --   | endash: --      |
-+------------------+-----------------+
-|     emdash: ---  | emdash: ---     |
-+------------------+-----------------+
-|     term         | term            |
-|     : definition |                 |
-|                  | :   definition  |
-+------------------+-----------------+
+::: {.nonincremental}
++------------------+----------------+
+| Markdown Syntax  | Output         |
++==================+================+
+|     endash: --   | endash: --     |
++------------------+----------------+
+|     emdash: ---  | emdash: ---    |
++------------------+----------------+
+|     term         | term           |
+|     : definition |                |
+|                  | :   definition |
++------------------+----------------+
+:::
 
 ::: footer
 Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html)
