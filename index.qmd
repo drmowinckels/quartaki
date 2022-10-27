@@ -22,6 +22,8 @@ While this workshop will focus on using Quarto with R, it also has native abilit
 -   Be able to use Academic Journal templates
 :::
 
+# Schedule
+
 ```{r}
 #| child: schedule.qmd
 ```

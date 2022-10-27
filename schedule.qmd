@@ -1,19 +1,13 @@
----
-editor: visual
----
-
-# Schedule
-
 -   Elements of a qmd ( \~ 45 minutes)
 
 -   Making our first html report ( \~ 45 minutes)
 
 -   Citations & cross-references ( \~ 30 minutes)
 
--   Making our first pdf report (\~ 30 hour)
-
 -   Lunch ( \~ 60 minutes)
 
--   Testing journal templates ( \~ 45 minutes)
+-   Making our first pdf report (\~ 30 hour)
+
+-   Testing journal templates ( \~ 30 minutes)
 
 -   Making our first presentation ( \~ 45 minutes)

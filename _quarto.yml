@@ -22,8 +22,9 @@ website:
 
 format:
   html:
-    theme: cosmo
-    css: lcbc-styles.scss
+    theme: 
+      - cosmo
+      - drmowinckels.scss
     toc: true
 
 editor: visual

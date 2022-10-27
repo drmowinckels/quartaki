@@ -1,0 +1,18 @@
+/*-- scss:defaults --*/
+
+$theme: "cerulean" !default;
+
+$primary:       #2e3d3d !default;
+$secondary:     #78888b !default;
+// $success:       $green !default;
+// $info:          $blue !default;
+// $warning:       $yellow !default;
+// $danger:        $red !default;
+// $light:         $gray-100 !default;
+// $dark:          $gray-800 !default;
+
+// Body
+$body-color:    $secondary:;
+
+// Fonts
+$headings-color: $primary;

@@ -67,19 +67,13 @@ Extensions are a powerful way to modify and extend the behavior of Quarto.
 
 ## Outline {.center}
 
--   Elements of a qmd ( \~ 45 minutes)
+::: {.nonincremental}
 
--   Making our first html report ( \~ 45 minutes)
+```{r}
+#| child: schedule.qmd
+```
 
--   Citations & cross-references ( \~ 30 minutes)
-
--   Making our first pdf report (\~ 30 hour)
-
--   Lunch ( \~ 60 minutes)
-
--   Testing journal templates ( \~ 45 minutes)
-
--   Making our first presentation ( \~ 45 minutes)
+:::
 
 ## Tools {.center}
 
@@ -156,18 +150,18 @@ Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-b
 
 ## Lists {.center}
 
-::: {.nonincremental}
-+------------------------------+----------------------------+
-| Markdown Syntax              | Output                     |
-+==============================+============================+
-|     * unordered list         | -   unordered list         |
-|         + sub-item 1         |                            |
-|         + sub-item 2         |     -   sub-item 1         |
-|             - sub-sub-item 1 |                            |
-|                              |     -   sub-item 2         |
-|                              |                            |
-|                              |         -   sub-sub-item 1 |
-+------------------------------+----------------------------+
+::: nonincremental
++------------------------------+-----------------------------+
+| Markdown Syntax              | Output                      |
++==============================+=============================+
+|     * unordered list         | -   unordered list          |
+|         + sub-item 1         |                             |
+|         + sub-item 2         |     -   sub-item 1          |
+|             - sub-sub-item 1 |                             |
+|                              |     -   sub-item 2          |
+|                              |                             |
+|                              |         -   sub-sub-item 1  |
++------------------------------+-----------------------------+
 :::
 
 ::: footer
@@ -176,7 +170,7 @@ Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-b
 
 ## Lists {.center}
 
-::: {.nonincremental}
+::: nonincremental
 +---------------------------------+----------------------------+
 | Markdown Syntax                 | Output                     |
 +=================================+============================+
@@ -274,18 +268,18 @@ Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-b
 
 ## Specials {.center}
 
-::: {.nonincremental}
-+------------------+----------------+
-| Markdown Syntax  | Output         |
-+==================+================+
-|     endash: --   | endash: --     |
-+------------------+----------------+
-|     emdash: ---  | emdash: ---    |
-+------------------+----------------+
-|     term         | term           |
-|     : definition |                |
-|                  | :   definition |
-+------------------+----------------+
+::: nonincremental
++------------------+-----------------+
+| Markdown Syntax  | Output          |
++==================+=================+
+|     endash: --   | endash: --      |
++------------------+-----------------+
+|     emdash: ---  | emdash: ---     |
++------------------+-----------------+
+|     term         | term            |
+|     : definition |                 |
+|                  | :   definition  |
++------------------+-----------------+
 :::
 
 ::: footer
