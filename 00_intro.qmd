@@ -67,12 +67,10 @@ Extensions are a powerful way to modify and extend the behavior of Quarto.
 
 ## Outline {.center}
 
-::: {.nonincremental}
-
+::: nonincremental
 ```{r}
-#| child: schedule.qmd
+#| child: child_docs/schedule.qmd
 ```
-
 :::
 
 ## Tools {.center}

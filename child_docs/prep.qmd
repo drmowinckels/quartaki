@@ -1,0 +1,38 @@
+# Preparations
+
+This introductory workshop to Quarto is being instructed using R and RStudio. It would be easiest for learners to follow along, and the instructor to help you , if you also use this set-up.
+
+Install instructions can be found on the RStudio webpages.
+
+A new version of RStudio and R is also recommended. Quarto is in rapid development, please make sure your RStudio is the newest version available (which will also install newest Quarto) to be able to follow along the workshop.
+
+You may choose to use vscode or another IDE, or even to do python in stead of R. However, know that the instructor will be less available to help using these tools, and code examples will need to be thought of by the learners them selves. Some examples on using other set-ups than R and RStudio can be found on the Quarto webpages.
+
+## R packages
+
+In addition to Quarto, a series of R packages will also be needed to show-case the ways we can use Quarto to generate reports.
+
+```r
+# Run in R
+install.packages(c(
+  "tidyverse",     # data-wrangling
+  "broom",         # model tidying
+  "knitr",         # table printing
+  "kableExtra",    # pretty table printing
+  "palmerpenguins" # dataset
+))
+```
+
+## Tinytex
+
+When creating PDFs from Quarto, we need to have LaTeX installed for that conversion to happen. To install tinytex, open your RStudio and look for a tab called `Console`. Next to the console, there should be a tab called Terminal, and run the following command:
+
+```bash
+quarto install tinytex
+```
+
+If the terminal is not visible next to the console, you need to enable it. Go to `Tools -> Terminal -> Move focus to Terminal` and it should pop up.
+
+## Troubleshooting
+
+If you have problems getting things installed, please contact me, and I will try help you get sorted.

@@ -2,11 +2,22 @@
 title: "Quartaki"
 subtitle: "--- 6 hour introduction to Quarto ---"
 author: Athanasia Mo Mowinckel
-format: 
-  html: 
-    toc: true
 ---
 
 ```{r}
-#| child: README.md
+#| child: child_docs/intro.qmd
+```
+
+```{r}
+#| child: child_docs/aims.qmd
+```
+
+## Schedule
+
+```{r}
+#| child: child_docs/schedule.qmd
+```
+
+```{r}
+#| child: child_docs/prep.qmd
 ```

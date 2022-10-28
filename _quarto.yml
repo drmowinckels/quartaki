@@ -2,11 +2,27 @@ project:
   type: website
   output-dir: docs
   render: 
-    - "!README*"
+    - "index.qmd"
+    - "00_intro.qmd"
 
 website:
-  title: "quartaki"
+  page-navigation: true
+  title: "Quartaki"
+  description: "Workshop materials for 6 hour workshop on Quarto"
+  site-url: "https://drmowinckels.github.io/quartaki/"
+
+  repo-url: https://github.com/drmowinckels/quartaki
+  repo-actions: [edit, issue]
+  
   navbar:
+    background: "#2e3d3d"
+    pinned: true
+    align: center
+    tools:
+      - icon: github
+        href: https://github.com/drmowinckels/quartaki
+        text: GitHub
+    style: docked
     left:
       - href: index.qmd
         text: Home
@@ -15,7 +31,7 @@ website:
       - href: 01_presentation.qmd
         text: Workshop slides
     right:
-      - href: https://github.com/drmowinckels/quartaki
+      - href: https://github.com/drmowinckels
         icon: github
       - href: https://drmowinckels.io
         icon: globe
@@ -24,9 +40,11 @@ website:
 
 format:
   html:
-    theme: 
-      - cosmo
-      - drmowinckels.scss
+    theme: [cosmo, drmowickel.scss]
+    toc: true
+    code-copy: true
+    code-overflow: scroll
+    highlight-style: a11y
 
 editor: visual
 

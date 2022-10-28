@@ -2,6 +2,10 @@
 toc-title: Table of contents
 ---
 
+# Quintro
+
+\-\-- 6 hour introduction to Quarto \-\--
+
 There are increasing demands on scientific staff in preparing reports
 for governmental and public dissemination, as well as scientific
 dissemination. Creating reports is a time-consuming task, as it often
@@ -73,8 +77,7 @@ and RStudio can be found on the Quarto webpages.
 In addition to Quarto, a series of R packages will also be needed to
 show-case the ways we can use Quarto to generate reports.
 
-::: cell
-``` {.r .cell-code}
+``` r
 # Run in R
 install.packages(c(
   "tidyverse",     # data-wrangling
@@ -84,7 +87,6 @@ install.packages(c(
   "palmerpenguins" # dataset
 ))
 ```
-:::
 
 ## Tinytex
 
@@ -93,15 +95,9 @@ conversion to happen. To install tinytex, open your RStudio and look for
 a tab called `Console`. Next to the console, there should be a tab
 called Terminal, and run the following command:
 
-::: cell
-``` {.bash .cell-code}
+``` bash
 quarto install tinytex
 ```
-
-::: {.cell-output .cell-output-stdout}
-    tinytex is already installed and up to date.
-:::
-:::
 
 If the terminal is not visible next to the console, you need to enable
 it. Go to `Tools -> Terminal -> Move focus to Terminal` and it should
