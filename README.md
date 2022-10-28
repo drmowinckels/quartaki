@@ -19,17 +19,21 @@ to interact with python, observable.js and Julia, without needing R
 installed. This makes Quarto a great tool to learn, no matter which
 language you focus on.
 
-Aims
+<div>
 
-Understand the basics of markdown
+> **Aims**
+>
+> Understand the basics of markdown
+>
+> Ability to generate html & pdf reports, and presentations
+>
+> Ability to cross-reference report content and add citations
+>
+> Be able to use Academic Journal templates
 
-Ability to generate html & pdf reports, and presentations
+</div>
 
-Ability to cross-reference report content and add citations
-
-Be able to use Academic Journal templates
-
-Schedule
+# Schedule
 
 -   Elements of a qmd ( \~ 45 minutes)
 
@@ -45,7 +49,7 @@ Schedule
 
 -   Making our first presentation ( \~ 45 minutes)
 
-Preparations
+# Preparations
 
 This introductory workshop to Quarto is being instructed using R and
 RStudio. It would be easiest for learners to follow along, and the
@@ -64,29 +68,46 @@ help using these tools, and code examples will need to be thought of by
 the learners them selves. Some examples on using other set-ups than R
 and RStudio can be found on the Quarto webpages.
 
-R packages
+## R packages
 
 In addition to Quarto, a series of R packages will also be needed to
 show-case the ways we can use Quarto to generate reports.
 
-{r} #\| eval: false \# Run in R install.packages(c( "tidyverse", \#
-data-wrangling "broom", \# model tidying "knitr", \# table printing
-"kableExtra", \# pretty table printing "palmerpenguins" \# dataset ))
+::: cell
+``` {.r .cell-code}
+# Run in R
+install.packages(c(
+  "tidyverse",     # data-wrangling
+  "broom",         # model tidying
+  "knitr",         # table printing
+  "kableExtra",    # pretty table printing
+  "palmerpenguins" # dataset
+))
+```
+:::
 
-Tinytex
+## Tinytex
 
 When creating PDFs from Quarto, we need to have LaTeX installed for that
 conversion to happen. To install tinytex, open your RStudio and look for
 a tab called `Console`. Next to the console, there should be a tab
 called Terminal, and run the following command:
 
-{bash} quarto install tinytex
+::: cell
+``` {.bash .cell-code}
+quarto install tinytex
+```
+
+::: {.cell-output .cell-output-stdout}
+    tinytex is already installed and up to date.
+:::
+:::
 
 If the terminal is not visible next to the console, you need to enable
-it. Go to Tools -\> Terminal -\> Move focus to Terminal and it should
+it. Go to `Tools -> Terminal -> Move focus to Terminal` and it should
 pop up.
 
-Troubleshooting
+## Troubleshooting
 
 If you have problems getting things installed, please contact me, and I
 will try help you get sorted.

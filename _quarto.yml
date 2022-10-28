@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: docs
+  render: 
+    - "!README*"
 
 website:
   title: "quartaki"
@@ -25,7 +27,6 @@ format:
     theme: 
       - cosmo
       - drmowinckels.scss
-    toc: true
 
 editor: visual
 
