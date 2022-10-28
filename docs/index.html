@@ -21,69 +21,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -182,20 +119,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#schedule" id="toc-schedule" class="nav-link active" data-scroll-target="#schedule">Schedule</a></li>
-  <li><a href="#schedule-1" id="toc-schedule-1" class="nav-link" data-scroll-target="#schedule-1">Schedule</a></li>
-  <li><a href="#preparations" id="toc-preparations" class="nav-link" data-scroll-target="#preparations">Preparations</a>
-  <ul class="collapse">
-  <li><a href="#r-packages" id="toc-r-packages" class="nav-link" data-scroll-target="#r-packages">R packages</a></li>
-  <li><a href="#tinytex" id="toc-tinytex" class="nav-link" data-scroll-target="#tinytex">Tinytex</a></li>
-  <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting">Troubleshooting</a></li>
-  </ul></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -224,82 +148,38 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
-<p>There are increasing demands on scientific staff in preparing reports for governmental and public dissemination, as well as scientific dissemination. Creating reports is a time-consuming task, as it often requires switching between programs for writing, doing analyses and creating tables and figures, as well as other graphical and textual programs. Learning efficient tools in combining programming and report generation are becoming increasingly important to alleviate the manual and burdensome process of switching programs.<br>
-<br>
-Quarto is a second generation report framework based on the popular markdown plain text format. Combining writing in markdown with the ability to run code to format, analyse, and visualise data, all in the same place, creates a seamless environment for the researchers to produce reports.<br>
-<br>
-While this workshop will focus on using Quarto with R, it also has native abilities to interact with python, observable.js and Julia, without needing R installed. This makes Quarto a great tool to learn, no matter which language you focus on.</p>
-<div class="callout-tip callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Aims
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li><p>Understand the basics of markdown</p></li>
-<li><p>Ability to generate html &amp; pdf reports, and presentations</p></li>
-<li><p>Ability to cross-reference report content and add citations</p></li>
-<li><p>Be able to use Academic Journal templates</p></li>
-</ul>
-</div>
-</div>
-<section id="schedule" class="level1">
-<h1>Schedule</h1>
-</section>
-<section id="schedule-1" class="level1">
-<h1>Schedule</h1>
+<p>There are increasing demands on scientific staff in preparing reports for governmental and public dissemination, as well as scientific dissemination. Creating reports is a time-consuming task, as it often requires switching between programs for writing, doing analyses and creating tables and figures, as well as other graphical and textual programs. Learning efficient tools in combining programming and report generation are becoming increasingly important to alleviate the manual and burdensome process of switching programs.Quarto is a second generation report framework based on the popular markdown plain text format. Combining writing in markdown with the ability to run code to format, analyse, and visualise data, all in the same place, creates a seamless environment for the researchers to produce reports.While this workshop will focus on using Quarto with R, it also has native abilities to interact with python, observable.js and Julia, without needing R installed. This makes Quarto a great tool to learn, no matter which language you focus on.</p>
+<p>Aims</p>
+<p>Understand the basics of markdown</p>
+<p>Ability to generate html &amp; pdf reports, and presentations</p>
+<p>Ability to cross-reference report content and add citations</p>
+<p>Be able to use Academic Journal templates</p>
+<p>Schedule</p>
 <ul>
 <li><p>Elements of a qmd ( ~ 45 minutes)</p></li>
 <li><p>Making our first html report ( ~ 45 minutes)</p></li>
 <li><p>Citations &amp; cross-references ( ~ 30 minutes)</p></li>
 <li><p>Lunch ( ~ 60 minutes)</p></li>
-<li><p>Making our first pdf report (~ 30 hour)</p></li>
+<li><p>Making our first pdf report (~ 30 minutes)</p></li>
 <li><p>Testing journal templates ( ~ 30 minutes)</p></li>
 <li><p>Making our first presentation ( ~ 45 minutes)</p></li>
 </ul>
-</section>
-<section id="preparations" class="level1">
-<h1>Preparations</h1>
+<p>Preparations</p>
 <p>This introductory workshop to Quarto is being instructed using R and RStudio. It would be easiest for learners to follow along, and the instructor to help you , if you also use this set-up.</p>
-<p>Install instructions can be found on the <a href="https://quarto.org/docs/get-started/">RStudio webpages</a>.</p>
-<p>A new version of <a href="https://www.rstudio.com/products/rstudio/download/#download">RStudio</a> and <a href="https://cran.r-project.org/">R</a> is also recommended. Quarto is in rapid development, please make sure your RStudio is the newest version available (which will also install newest Quarto) to be able to follow along the workshop.</p>
-<p>You may choose to use vscode or another IDE, or even to do python in stead of R. However, know that the instructor will be less available to help using these tools, and code examples will need to be thought of by the learners them selves. Some examples on using other set-ups than R and RStudio can be found on the <a href="https://quarto.org/docs/get-started/hello/vscode.html">Quarto webpages</a>.</p>
-<section id="r-packages" class="level2">
-<h2 class="anchored" data-anchor-id="r-packages">R packages</h2>
+<p>Install instructions can be found on the RStudio webpages.</p>
+<p>A new version of RStudio and R is also recommended. Quarto is in rapid development, please make sure your RStudio is the newest version available (which will also install newest Quarto) to be able to follow along the workshop.</p>
+<p>You may choose to use vscode or another IDE, or even to do python in stead of R. However, know that the instructor will be less available to help using these tools, and code examples will need to be thought of by the learners them selves. Some examples on using other set-ups than R and RStudio can be found on the Quarto webpages.</p>
+<p>R packages</p>
 <p>In addition to Quarto, a series of R packages will also be needed to show-case the ways we can use Quarto to generate reports.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Run in R</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"tidyverse"</span>,     <span class="co"># data-wrangling</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"broom"</span>,         <span class="co"># model tidying</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"knitr"</span>,         <span class="co"># table printing</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">"kableExtra"</span>,    <span class="co"># pretty table printing</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">"palmerpenguins"</span> <span class="co"># dataset</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="tinytex" class="level2">
-<h2 class="anchored" data-anchor-id="tinytex">Tinytex</h2>
-<p>When creating PDFs from Quarto, we need to have LaTeX installed for that conversion to happen. To install tinytex, open your RStudio and look for a tab called `Console`. Next to the console, there should be a tab called <code>Terminal</code>, and run the following command:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> install tinytex</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>tinytex is already installed and up to date.</code></pre>
-</div>
-</div>
-<p>If the terminal is not visible next to the console, you need to enable it. Go to <code>Tools -&gt; Terminal -&gt; Move focus to Terminal</code> and it should pop up.</p>
-</section>
-<section id="troubleshooting" class="level2">
-<h2 class="anchored" data-anchor-id="troubleshooting">Troubleshooting</h2>
-<p>If you have problems getting things installed, please <a href="mailto:a.m.mowinckel@psykologi.uio.no">contact me</a>, and I will try help you get sorted.</p>
+<p>{r} #| eval: false # Run in R install.packages(c( “tidyverse”, # data-wrangling “broom”, # model tidying “knitr”, # table printing “kableExtra”, # pretty table printing “palmerpenguins” # dataset ))</p>
+<p>Tinytex</p>
+<p>When creating PDFs from Quarto, we need to have LaTeX installed for that conversion to happen. To install tinytex, open your RStudio and look for a tab called <code>Console</code>. Next to the console, there should be a tab called Terminal, and run the following command:</p>
+<p>{bash} quarto install tinytex</p>
+<p>If the terminal is not visible next to the console, you need to enable it. Go to Tools -&gt; Terminal -&gt; Move focus to Terminal and it should pop up.</p>
+<p>Troubleshooting</p>
+<p>If you have problems getting things installed, please contact me, and I will try help you get sorted.</p>
 
 
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
