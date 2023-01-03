@@ -3,10 +3,11 @@ title: "Palmer penguins"
 author: Athanasia Mo Mowinckel
 date: 2022-10-26
 format: 
-  pdf:
+  html:
     toc: true
     toc-depth: 2
     toc-title: Contents
+    toc-location: left
     html-math-method: katex
     css: lcbc-styles.scss
     anchor-sections: true
@@ -123,3 +124,4 @@ penguins |>
                notation = "none") |> 
   collapse_rows(1:2)
 ```
+

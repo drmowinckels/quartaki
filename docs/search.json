@@ -11,21 +11,21 @@
     "href": "index.html#schedule",
     "title": "Quartaki",
     "section": "Schedule",
-    "text": "Schedule\n\nElements of a qmd ( ~ 45 minutes)\nMaking our first html report ( ~ 45 minutes)\nCitations & cross-references ( ~ 30 minutes)\nLunch ( ~ 60 minutes)\nMaking our first pdf report (~ 30 minutes)\nTesting journal templates ( ~ 30 minutes)\nMaking our first presentation ( ~ 45 minutes)"
+    "text": "Schedule\n\nElements of a qmd ( ~ 45 minutes)\nMaking our first html report ( ~ 45 minutes)\nCitations & cross-references ( ~ 45 minutes)\nLunch ( ~ 60 minutes)\nMaking our first pdf report (~ 45 minutes)\nTesting journal templates ( ~ 45 minutes)\nMaking our first presentation ( ~ 45 minutes)"
   },
   {
     "objectID": "index.html#r-packages",
     "href": "index.html#r-packages",
     "title": "Quartaki",
     "section": "R packages",
-    "text": "R packages\nIn addition to Quarto, a series of R packages will also be needed to show-case the ways we can use Quarto to generate reports.\n# Run in R\ninstall.packages(c(\n  \"tidyverse\",     # data-wrangling\n  \"broom\",         # model tidying\n  \"knitr\",         # table printing\n  \"kableExtra\",    # pretty table printing\n  \"palmerpenguins\" # dataset\n))"
+    "text": "R packages\nIn addition to Quarto, a series of R packages will also be needed to show-case the ways we can use Quarto to generate reports.\n# Run in R\ninstall.packages(c(\n  \"tidyverse\",     # data-wrangling\n  \"knitr\",         # table printing\n  \"kableExtra\",    # pretty table printing\n  \"palmerpenguins\" # dataset\n))"
   },
   {
     "objectID": "index.html#tinytex",
     "href": "index.html#tinytex",
     "title": "Quartaki",
     "section": "Tinytex",
-    "text": "Tinytex\nWhen creating PDFs from Quarto, we need to have LaTeX installed for that conversion to happen. To install tinytex, open your RStudio and look for a tab called Console. Next to the console, there should be a tab called Terminal, and run the following command:\nquarto install tinytex\nIf the terminal is not visible next to the console, you need to enable it. Go to Tools -> Terminal -> Move focus to Terminal and it should pop up."
+    "text": "Tinytex\nWhen creating PDFs from Quarto, we need to have LaTeX installed for that conversion to happen. To install tinytex, open your RStudio and look for a tab called Console (by default it should be in the lower left corner). Next to the console, there should be a tab called Terminal, and run the following command:\nquarto install tinytex\nIf the terminal is not visible next to the console, you need to enable it. Go to Tools -> Terminal -> Move focus to Terminal and it should pop up."
   },
   {
     "objectID": "index.html#troubleshooting",
@@ -137,7 +137,7 @@
     "href": "01_presentation.html#exercise",
     "title": "Quarto",
     "section": "Exercise",
-    "text": "Exercise\n\nCreate a list in your document, listing your favourite foods, at least the top three.\nMake the list ordered.\nAdd a horizontal rule after your list.\n\n\n\n\n−+\n10:00"
+    "text": "Exercise\n\n\nCreate a list in your document, listing your favourite foods, at least the top three. Render it.\nMake the list ordered. Render it.\nAdd a horizontal rule after your list. Render it.\n\n\n\n\n−+\n10:00"
   },
   {
     "objectID": "01_presentation.html#go-to-rstudio-1",
@@ -151,7 +151,7 @@
     "href": "01_presentation.html#exercise-1",
     "title": "Quarto",
     "section": "Exercise",
-    "text": "Exercise\n\n\n\n−+\n10:00"
+    "text": "Exercise\n\n\n\n\n\n\n\n−+\n10:00"
   },
   {
     "objectID": "01_presentation.html#cross-references-1",
@@ -340,7 +340,7 @@
     "href": "00_intro.html#outline",
     "title": "Quarto",
     "section": "Outline",
-    "text": "Outline\n\n\nElements of a qmd ( ~ 45 minutes)\nMaking our first html report ( ~ 45 minutes)\nCitations & cross-references ( ~ 30 minutes)\nLunch ( ~ 60 minutes)\nMaking our first pdf report (~ 30 minutes)\nTesting journal templates ( ~ 30 minutes)\nMaking our first presentation ( ~ 45 minutes)"
+    "text": "Outline\n\n\nElements of a qmd ( ~ 45 minutes)\nMaking our first html report ( ~ 45 minutes)\nCitations & cross-references ( ~ 45 minutes)\nLunch ( ~ 60 minutes)\nMaking our first pdf report (~ 45 minutes)\nTesting journal templates ( ~ 45 minutes)\nMaking our first presentation ( ~ 45 minutes)"
   },
   {
     "objectID": "00_intro.html#tools",
@@ -445,6 +445,13 @@
     "href": "00_intro.html#r-markdown-vs.-quarto",
     "title": "Quarto",
     "section": "R markdown vs. Quarto",
-    "text": "R markdown vs. Quarto\nCode chunks can be provided inside the code chunk\n\n\n```{r} #| code-fold: true #| code-summary: “Show the code” ```\n\n```{r echo = TRUE, message = FALSE ```"
+    "text": "R markdown vs. Quarto\nCode chunks can be provided inside the code chunk\n\n\n```{r}\n#| echo: true\n#| message: false\n```\n\n```{r echo = TRUE, message = FALSE ```"
+  },
+  {
+    "objectID": "index.html#check-the-install",
+    "href": "index.html#check-the-install",
+    "title": "Quartaki",
+    "section": "Check the install",
+    "text": "Check the install\nThe best way to confirm that everything is installed correctly, is to create a test quarto document. In RStudio, go to File -> New file -> Quarto document\n\n\n\nFill in the title, and choose to create a PDF document (this will also verify tinytex installation is successful).\nClick on Create.\n\nRStudio should open a document for you, which is the test document you will render.\nDon’t think about the content just now, but find the Render button at the top of the document.\nClick it and you should see some action in a new tab called “Background jobs”.\nIt will call on latex and maybe install some latex packages to create your document.\nIf it is successful, the RStudio Viewer window should come into focus and you will see a preview of a PDF document with the title “Test document”.\nThis means everything went fine and you are ready!"
   }
 ]

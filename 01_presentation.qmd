@@ -4,6 +4,7 @@ subtitle: "--- Creating documents ---"
 format:
   revealjs: 
     theme: [default, lcbc-styles.scss]
+    logo: /images/lcbc_logo_wide.png
     slide-number: c/t
     incremental: true
 bibliography: references.bib
@@ -174,18 +175,21 @@ More: [RStudio - HTML yaml](https://quarto.org/docs/output-formats/html-code.htm
 
 ## Exercise
 
--   Create a list in your document, listing your favourite foods, at least the top three.
+::: {.nonincremental}
 
--   Make the list *ordered.*
+-   Create a list in your document, listing your favourite foods, at least the top three. Render it.
 
--   Add a horizontal rule after your list.
+-   Make the list *ordered.* Render it.
 
-```{r, echo = FALSE}
+-   Add a horizontal rule after your list. Render it.
+
+```{r}
+#| echo: false
 countdown::countdown(
   minutes = 10,
   left = 0,
   right = 0,
-  top = "80%",
+  top = "40%",
   padding = "50px",
   margin = "10%",
   font_size = "4em",
@@ -195,6 +199,7 @@ countdown::countdown(
   warn_when = 30
 )
 ```
+::: 
 
 # Break
 
@@ -225,12 +230,17 @@ countdown::countdown(
 
 ## Exercise
 
-```{r, echo = FALSE}
+::: {.nonincremental}
+
+-   
+
+```{r}
+#| echo: false
 countdown::countdown(
   minutes = 10,
   left = 0,
   right = 0,
-  top = "80%",
+  top = "40%",
   padding = "50px",
   margin = "10%",
   font_size = "4em",
@@ -240,6 +250,8 @@ countdown::countdown(
   warn_when = 30
 )
 ```
+::: 
+
 
 # Break
 

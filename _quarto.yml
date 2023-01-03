@@ -4,11 +4,12 @@ project:
   render: 
     - "index.qmd"
     - "00_intro.qmd"
+    - "01_presentation.qmd"
 
 website:
   page-navigation: true
   title: "Quartaki"
-  description: "Workshop materials for 6 hour workshop on Quarto"
+  description: "Workshop materials for 1 day workshop on Quarto"
   site-url: "https://drmowinckels.github.io/quartaki/"
 
   repo-url: https://github.com/drmowinckels/quartaki

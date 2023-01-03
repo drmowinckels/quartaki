@@ -4,7 +4,7 @@ subtitle: "--- enables you to weave together content and executable code into a 
 format:
   revealjs: 
     theme: [default, lcbc-styles.scss]
-    logo: images/lcbc_logo_wide.png
+    logo: /images/lcbc_logo_wide.png
     slide-number: c/t
     incremental: true
 ---
@@ -149,17 +149,17 @@ Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-b
 ## Lists {.center}
 
 ::: nonincremental
-+------------------------------+-----------------------------+
-| Markdown Syntax              | Output                      |
-+==============================+=============================+
-|     * unordered list         | -   unordered list          |
-|         + sub-item 1         |                             |
-|         + sub-item 2         |     -   sub-item 1          |
-|             - sub-sub-item 1 |                             |
-|                              |     -   sub-item 2          |
-|                              |                             |
-|                              |         -   sub-sub-item 1  |
-+------------------------------+-----------------------------+
++------------------------------+----------------------------+
+| Markdown Syntax              | Output                     |
++==============================+============================+
+|     * unordered list         | -   unordered list         |
+|         + sub-item 1         |                            |
+|         + sub-item 2         |     -   sub-item 1         |
+|             - sub-sub-item 1 |                            |
+|                              |     -   sub-item 2         |
+|                              |                            |
+|                              |         -   sub-sub-item 1 |
++------------------------------+----------------------------+
 :::
 
 ::: footer
@@ -406,7 +406,13 @@ Code chunks can be provided inside the code chunk
 
 ::: columns
 ::: {.column width="50%"}
-**\`\`\`{r}** #\| code-fold: true #\| code-summary: "Show the code" **\`\`\`**
+**\`\`\`{r}**
+
+#\| echo: true
+
+#\| message: false
+
+**\`\`\`**
 :::
 
 ::: {.column width="50%"}
