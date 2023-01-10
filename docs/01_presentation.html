@@ -437,6 +437,8 @@
 <p>Add classes, attributes, and other identifiers to content using Divs and Span in [Callout Blocks].</p>
 <div class="columns">
 <div class="column">
+<p><img data-src="images/image-54128389.png"></p>
+</div><div class="column">
 <div class="sourceCode" id="cb1"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1"></a>::: {.border}</span>
 <span id="cb1-2"><a href="#cb1-2"></a>This content can be styled with a border</span>
 <span id="cb1-3"><a href="#cb1-3"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -467,20 +469,23 @@
 <h2>Divs</h2>
 <div class="columns">
 <div class="column">
+<p><img data-src="images/image-439765090.png"></p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1"></a>::::: {#special .sidebar}</span>
 <span id="cb3-2"><a href="#cb3-2"></a></span>
-<span id="cb3-3"><a href="#cb3-3"></a>::: {.warning}</span>
-<span id="cb3-4"><a href="#cb3-4"></a>Here is a warning.</span>
-<span id="cb3-5"><a href="#cb3-5"></a>:::</span>
-<span id="cb3-6"><a href="#cb3-6"></a></span>
-<span id="cb3-7"><a href="#cb3-7"></a>More content.</span>
-<span id="cb3-8"><a href="#cb3-8"></a>:::::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-3"><a href="#cb3-3"></a>::: callout-warning</span>
+<span id="cb3-4"><a href="#cb3-4"></a><span class="fu">## This is a warning block</span></span>
+<span id="cb3-5"><a href="#cb3-5"></a></span>
+<span id="cb3-6"><a href="#cb3-6"></a>That can be used for extra emphasis</span>
+<span id="cb3-7"><a href="#cb3-7"></a>:::</span>
+<span id="cb3-8"><a href="#cb3-8"></a></span>
+<span id="cb3-9"><a href="#cb3-9"></a>More content.</span>
+<span id="cb3-10"><a href="#cb3-10"></a>:::::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">&lt;div</span> <span class="er">id</span><span class="ot">=</span><span class="st">"special"</span> <span class="er">class</span><span class="ot">=</span><span class="st">"sidebar"</span><span class="kw">&gt;</span></span>
-<span id="cb4-2"><a href="#cb4-2"></a>  <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">"warning"</span><span class="kw">&gt;</span></span>
-<span id="cb4-3"><a href="#cb4-3"></a>    <span class="kw">&lt;p&gt;</span>Here is a warning.<span class="kw">&lt;/p&gt;</span></span>
-<span id="cb4-4"><a href="#cb4-4"></a>  <span class="kw">&lt;/div&gt;</span></span>
-<span id="cb4-5"><a href="#cb4-5"></a>  <span class="kw">&lt;p&gt;</span>More content.<span class="kw">&lt;/p&gt;</span></span>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">"callout-caption-container flex-fill"</span><span class="kw">&gt;</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a>  This is a warning block</span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="kw">&lt;/div&gt;</span></span>
+<span id="cb4-4"><a href="#cb4-4"></a><span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">"callout-body-container callout-body"</span><span class="kw">&gt;</span></span>
+<span id="cb4-5"><a href="#cb4-5"></a>  <span class="kw">&lt;p&gt;</span>That can be used for extra emphasis<span class="kw">&lt;/p&gt;</span></span>
 <span id="cb4-6"><a href="#cb4-6"></a><span class="kw">&lt;/div&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
@@ -489,34 +494,6 @@
 </div>
 <aside class="notes">
 <p>Fences without attributes are always closing fences. Unlike with fenced code blocks, the number of colons in the closing fence need not match the number in the opening fence. However, it can be helpful for visual clarity to use fences of different lengths to distinguish nested divs from their parents.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="spans" class="slide level2 center">
-<h2>Spans</h2>
-<div class="columns">
-<div class="column">
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1"></a><span class="co">[</span><span class="ot">This is *some text*</span><span class="co">]</span>{.class key="val"}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div><div class="column">
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb6-1"><a href="#cb6-1"></a><span class="kw">&lt;span</span> <span class="er">class</span><span class="ot">=</span><span class="st">"class"</span> <span class="er">data-key</span><span class="ot">=</span><span class="st">"val"</span><span class="kw">&gt;</span></span>
-<span id="cb6-2"><a href="#cb6-2"></a>  This is <span class="kw">&lt;em&gt;</span>some text<span class="kw">&lt;/em&gt;</span></span>
-<span id="cb6-3"><a href="#cb6-3"></a><span class="kw">&lt;/span&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-<div class="footer">
-<p>Source: <a href="https://quarto.org/docs/output-formats/html-code.html">RStudio - HTML Basics</a></p>
-</div>
-<aside class="notes">
-<p>A bracketed sequence of inlines, as one would use to begin a link, will be treated as a <code>Span</code> with attributes if it is followed immediately by attributes:</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -541,42 +518,8 @@
 </div>
 </section></section>
 <section>
-<section id="yaml" class="title-slide slide level1 center">
-<h1>Yaml</h1>
-<div class="columns">
-<div class="column">
-<ul>
-<li class="fragment">Most html options can be controlled via yaml</li>
-<li class="fragment">Most options come under the html format tag</li>
-<li class="fragment">be careful of indentation, it matters!</li>
-</ul>
-</div><div class="column">
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb7-1"><a href="#cb7-1"></a><span class="pp">---</span></span>
-<span id="cb7-2"><a href="#cb7-2"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"My document"</span></span>
-<span id="cb7-3"><a href="#cb7-3"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">"My name"</span></span>
-<span id="cb7-4"><a href="#cb7-4"></a><span class="fu">date</span><span class="kw">:</span><span class="at"> 2022-10-26</span></span>
-<span id="cb7-5"><a href="#cb7-5"></a><span class="fu">format</span><span class="kw">:</span></span>
-<span id="cb7-6"><a href="#cb7-6"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
-<span id="cb7-7"><a href="#cb7-7"></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb7-8"><a href="#cb7-8"></a><span class="at">    </span><span class="fu">toc-depth</span><span class="kw">:</span><span class="at"> </span><span class="dv">2</span></span>
-<span id="cb7-9"><a href="#cb7-9"></a><span class="at">    </span><span class="fu">toc-title</span><span class="kw">:</span><span class="at"> Contents</span></span>
-<span id="cb7-10"><a href="#cb7-10"></a><span class="at">    </span><span class="fu">html-math-method</span><span class="kw">:</span><span class="at"> katex</span></span>
-<span id="cb7-11"><a href="#cb7-11"></a><span class="at">    </span><span class="fu">css</span><span class="kw">:</span><span class="at"> styles.css</span></span>
-<span id="cb7-12"><a href="#cb7-12"></a><span class="at">    </span><span class="fu">anchor-sections</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb7-13"><a href="#cb7-13"></a><span class="at">    </span><span class="fu">smooth-scroll</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb7-14"><a href="#cb7-14"></a><span class="at">    </span><span class="fu">code-fold</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb7-15"><a href="#cb7-15"></a><span class="at">    </span><span class="fu">code-summary</span><span class="kw">:</span><span class="at"> </span><span class="st">"Show the code"</span></span>
-<span id="cb7-16"><a href="#cb7-16"></a><span class="at">    </span><span class="fu">code-overflow</span><span class="kw">:</span><span class="at"> wrap</span></span>
-<span id="cb7-17"><a href="#cb7-17"></a><span class="at">    </span><span class="fu">css</span><span class="kw">:</span><span class="at"> styles.css</span></span>
-<span id="cb7-18"><a href="#cb7-18"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-<div class="footer">
-<p>More: <a href="https://quarto.org/docs/output-formats/html-code.html">RStudio - HTML yaml</a></p>
-</div>
-</section>
-<section id="go-to-rstudio" class="slide level2">
-<h2>Go to RStudio</h2>
+<section id="go-to-rstudio" class="title-slide slide level1 center">
+<h1>Go to RStudio</h1>
 <aside class="notes">
 <ul>
 <li>File &gt; New File &gt; Quarto Document</li>
@@ -585,8 +528,6 @@
 <li>Render on save</li>
 <li>Run chunk by chunk</li>
 <li>Alter chunk code to see difference</li>
-<li>Alter output format</li>
-<li>Switch back to html format</li>
 </ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -604,13 +545,13 @@
 <h2>Exercise</h2>
 <div>
 <ul>
+<li><p>Write a little bit about your self. A sentence or two about your background and education.</p></li>
 <li><p>Create a list in your document, listing your favourite foods, at least the top three. Render it.</p></li>
 <li><p>Make the list <em>ordered.</em> Render it.</p></li>
-<li><p>Add a horizontal rule after your list. Render it.</p></li>
 </ul>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_3902488c" data-warn-when="30" data-update-every="1" data-play-sound="true" tabindex="0" style="top:40%;right:0;left:0;margin:10%;padding:50px;font-size:4em;">
+<div class="countdown" id="timer_3236e10d" data-warn-when="30" data-update-every="1" data-play-sound="true" tabindex="0" style="top:40%;right:0;left:0;margin:10%;padding:50px;font-size:4em;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -618,26 +559,49 @@
 </div>
 </div>
 </section></section>
-<section>
-<section id="break" class="title-slide slide level1 center">
-<h1>Break</h1>
-<div class="cell">
-<div class="cell-output-display">
-<div class="countdown" id="timer_a3699a27" data-warn-when="30" data-update-every="1" data-play-sound="true" tabindex="0" style="top:80%;right:0;left:0;margin:10%;padding:50px;font-size:4em;">
-<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
-<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+<section id="yaml" class="title-slide slide level1 center">
+<h1>Yaml</h1>
+<div class="columns">
+<div class="column">
+<ul>
+<li class="fragment"><p>Most html options can be controlled via yaml</p></li>
+<li class="fragment"><p>Most options come under the html format tag</p></li>
+<li class="fragment"><p>be careful of indentation, it matters!</p></li>
+</ul>
+</div><div class="column">
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb5-1"><a href="#cb5-1"></a><span class="pp">---</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"My document"</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">"My name"</span></span>
+<span id="cb5-4"><a href="#cb5-4"></a><span class="fu">date</span><span class="kw">:</span><span class="at"> 2022-10-26</span></span>
+<span id="cb5-5"><a href="#cb5-5"></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb5-6"><a href="#cb5-6"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="cb5-7"><a href="#cb5-7"></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb5-8"><a href="#cb5-8"></a><span class="at">    </span><span class="fu">toc-depth</span><span class="kw">:</span><span class="at"> </span><span class="dv">2</span></span>
+<span id="cb5-9"><a href="#cb5-9"></a><span class="at">    </span><span class="fu">toc-title</span><span class="kw">:</span><span class="at"> Contents</span></span>
+<span id="cb5-10"><a href="#cb5-10"></a><span class="at">    </span><span class="fu">html-math-method</span><span class="kw">:</span><span class="at"> katex</span></span>
+<span id="cb5-11"><a href="#cb5-11"></a><span class="at">    </span><span class="fu">css</span><span class="kw">:</span><span class="at"> styles.css</span></span>
+<span id="cb5-12"><a href="#cb5-12"></a><span class="at">    </span><span class="fu">anchor-sections</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb5-13"><a href="#cb5-13"></a><span class="at">    </span><span class="fu">smooth-scroll</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb5-14"><a href="#cb5-14"></a><span class="at">    </span><span class="fu">code-fold</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb5-15"><a href="#cb5-15"></a><span class="at">    </span><span class="fu">code-summary</span><span class="kw">:</span><span class="at"> </span><span class="st">"Show the code"</span></span>
+<span id="cb5-16"><a href="#cb5-16"></a><span class="at">    </span><span class="fu">code-overflow</span><span class="kw">:</span><span class="at"> wrap</span></span>
+<span id="cb5-17"><a href="#cb5-17"></a><span class="at">    </span><span class="fu">css</span><span class="kw">:</span><span class="at"> styles.css</span></span>
+<span id="cb5-18"><a href="#cb5-18"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
+<div class="footer">
+<p>More: <a href="https://quarto.org/docs/output-formats/html-code.html">RStudio - HTML yaml</a></p>
 </div>
 </section>
-<section id="go-to-rstudio-1" class="slide level2">
-<h2>Go to RStudio</h2>
+
+<section>
+<section id="go-to-rstudio-1" class="title-slide slide level1 center">
+<h1>Go to RStudio</h1>
 <aside class="notes">
 <ul>
-<li>Show visual editor shortcuts and inserts</li>
-<li>Start adding penguins stuff</li>
-<li>Add columns</li>
-<li>Alter yaml settings to show changes to doc</li>
+<li>Add toc</li>
+<li>Alter output format</li>
+<li>Switch back to html format</li>
 </ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -655,11 +619,52 @@
 <h2>Exercise</h2>
 <div>
 <ul>
-<li></li>
+<li><p>Change the title of the Table of Contents.</p></li>
+<li><p>Change the location of the Table of Contents.</p></li>
+<li><p>Turn on Anchored sections, what did that do?</p></li>
+<li><p>Turn on smooth-scroll, what did that do?</p></li>
 </ul>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_d7200d89" data-warn-when="30" data-update-every="1" data-play-sound="true" tabindex="0" style="top:40%;right:0;left:0;margin:10%;padding:50px;font-size:4em;">
+<div class="countdown" id="timer_40921017" data-warn-when="30" data-update-every="1" data-play-sound="true" tabindex="0" style="top:40%;right:0;left:0;margin:10%;padding:50px;font-size:4em;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="go-to-rstudio-2" class="slide level2">
+<h2>Go to RStudio</h2>
+<aside class="notes">
+<ul>
+<li>Show visual editor shortcuts and inserts</li>
+<li>Start adding penguins stuff</li>
+<li>Add columns</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="exercise-2" class="slide level2">
+<h2>Exercise</h2>
+<div>
+<ul>
+<li><p>Add a call out block with a tip about your favourite drink</p></li>
+<li><p>Add a horizontal rule</p></li>
+<li><p>Add a comment. What does that look like?</p></li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_f8dd5ce0" data-warn-when="30" data-update-every="1" data-play-sound="true" tabindex="0" style="top:40%;right:0;left:0;margin:10%;padding:50px;font-size:4em;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -667,11 +672,11 @@
 </div>
 </div>
 </section></section>
-<section id="break-1" class="title-slide slide level1 center">
+<section id="break" class="title-slide slide level1 center">
 <h1>Break</h1>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_027da8c0" data-warn-when="30" data-update-every="1" data-play-sound="true" tabindex="0" style="top:80%;right:0;left:0;margin:10%;padding:50px;font-size:4em;">
+<div class="countdown" id="timer_04678ea3" data-warn-when="30" data-update-every="1" data-play-sound="true" tabindex="0" style="top:80%;right:0;left:0;margin:10%;padding:50px;font-size:4em;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -690,7 +695,7 @@
 <thead>
 <tr class="header">
 <th>Type</th>
-<th>Prefix</th>
+<th>Label Prefix</th>
 </tr>
 </thead>
 <tbody>
@@ -720,8 +725,21 @@
 </tr>
 </tbody>
 </table>
+<aside class="notes">
+<p>When adding cross-references, its important to have in mind the prefixes necessary to make the cross-referencing work. Thankfully, these are fairly straight forward, but still do require some cognitive load on our part to learn them.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="go-to-rstudio-2" class="slide level2">
+<section id="go-to-rstudio-3" class="slide level2">
 <h2>Go to RStudio</h2>
 <aside class="notes">
 <ul>
@@ -739,42 +757,58 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="exercise-2" class="slide level2">
+<section id="exercise-3" class="slide level2">
 <h2>Exercise</h2>
+<div>
 <ul>
-<li class="fragment"><p>Take a screenshot of the countdown timer, and add the image to your document.</p></li>
-<li class="fragment"><p>Give the image a caption, and reference it in a piece of text.</p></li>
+<li><p>Take a screenshot of something on your screen, and add the image to your document.</p></li>
+<li><p>Give the image a caption, and reference it in a piece of text.</p></li>
 </ul>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_343185ca" data-warn-when="30" data-update-every="1" data-play-sound="true" tabindex="0" style="top:80%;right:0;left:0;margin:10%;padding:50px;font-size:4em;">
+<div class="countdown" id="timer_af15eb01" data-warn-when="30" data-update-every="1" data-play-sound="true" tabindex="0" style="top:40%;right:0;left:0;margin:10%;padding:50px;font-size:4em;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
 </div>
-</section>
-<section id="add-image" class="slide level2">
-<h2>Add image</h2>
+</div>
+<aside class="notes">
 <p>Have a look at <a href="#/fig-counter">Figure&nbsp;1</a>.</p>
-
-<img data-src="images/paste-04E127A0.png" class="r-stretch quarto-figure-center"><p class="caption">Figure&nbsp;1: Counter screenshot</p></section></section>
-<section id="break-2" class="title-slide slide level1 center">
-<h1>Break</h1>
-<div class="cell">
-<div class="cell-output-display">
-<div class="countdown" id="timer_5260c731" data-warn-when="30" data-update-every="1" data-play-sound="true" tabindex="0" style="top:80%;right:0;left:0;margin:10%;padding:50px;font-size:4em;">
-<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
-<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+<div id="fig-counter" class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/paste-04E127A0.png"></p>
+<p></p><figcaption>Figure&nbsp;1: Counter screenshot</figcaption><p></p>
+</figure>
 </div>
-</div>
-</div>
-</section>
-
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
 <section>
 <section id="citation" class="title-slide slide level1 center">
 <h1>Citation</h1>
 
+</section>
+<section id="adding-citations" class="slide level2">
+<h2>Adding citations</h2>
+<ul>
+<li class="fragment"><p>Can be added via <code>insert -&gt; citation</code></p>
+<ul>
+<li class="fragment">Brings up the UI</li>
+<li class="fragment">The UI can help you find refs, in addition to adding them to the doc.</li>
+</ul></li>
+<li class="fragment"><p>Can also be added directly with <code>@</code></p></li>
+<li class="fragment"><p>References are stored in bibtex files in your project</p></li>
+</ul>
 </section>
 <section id="citation-control" class="slide level2">
 <h2>Citation control</h2>
@@ -830,11 +864,11 @@ also @ggseg, chap. 1]</code></pre></td>
 </div><div class="column" style="width: 10%;">
 
 </div><div class="column" style="width: 45%;">
-<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb13-1"><a href="#cb13-1"></a><span class="pp">---</span></span>
-<span id="cb13-2"><a href="#cb13-2"></a><span class="fu">bibliography</span><span class="kw">:</span><span class="at"> references.bib</span></span>
-<span id="cb13-3"><a href="#cb13-3"></a><span class="fu">csl</span><span class="kw">:</span><span class="at"> nature.csl</span></span>
-<span id="cb13-4"><a href="#cb13-4"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Currently, only Zotero is supported as a reference manager.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb11-1"><a href="#cb11-1"></a><span class="pp">---</span></span>
+<span id="cb11-2"><a href="#cb11-2"></a><span class="fu">bibliography</span><span class="kw">:</span><span class="at"> references.bib</span></span>
+<span id="cb11-3"><a href="#cb11-3"></a><span class="fu">csl</span><span class="kw">:</span><span class="at"> nature.csl</span></span>
+<span id="cb11-4"><a href="#cb11-4"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Currently, only Zotero is supported as a connected reference manager.</p>
 </div>
 </div>
 </section>
@@ -853,9 +887,10 @@ Biswal, Bharat B., Maarten Mennes, Xi-Nian Nian Zuo, Suril Gohel, Clare Kelly, S
 Mowinckel, Athanasia M., and Didac Vidal-Piñeiro. 2019. <span>“Visualisation of Brain Statistics with r-Packages Ggseg and Ggseg3d.”</span>
 </div>
 </div>
-</section>
-<section id="go-to-rstudio-3" class="slide level2">
-<h2>Go to RStudio</h2>
+</section></section>
+<section>
+<section id="go-to-rstudio-4" class="title-slide slide level1 center">
+<h1>Go to RStudio</h1>
 <aside class="notes">
 <ul>
 <li>Show the insert citation tool</li>
@@ -875,18 +910,20 @@ Mowinckel, Athanasia M., and Didac Vidal-Piñeiro. 2019. <span>“Visualisation 
           display:block!important;
       }</style></aside>
 </section>
-<section id="exercise-3" class="slide level2">
+<section id="exercise-4" class="slide level2">
 <h2>Exercise</h2>
+<div>
 <ul>
-<li class="fragment">Add a citation to an important paper in your field searching for its DOI</li>
-<li class="fragment">Cite it in text using three different ways of controlling citation appearance (1. standard, 2. name &amp; year in parentheses, 3. year only)</li>
-<li class="fragment">Redirect the reference generation to a specific spot in your document</li>
+<li>Add a citation to an important paper in your field searching for its DOI</li>
+<li>Cite it in text using three different ways of controlling citation appearance (1. standard, 2. name &amp; year in parentheses, 3. year only)</li>
+<li>Redirect the reference generation to a specific spot in your document</li>
 </ul>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_96973b42" data-warn-when="30" data-update-every="1" data-play-sound="true" tabindex="0" style="top:80%;right:0;left:0;margin:10%;padding:50px;font-size:4em;">
+<div class="countdown" id="timer_068409aa" data-warn-when="30" data-update-every="1" data-play-sound="true" tabindex="0" style="top:50%;right:0;left:0;margin:10%;padding:50px;font-size:4em;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
 </div>
 </div>
 </div>
@@ -895,7 +932,7 @@ Mowinckel, Athanasia M., and Didac Vidal-Piñeiro. 2019. <span>“Visualisation 
 <h1>Lunch</h1>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_4164913a" data-warn-when="30" data-update-every="1" data-play-sound="true" tabindex="0" style="top:80%;right:0;left:0;margin:10%;padding:50px;font-size:4em;">
+<div class="countdown" id="timer_30ee0a5f" data-warn-when="30" data-update-every="1" data-play-sound="true" tabindex="0" style="top:80%;right:0;left:0;margin:10%;padding:50px;font-size:4em;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">60</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -910,28 +947,28 @@ Mowinckel, Athanasia M., and Didac Vidal-Piñeiro. 2019. <span>“Visualisation 
 </section>
 <section id="very-controlled-by-yaml" class="slide level2">
 <h2>Very controlled by yaml</h2>
-<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb15-1"><a href="#cb15-1"></a><span class="pp">---</span></span>
-<span id="cb15-2"><a href="#cb15-2"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"My document"</span></span>
-<span id="cb15-3"><a href="#cb15-3"></a><span class="fu">format</span><span class="kw">:</span></span>
-<span id="cb15-4"><a href="#cb15-4"></a><span class="at">  </span><span class="fu">pdf</span><span class="kw">:</span></span>
-<span id="cb15-5"><a href="#cb15-5"></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb15-6"><a href="#cb15-6"></a><span class="at">    </span><span class="fu">toc-depth</span><span class="kw">:</span><span class="at"> </span><span class="dv">2</span></span>
-<span id="cb15-7"><a href="#cb15-7"></a><span class="at">    </span><span class="fu">toc-title</span><span class="kw">:</span><span class="at"> Contents</span></span>
-<span id="cb15-8"><a href="#cb15-8"></a><span class="at">    </span><span class="fu">number-sections</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb15-9"><a href="#cb15-9"></a><span class="at">    </span><span class="fu">colorlinks</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb15-10"><a href="#cb15-10"></a><span class="at">    </span><span class="fu">keep-tex</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb15-11"><a href="#cb15-11"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb13-1"><a href="#cb13-1"></a><span class="pp">---</span></span>
+<span id="cb13-2"><a href="#cb13-2"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"My document"</span></span>
+<span id="cb13-3"><a href="#cb13-3"></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb13-4"><a href="#cb13-4"></a><span class="at">  </span><span class="fu">pdf</span><span class="kw">:</span></span>
+<span id="cb13-5"><a href="#cb13-5"></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb13-6"><a href="#cb13-6"></a><span class="at">    </span><span class="fu">toc-depth</span><span class="kw">:</span><span class="at"> </span><span class="dv">2</span></span>
+<span id="cb13-7"><a href="#cb13-7"></a><span class="at">    </span><span class="fu">toc-title</span><span class="kw">:</span><span class="at"> Contents</span></span>
+<span id="cb13-8"><a href="#cb13-8"></a><span class="at">    </span><span class="fu">number-sections</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb13-9"><a href="#cb13-9"></a><span class="at">    </span><span class="fu">colorlinks</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb13-10"><a href="#cb13-10"></a><span class="at">    </span><span class="fu">keep-tex</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb13-11"><a href="#cb13-11"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="footer">
 <p>Source: RStudio - <a href="https://quarto.org/docs/output-formats/pdf-basics.html">Quarto PDF basics</a></p>
 </div>
-</section>
-<section id="go-to-rstudio-4" class="slide level2">
-<h2>Go to RStudio</h2>
+</section></section>
+<section id="go-to-rstudio-5" class="title-slide slide level1 center">
+<h1>Go to RStudio</h1>
 <aside class="notes">
 <ul>
 <li>Change html document to pdf</li>
-<li>try to render</li>
-<li>what are differences?</li>
+<li>Try to render</li>
+<li>What are differences?</li>
 </ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -945,26 +982,30 @@ Mowinckel, Athanasia M., and Didac Vidal-Piñeiro. 2019. <span>“Visualisation 
           display:block!important;
       }</style></aside>
 </section>
-<section id="exercise-4" class="slide level2">
-<h2>Exercise</h2>
+
+<section id="exercise-5" class="title-slide slide level1 center">
+<h1>Exercise</h1>
+<div>
 <ul>
-<li class="fragment">Add some headers, what does that do?</li>
-<li class="fragment">Add section numbering, what does that do?</li>
+<li>Add some headers, what does that do?</li>
+<li>Add section numbering, what does that do?</li>
 </ul>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_3f354ffc" data-warn-when="30" data-update-every="1" data-play-sound="true" tabindex="0" style="top:80%;right:0;left:0;margin:10%;padding:50px;font-size:4em;">
+<div class="countdown" id="timer_755db7b8" data-warn-when="30" data-update-every="1" data-play-sound="true" tabindex="0" style="top:80%;right:0;left:0;margin:10%;padding:50px;font-size:4em;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
 </div>
-</section></section>
-<section id="break-3" class="title-slide slide level1 center">
+</div>
+</section>
+
+<section id="break-1" class="title-slide slide level1 center">
 <h1>Break</h1>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_5a2e337d" data-warn-when="30" data-update-every="1" data-play-sound="true" tabindex="0" style="top:80%;right:0;left:0;margin:10%;padding:50px;font-size:4em;">
+<div class="countdown" id="timer_e325e023" data-warn-when="30" data-update-every="1" data-play-sound="true" tabindex="0" style="top:80%;right:0;left:0;margin:10%;padding:50px;font-size:4em;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -983,33 +1024,33 @@ Mowinckel, Athanasia M., and Didac Vidal-Piñeiro. 2019. <span>“Visualisation 
 <h2>Authors and affiliations</h2>
 <div class="columns">
 <div class="column">
-<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb16-1"><a href="#cb16-1"></a><span class="fu">author</span><span class="kw">:</span></span>
-<span id="cb16-2"><a href="#cb16-2"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span></span>
-<span id="cb16-3"><a href="#cb16-3"></a><span class="at">      </span><span class="fu">given</span><span class="kw">:</span><span class="at"> Norah</span></span>
-<span id="cb16-4"><a href="#cb16-4"></a><span class="at">      </span><span class="fu">family</span><span class="kw">:</span><span class="at"> Jones</span></span>
-<span id="cb16-5"><a href="#cb16-5"></a><span class="at">      </span><span class="fu">literal</span><span class="kw">:</span><span class="at"> Norah Jones</span></span>
-<span id="cb16-6"><a href="#cb16-6"></a><span class="at">      </span><span class="fu">affiliations</span><span class="kw">:</span></span>
-<span id="cb16-7"><a href="#cb16-7"></a><span class="at">        </span><span class="kw">-</span><span class="at"> </span><span class="fu">ref</span><span class="kw">:</span><span class="at"> cmu</span></span>
-<span id="cb16-8"><a href="#cb16-8"></a><span class="at">        </span><span class="kw">-</span><span class="at"> </span><span class="fu">ref</span><span class="kw">:</span><span class="at"> chicago</span></span>
-<span id="cb16-9"><a href="#cb16-9"></a><span class="at">    </span><span class="fu">attributes</span><span class="kw">:</span></span>
-<span id="cb16-10"><a href="#cb16-10"></a><span class="at">      </span><span class="fu">corresponding</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb14-1"><a href="#cb14-1"></a><span class="fu">author</span><span class="kw">:</span></span>
+<span id="cb14-2"><a href="#cb14-2"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span></span>
+<span id="cb14-3"><a href="#cb14-3"></a><span class="at">      </span><span class="fu">given</span><span class="kw">:</span><span class="at"> Norah</span></span>
+<span id="cb14-4"><a href="#cb14-4"></a><span class="at">      </span><span class="fu">family</span><span class="kw">:</span><span class="at"> Jones</span></span>
+<span id="cb14-5"><a href="#cb14-5"></a><span class="at">      </span><span class="fu">literal</span><span class="kw">:</span><span class="at"> Norah Jones</span></span>
+<span id="cb14-6"><a href="#cb14-6"></a><span class="at">      </span><span class="fu">affiliations</span><span class="kw">:</span></span>
+<span id="cb14-7"><a href="#cb14-7"></a><span class="at">        </span><span class="kw">-</span><span class="at"> </span><span class="fu">ref</span><span class="kw">:</span><span class="at"> cmu</span></span>
+<span id="cb14-8"><a href="#cb14-8"></a><span class="at">        </span><span class="kw">-</span><span class="at"> </span><span class="fu">ref</span><span class="kw">:</span><span class="at"> chicago</span></span>
+<span id="cb14-9"><a href="#cb14-9"></a><span class="at">    </span><span class="fu">attributes</span><span class="kw">:</span></span>
+<span id="cb14-10"><a href="#cb14-10"></a><span class="at">      </span><span class="fu">corresponding</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
-<div class="sourceCode" id="cb17"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb17-1"><a href="#cb17-1"></a><span class="fu">affiliations</span><span class="kw">:</span></span>
-<span id="cb17-2"><a href="#cb17-2"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">id</span><span class="kw">:</span><span class="at"> cmu</span></span>
-<span id="cb17-3"><a href="#cb17-3"></a><span class="at">    </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Carnegie Mellon University</span></span>
-<span id="cb17-4"><a href="#cb17-4"></a><span class="at">    </span><span class="fu">city</span><span class="kw">:</span><span class="at"> Pittsburgh</span></span>
-<span id="cb17-5"><a href="#cb17-5"></a><span class="at">    </span><span class="fu">state</span><span class="kw">:</span><span class="at"> PA</span></span>
-<span id="cb17-6"><a href="#cb17-6"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">id</span><span class="kw">:</span><span class="at"> chicago</span></span>
-<span id="cb17-7"><a href="#cb17-7"></a><span class="at">    </span><span class="fu">name</span><span class="kw">:</span><span class="at"> University of Chicago</span></span>
-<span id="cb17-8"><a href="#cb17-8"></a><span class="at">    </span><span class="fu">city</span><span class="kw">:</span><span class="at"> Chicago</span></span>
-<span id="cb17-9"><a href="#cb17-9"></a><span class="at">    </span><span class="fu">state</span><span class="kw">:</span><span class="at"> IL</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb15-1"><a href="#cb15-1"></a><span class="fu">affiliations</span><span class="kw">:</span></span>
+<span id="cb15-2"><a href="#cb15-2"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">id</span><span class="kw">:</span><span class="at"> cmu</span></span>
+<span id="cb15-3"><a href="#cb15-3"></a><span class="at">    </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Carnegie Mellon University</span></span>
+<span id="cb15-4"><a href="#cb15-4"></a><span class="at">    </span><span class="fu">city</span><span class="kw">:</span><span class="at"> Pittsburgh</span></span>
+<span id="cb15-5"><a href="#cb15-5"></a><span class="at">    </span><span class="fu">state</span><span class="kw">:</span><span class="at"> PA</span></span>
+<span id="cb15-6"><a href="#cb15-6"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">id</span><span class="kw">:</span><span class="at"> chicago</span></span>
+<span id="cb15-7"><a href="#cb15-7"></a><span class="at">    </span><span class="fu">name</span><span class="kw">:</span><span class="at"> University of Chicago</span></span>
+<span id="cb15-8"><a href="#cb15-8"></a><span class="at">    </span><span class="fu">city</span><span class="kw">:</span><span class="at"> Chicago</span></span>
+<span id="cb15-9"><a href="#cb15-9"></a><span class="at">    </span><span class="fu">state</span><span class="kw">:</span><span class="at"> IL</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <div class="footer">
 <p>Source: <a href="https://quarto.org/docs/journals/authors.html">RStudio - Quarto Journal authors</a></p>
 </div>
 </section>
-<section id="go-to-rstudio-5" class="slide level2">
+<section id="go-to-rstudio-6" class="slide level2">
 <h2>Go to RStudio</h2>
 <aside class="notes">
 <ul>
@@ -1032,7 +1073,7 @@ Mowinckel, Athanasia M., and Didac Vidal-Piñeiro. 2019. <span>“Visualisation 
           display:block!important;
       }</style></aside>
 </section>
-<section id="exercise-5" class="slide level2">
+<section id="exercise-6" class="slide level2">
 <h2>Exercise</h2>
 <ul>
 <li class="fragment"><p>Adapt the plos template to include the same content as our pdf document</p></li>
@@ -1040,18 +1081,18 @@ Mowinckel, Athanasia M., and Didac Vidal-Piñeiro. 2019. <span>“Visualisation 
 </ul>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_662ba2b3" data-warn-when="30" data-update-every="1" data-play-sound="true" tabindex="0" style="top:80%;right:0;left:0;margin:10%;padding:50px;font-size:4em;">
+<div class="countdown" id="timer_12cecf46" data-warn-when="30" data-update-every="1" data-play-sound="true" tabindex="0" style="top:80%;right:0;left:0;margin:10%;padding:50px;font-size:4em;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
 </div>
 </section></section>
-<section id="break-4" class="title-slide slide level1 center">
+<section id="break-2" class="title-slide slide level1 center">
 <h1>Break</h1>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_ba157b05" data-warn-when="30" data-update-every="1" data-play-sound="true" tabindex="0" style="top:80%;right:0;left:0;margin:10%;padding:50px;font-size:4em;">
+<div class="countdown" id="timer_e449322e" data-warn-when="30" data-update-every="1" data-play-sound="true" tabindex="0" style="top:80%;right:0;left:0;margin:10%;padding:50px;font-size:4em;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -1113,7 +1154,7 @@ format: revealjs
 - Out on the street
 - the traffic starts jumpin'</code></pre>
 </section>
-<section id="go-to-rstudio-6" class="slide level2">
+<section id="go-to-rstudio-7" class="slide level2">
 <h2>Go to RStudio</h2>
 <aside class="notes">
 <ul>
@@ -1134,7 +1175,7 @@ format: revealjs
           display:block!important;
       }</style></aside>
 </section>
-<section id="exercise-6" class="slide level2">
+<section id="exercise-7" class="slide level2">
 <h2>Exercise</h2>
 <ul>
 <li class="fragment">Adapt the remaining of the document so that you have distinct slides for all content</li>
@@ -1143,18 +1184,18 @@ format: revealjs
 </ul>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_7203e8e3" data-warn-when="30" data-update-every="1" data-play-sound="true" tabindex="0" style="top:80%;right:0;left:0;margin:10%;padding:50px;font-size:4em;">
+<div class="countdown" id="timer_bc69ba8e" data-warn-when="30" data-update-every="1" data-play-sound="true" tabindex="0" style="top:80%;right:0;left:0;margin:10%;padding:50px;font-size:4em;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
 </div>
 </section></section>
-<section id="break-5" class="title-slide slide level1 center">
+<section id="break-3" class="title-slide slide level1 center">
 <h1>Break</h1>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_34c357c6" data-warn-when="30" data-update-every="1" data-play-sound="true" tabindex="0" style="top:80%;right:0;left:0;margin:10%;padding:50px;font-size:4em;">
+<div class="countdown" id="timer_0097dfa2" data-warn-when="30" data-update-every="1" data-play-sound="true" tabindex="0" style="top:80%;right:0;left:0;margin:10%;padding:50px;font-size:4em;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>

@@ -25,6 +25,10 @@ Add classes, attributes, and other identifiers to content using Divs and Span in
 
 ::: columns
 ::: column
+![](images/image-54128389.png)
+:::
+
+::: column
 ``` markdown
 ::: {.border}
 This content can be styled with a border
@@ -53,11 +57,15 @@ Divs start with a fence containing at least three consecutive colons plus some a
 
 ::: columns
 ::: column
+![](images/image-439765090.png)
+
 ``` markdown
 ::::: {#special .sidebar}
 
-::: {.warning}
-Here is a warning.
+::: callout-warning
+## This is a warning block
+
+That can be used for extra emphasis
 :::
 
 More content.
@@ -67,11 +75,11 @@ More content.
 
 ::: column
 ``` html
-<div id="special" class="sidebar">
-  <div class="warning">
-    <p>Here is a warning.</p>
-  </div>
-  <p>More content.</p>
+<div class="callout-caption-container flex-fill">
+  This is a warning block
+</div>
+<div class="callout-body-container callout-body">
+  <p>That can be used for extra emphasis</p>
 </div>
 ```
 :::
@@ -85,31 +93,6 @@ Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-b
 Fences without attributes are always closing fences. Unlike with fenced code blocks, the number of colons in the closing fence need not match the number in the opening fence. However, it can be helpful for visual clarity to use fences of different lengths to distinguish nested divs from their parents.
 :::
 
-## Spans {.center}
-
-::: columns
-::: column
-``` markdown
-[This is *some text*]{.class key="val"}
-```
-:::
-
-::: column
-``` html
-<span class="class" data-key="val">
-  This is <em>some text</em>
-</span>
-```
-:::
-:::
-
-::: footer
-Source: [RStudio - HTML Basics](https://quarto.org/docs/output-formats/html-code.html)
-:::
-
-::: notes
-A bracketed sequence of inlines, as one would use to begin a link, will be treated as a `Span` with attributes if it is followed immediately by attributes:
-:::
 
 ## css and filters {.center}
 
@@ -123,12 +106,53 @@ A bracketed sequence of inlines, as one would use to begin a link, will be treat
 Source: [RStudio - HTML Basics](https://quarto.org/docs/output-formats/html-code.html)
 :::
 
+# Go to RStudio
+
+::: notes
+-   File \> New File \> Quarto Document
+-   Have a look at its components
+-   Render
+-   Render on save
+-   Run chunk by chunk
+-   Alter chunk code to see difference
+:::
+
+## Exercise
+
+::: nonincremental
+-   Write a little bit about your self. A sentence or two about your background and education.  
+
+-   Create a list in your document, listing your favourite foods, at least the top three. Render it.
+
+-   Make the list *ordered.* Render it.
+
+
+```{r}
+#| echo: false
+countdown::countdown(
+  minutes = 10,
+  left = 0,
+  right = 0,
+  top = "40%",
+  padding = "50px",
+  margin = "10%",
+  font_size = "4em",
+  color_running_background  = "transparent",
+  color_finished_background = "#ffffff",
+  play_sound = TRUE,
+  warn_when = 30
+)
+```
+:::
+
 # Yaml
 
 ::: columns
 ::: column
 -   Most html options can be controlled via yaml
+
 -   Most options come under the html format tag
+
 -   be careful of indentation, it matters!
 :::
 
@@ -160,28 +184,25 @@ format:
 More: [RStudio - HTML yaml](https://quarto.org/docs/output-formats/html-code.html)
 :::
 
-## Go to RStudio
+# Go to RStudio
 
 ::: notes
--   File \> New File \> Quarto Document
--   Have a look at its components
--   Render
--   Render on save
--   Run chunk by chunk
--   Alter chunk code to see difference
+-   Add toc
 -   Alter output format
 -   Switch back to html format
 :::
 
 ## Exercise
 
-::: {.nonincremental}
+::: nonincremental
 
--   Create a list in your document, listing your favourite foods, at least the top three. Render it.
+-   Change the title of the Table of Contents.
 
--   Make the list *ordered.* Render it.
+-   Change the location of the Table of Contents.
 
--   Add a horizontal rule after your list. Render it.
+-   Turn on Anchored sections, what did that do?
+
+-   Turn on smooth-scroll, what did that do?
 
 ```{r}
 #| echo: false
@@ -199,25 +220,8 @@ countdown::countdown(
   warn_when = 30
 )
 ```
-::: 
+:::
 
-# Break
-
-```{r, echo = FALSE}
-countdown::countdown(
-  minutes = 5,
-  left = 0,
-  right = 0,
-  top = "80%",
-  padding = "50px",
-  margin = "10%",
-  font_size = "4em",
-  color_running_background  = "transparent",
-  color_finished_background = "#ffffff",
-  play_sound = TRUE,
-  warn_when = 30
-)
-```
 
 ## Go to RStudio
 
@@ -225,14 +229,17 @@ countdown::countdown(
 -   Show visual editor shortcuts and inserts
 -   Start adding penguins stuff
 -   Add columns
--   Alter yaml settings to show changes to doc
 :::
 
 ## Exercise
 
-::: {.nonincremental}
+::: nonincremental
 
--   
+-   Add a call out block with a tip about your favourite drink
+
+-   Add a horizontal rule
+
+-   Add a comment. What does that look like?
 
 ```{r}
 #| echo: false
@@ -250,8 +257,7 @@ countdown::countdown(
   warn_when = 30
 )
 ```
-::: 
-
+:::
 
 # Break
 
@@ -275,14 +281,19 @@ countdown::countdown(
 
 ## Cross-references
 
-| Type         | Prefix |
-|--------------|--------|
-| Figures      | fig-   |
-| Tables       | tbl-   |
-| Equations    | eq-    |
-| Sections     | sec-   |
-| Code listing | lst-   |
-| Theorem      | thm-   |
+| Type         | Label Prefix |
+|--------------|--------------|
+| Figures      | fig-         |
+| Tables       | tbl-         |
+| Equations    | eq-          |
+| Sections     | sec-         |
+| Code listing | lst-         |
+| Theorem      | thm-         |
+
+::: notes
+When adding cross-references, its important to have in mind the prefixes necessary to make the cross-referencing work.
+Thankfully, these are fairly straight forward, but still do require some cognitive load on our part to learn them.
+:::
 
 ## Go to RStudio
 
@@ -292,7 +303,8 @@ countdown::countdown(
 
 ## Exercise
 
--   Take a screenshot of the countdown timer, and add the image to your document.
+::: nonincremental
+-   Take a screenshot of something on your screen, and add the image to your document.
 
 -   Give the image a caption, and reference it in a piece of text.
 
@@ -301,7 +313,7 @@ countdown::countdown(
   minutes = 10,
   left = 0,
   right = 0,
-  top = "80%",
+  top = "40%",
   padding = "50px",
   margin = "10%",
   font_size = "4em",
@@ -311,32 +323,26 @@ countdown::countdown(
   warn_when = 30
 )
 ```
+:::
 
-## Add image
-
+::: notes
 Have a look at @fig-counter.
 
 ![Counter screenshot](images/paste-04E127A0.png){#fig-counter}
+:::
 
-# Break
-
-```{r, echo = FALSE}
-countdown::countdown(
-  minutes = 5,
-  left = 0,
-  right = 0,
-  top = "80%",
-  padding = "50px",
-  margin = "10%",
-  font_size = "4em",
-  color_running_background  = "transparent",
-  color_finished_background = "#ffffff",
-  play_sound = TRUE,
-  warn_when = 30
-)
-```
 
 # Citation
+
+## Adding citations
+
+-   Can be added via `insert -> citation`
+    -   Brings up the UI
+    -   The UI can help you find refs, in addition to adding them to the doc.
+
+-   Can also be added directly with `@`
+
+-   References are stored in bibtex files in your project
 
 ## Citation control
 
@@ -377,7 +383,7 @@ csl: nature.csl
 ---
 ```
 
-Currently, only Zotero is supported as a reference manager.
+Currently, only Zotero is supported as a connected reference manager.
 :::
 :::
 
@@ -395,7 +401,7 @@ Currently, only Zotero is supported as a reference manager.
 ::: {#refs}
 :::
 
-## Go to RStudio
+# Go to RStudio
 
 ::: notes
 -   Show the insert citation tool
@@ -406,6 +412,7 @@ Currently, only Zotero is supported as a reference manager.
 
 ## Exercise
 
+::: nonincremental
 -   Add a citation to an important paper in your field searching for its DOI
 -   Cite it in text using three different ways of controlling citation appearance (1. standard, 2. name & year in parentheses, 3. year only)
 -   Redirect the reference generation to a specific spot in your document
@@ -415,7 +422,7 @@ countdown::countdown(
   minutes = 10,
   left = 0,
   right = 0,
-  top = "80%",
+  top = "50%",
   padding = "50px",
   margin = "10%",
   font_size = "4em",
@@ -425,6 +432,7 @@ countdown::countdown(
   warn_when = 30
 )
 ```
+:::
 
 # Lunch
 
@@ -466,16 +474,17 @@ format:
 Source: RStudio - [Quarto PDF basics](https://quarto.org/docs/output-formats/pdf-basics.html)
 :::
 
-## Go to RStudio
+# Go to RStudio
 
 ::: notes
 -   Change html document to pdf
--   try to render
--   what are differences?
+-   Try to render
+-   What are differences?
 :::
 
-## Exercise
+# Exercise
 
+::: nonincremental
 -   Add some headers, what does that do?
 -   Add section numbering, what does that do?
 
@@ -494,6 +503,7 @@ countdown::countdown(
   warn_when = 30
 )
 ```
+:::
 
 # Break
 

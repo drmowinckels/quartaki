@@ -25,14 +25,14 @@
     "href": "index.html#tinytex",
     "title": "Quartaki",
     "section": "Tinytex",
-    "text": "Tinytex\nWhen creating PDFs from Quarto, we need to have LaTeX installed for that conversion to happen. To install tinytex, open your RStudio and look for a tab called Console (by default it should be in the lower left corner). Next to the console, there should be a tab called Terminal, and run the following command:\nquarto install tinytex\nIf the terminal is not visible next to the console, you need to enable it. Go to Tools -> Terminal -> Move focus to Terminal and it should pop up."
+    "text": "Tinytex\nWhen creating PDFs from Quarto, we need to have LaTeX installed for that conversion to happen. To install tinytex, open your RStudio and look for a tab called Console (by default it should be in the lower left corner). Next to the console, there should be a tab called Terminal, and run the following command:\nquarto install tinytex\n\n\n\n\n\n\nI can’t see the terminal!\n\n\n\nIf the terminal is not visible next to the console, you need to enable it. Go to Tools -> Terminal -> Move focus to Terminal and it should pop up."
   },
   {
     "objectID": "index.html#troubleshooting",
     "href": "index.html#troubleshooting",
     "title": "Quartaki",
     "section": "Troubleshooting",
-    "text": "Troubleshooting\nIf you have problems getting things installed, please contact me, and I will try help you get sorted."
+    "text": "Troubleshooting\nIf you have problems getting things installed, please contact me on email or through a GitHub issue, and I will try help you get sorted."
   },
   {
     "objectID": "LICENSE.html",
@@ -102,14 +102,14 @@
     "href": "01_presentation.html#divs",
     "title": "Quarto",
     "section": "Divs",
-    "text": "Divs\nAdd classes, attributes, and other identifiers to content using Divs and Span in [Callout Blocks].\n\n\n::: {.border}\nThis content can be styled with a border\n:::\n\n<div class=\"border\">\n  <p>This content can be styled with a border</p>\n</div>\n\n\n\nSource: RStudio - HTML Basics\n\n\nDivs start with a fence containing at least three consecutive colons plus some attributes. The attributes may optionally be followed by another string of consecutive colons. The Div ends with another line containing a string of at least three consecutive colons. The Div should be separated by blank lines from preceding and following blocks. Divs may also be nested. For example"
+    "text": "Divs\nAdd classes, attributes, and other identifiers to content using Divs and Span in [Callout Blocks].\n\n\n\n\n::: {.border}\nThis content can be styled with a border\n:::\n\n<div class=\"border\">\n  <p>This content can be styled with a border</p>\n</div>\n\n\n\nSource: RStudio - HTML Basics\n\n\nDivs start with a fence containing at least three consecutive colons plus some attributes. The attributes may optionally be followed by another string of consecutive colons. The Div ends with another line containing a string of at least three consecutive colons. The Div should be separated by blank lines from preceding and following blocks. Divs may also be nested. For example"
   },
   {
     "objectID": "01_presentation.html#divs-1",
     "href": "01_presentation.html#divs-1",
     "title": "Quarto",
     "section": "Divs",
-    "text": "Divs\n\n\n::::: {#special .sidebar}\n\n::: {.warning}\nHere is a warning.\n:::\n\nMore content.\n:::::\n\n<div id=\"special\" class=\"sidebar\">\n  <div class=\"warning\">\n    <p>Here is a warning.</p>\n  </div>\n  <p>More content.</p>\n</div>\n\n\n\nSource: RStudio - Markdown basics\n\n\nFences without attributes are always closing fences. Unlike with fenced code blocks, the number of colons in the closing fence need not match the number in the opening fence. However, it can be helpful for visual clarity to use fences of different lengths to distinguish nested divs from their parents."
+    "text": "Divs\n\n\n\n::::: {#special .sidebar}\n\n::: callout-warning\n## This is a warning block\n\nThat can be used for extra emphasis\n:::\n\nMore content.\n:::::\n\n<div class=\"callout-caption-container flex-fill\">\n  This is a warning block\n</div>\n<div class=\"callout-body-container callout-body\">\n  <p>That can be used for extra emphasis</p>\n</div>\n\n\n\nSource: RStudio - Markdown basics\n\n\nFences without attributes are always closing fences. Unlike with fenced code blocks, the number of colons in the closing fence need not match the number in the opening fence. However, it can be helpful for visual clarity to use fences of different lengths to distinguish nested divs from their parents."
   },
   {
     "objectID": "01_presentation.html#spans",
@@ -137,7 +137,7 @@
     "href": "01_presentation.html#exercise",
     "title": "Quarto",
     "section": "Exercise",
-    "text": "Exercise\n\n\nCreate a list in your document, listing your favourite foods, at least the top three. Render it.\nMake the list ordered. Render it.\nAdd a horizontal rule after your list. Render it.\n\n\n\n\n−+\n10:00"
+    "text": "Exercise\n\n\nWrite a little bit about your self. A sentence or two about your background and education.\nCreate a list in your document, listing your favourite foods, at least the top three. Render it.\nMake the list ordered. Render it.\n\n\n\n\n−+\n10:00"
   },
   {
     "objectID": "01_presentation.html#go-to-rstudio-1",
@@ -151,28 +151,28 @@
     "href": "01_presentation.html#exercise-1",
     "title": "Quarto",
     "section": "Exercise",
-    "text": "Exercise\n\n\n\n\n\n\n\n−+\n10:00"
+    "text": "Exercise\n\n\nChange the title of the Table of Contents.\nChange the location of the Table of Contents.\nTurn on Anchored sections, what did that do?\nTurn on smooth-scroll, what did that do?\n\n\n\n\n−+\n10:00"
   },
   {
     "objectID": "01_presentation.html#cross-references-1",
     "href": "01_presentation.html#cross-references-1",
     "title": "Quarto",
     "section": "Cross-references",
-    "text": "Cross-references\n\n\n\nType\nPrefix\n\n\n\n\nFigures\nfig-\n\n\nTables\ntbl-\n\n\nEquations\neq-\n\n\nSections\nsec-\n\n\nCode listing\nlst-\n\n\nTheorem\nthm-"
+    "text": "Cross-references\n\n\n\nType\nLabel Prefix\n\n\n\n\nFigures\nfig-\n\n\nTables\ntbl-\n\n\nEquations\neq-\n\n\nSections\nsec-\n\n\nCode listing\nlst-\n\n\nTheorem\nthm-\n\n\n\n\nWhen adding cross-references, its important to have in mind the prefixes necessary to make the cross-referencing work. Thankfully, these are fairly straight forward, but still do require some cognitive load on our part to learn them."
   },
   {
     "objectID": "01_presentation.html#go-to-rstudio-2",
     "href": "01_presentation.html#go-to-rstudio-2",
     "title": "Quarto",
     "section": "Go to RStudio",
-    "text": "Go to RStudio\n\n\nAdd cross-refs to tabs and figs"
+    "text": "Go to RStudio\n\n\nShow visual editor shortcuts and inserts\nStart adding penguins stuff\nAdd columns"
   },
   {
     "objectID": "01_presentation.html#exercise-2",
     "href": "01_presentation.html#exercise-2",
     "title": "Quarto",
     "section": "Exercise",
-    "text": "Exercise\n\nTake a screenshot of the countdown timer, and add the image to your document.\nGive the image a caption, and reference it in a piece of text.\n\n\n\n\n−+\n10:00"
+    "text": "Exercise\n\n\nAdd a call out block with a tip about your favourite drink\nAdd a horizontal rule\nAdd a comment. What does that look like?\n\n\n\n\n−+\n10:00"
   },
   {
     "objectID": "01_presentation.html#add-image",
@@ -193,7 +193,7 @@
     "href": "01_presentation.html#yaml-settings",
     "title": "Quarto",
     "section": "yaml settings",
-    "text": "yaml settings\n\n\n\ncontrol file name containing the bibliography\ncontrol citation style with csl file\n\nCSL directory\nZotero style search\n\n\n\n\n\n---\nbibliography: references.bib\ncsl: nature.csl\n---\nCurrently, only Zotero is supported as a reference manager."
+    "text": "yaml settings\n\n\n\ncontrol file name containing the bibliography\ncontrol citation style with csl file\n\nCSL directory\nZotero style search\n\n\n\n\n\n---\nbibliography: references.bib\ncsl: nature.csl\n---\nCurrently, only Zotero is supported as a connected reference manager."
   },
   {
     "objectID": "01_presentation.html#redirect-reference-generation",
@@ -207,14 +207,14 @@
     "href": "01_presentation.html#go-to-rstudio-3",
     "title": "Quarto",
     "section": "Go to RStudio",
-    "text": "Go to RStudio\n\n\nShow the insert citation tool\nSearch for doi 10.1177/2515245920928009\nSearch pubmed\ninform about zotero and better bibtex integration"
+    "text": "Go to RStudio\n\n\nAdd cross-refs to tabs and figs"
   },
   {
     "objectID": "01_presentation.html#exercise-3",
     "href": "01_presentation.html#exercise-3",
     "title": "Quarto",
     "section": "Exercise",
-    "text": "Exercise\n\nAdd a citation to an important paper in your field searching for its DOI\nCite it in text using three different ways of controlling citation appearance (1. standard, 2. name & year in parentheses, 3. year only)\nRedirect the reference generation to a specific spot in your document\n\n\n\n\n−+\n10:00"
+    "text": "Exercise\n\n\nTake a screenshot of something on your screen, and add the image to your document.\nGive the image a caption, and reference it in a piece of text.\n\n\n\n\n−+\n10:00\n\n\n\n\n\nHave a look at Figure 1.\n\n\n\nFigure 1: Counter screenshot"
   },
   {
     "objectID": "01_presentation.html#very-controlled-by-yaml",
@@ -228,14 +228,14 @@
     "href": "01_presentation.html#go-to-rstudio-4",
     "title": "Quarto",
     "section": "Go to RStudio",
-    "text": "Go to RStudio\n\n\nChange html document to pdf\ntry to render\nwhat are differences?"
+    "text": "Go to RStudio\n\n\nShow the insert citation tool\nSearch for doi 10.1177/2515245920928009\nSearch pubmed\ninform about zotero and better bibtex integration"
   },
   {
     "objectID": "01_presentation.html#exercise-4",
     "href": "01_presentation.html#exercise-4",
     "title": "Quarto",
     "section": "Exercise",
-    "text": "Exercise\n\nAdd some headers, what does that do?\nAdd section numbering, what does that do?\n\n\n\n\n−+\n10:00"
+    "text": "Exercise\n\n\nAdd a citation to an important paper in your field searching for its DOI\nCite it in text using three different ways of controlling citation appearance (1. standard, 2. name & year in parentheses, 3. year only)\nRedirect the reference generation to a specific spot in your document\n\n\n\n\n−+\n10:00"
   },
   {
     "objectID": "01_presentation.html#authors-and-affiliations",
@@ -249,14 +249,14 @@
     "href": "01_presentation.html#go-to-rstudio-5",
     "title": "Quarto",
     "section": "Go to RStudio",
-    "text": "Go to RStudio\n\n\nget arxiv template\nquarto use template mikemahoney218/quarto-arxiv\nrender it\nwalk through it\ntest another template\nquarto use template quarto-journals/plos`"
+    "text": "Go to RStudio\n\n\nChange html document to pdf\ntry to render\nwhat are differences?"
   },
   {
     "objectID": "01_presentation.html#exercise-5",
     "href": "01_presentation.html#exercise-5",
     "title": "Quarto",
     "section": "Exercise",
-    "text": "Exercise\n\nAdapt the plos template to include the same content as our pdf document\nAdapt the yaml to reflect you as an author\n\n\n\n\n−+\n10:00"
+    "text": "Exercise\n\nAdd some headers, what does that do?\nAdd section numbering, what does that do?\n\n\n\n\n−+\n10:00"
   },
   {
     "objectID": "01_presentation.html#formats",
@@ -284,14 +284,14 @@
     "href": "01_presentation.html#go-to-rstudio-6",
     "title": "Quarto",
     "section": "Go to RStudio",
-    "text": "Go to RStudio\n\n\nuse html document as basis, convert to revealjs\nrender\nstart adapting to make slides\nshow tabset"
+    "text": "Go to RStudio\n\n\nget arxiv template\nquarto use template mikemahoney218/quarto-arxiv\nrender it\nwalk through it\ntest another template\nquarto use template quarto-journals/plos`"
   },
   {
     "objectID": "01_presentation.html#exercise-6",
     "href": "01_presentation.html#exercise-6",
     "title": "Quarto",
     "section": "Exercise",
-    "text": "Exercise\n\nAdapt the remaining of the document so that you have distinct slides for all content\nMake a slide without a header\nMake a slide with two columns of content\n\n\n\n\n−+\n10:00"
+    "text": "Exercise\n\nAdapt the plos template to include the same content as our pdf document\nAdapt the yaml to reflect you as an author\n\n\n\n\n−+\n10:00"
   },
   {
     "objectID": "01_presentation.html#athanasia-monika-mowinckel",
@@ -305,7 +305,7 @@
     "href": "00_intro.html#next-generation-r-markdown",
     "title": "Quarto",
     "section": "Next generation R Markdown",
-    "text": "Next generation R Markdown\n\nQuarto is a multi-language, next-generation version of R Markdown from RStudio, and includes dozens of new features and capabilities while at the same being able to render most existing Rmd files without modification."
+    "text": "Next generation R Markdown\n\nQuarto is a multi-language, next-generation version of R Markdown from Posit, and includes dozens of new features and capabilities while at the same being able to render most existing Rmd files without modification."
   },
   {
     "objectID": "00_intro.html#multi-lingual",
@@ -445,7 +445,7 @@
     "href": "00_intro.html#r-markdown-vs.-quarto",
     "title": "Quarto",
     "section": "R markdown vs. Quarto",
-    "text": "R markdown vs. Quarto\nCode chunks can be provided inside the code chunk\n\n\n```{r}\n#| echo: true\n#| message: false\n```\n\n```{r echo = TRUE, message = FALSE ```"
+    "text": "R markdown vs. Quarto\nCode chunks can be provided inside the code chunk\n\n\n```{r echo = TRUE, message = FALSE ```\n\n```{r}\n#| echo: true\n#| message: false\n```"
   },
   {
     "objectID": "index.html#check-the-install",
@@ -453,5 +453,26 @@
     "title": "Quartaki",
     "section": "Check the install",
     "text": "Check the install\nThe best way to confirm that everything is installed correctly, is to create a test quarto document. In RStudio, go to File -> New file -> Quarto document\n\n\n\nFill in the title, and choose to create a PDF document (this will also verify tinytex installation is successful).\nClick on Create.\n\nRStudio should open a document for you, which is the test document you will render.\nDon’t think about the content just now, but find the Render button at the top of the document.\nClick it and you should see some action in a new tab called “Background jobs”.\nIt will call on latex and maybe install some latex packages to create your document.\nIf it is successful, the RStudio Viewer window should come into focus and you will see a preview of a PDF document with the title “Test document”.\nThis means everything went fine and you are ready!"
+  },
+  {
+    "objectID": "01_presentation.html#go-to-rstudio-7",
+    "href": "01_presentation.html#go-to-rstudio-7",
+    "title": "Quarto",
+    "section": "Go to RStudio",
+    "text": "Go to RStudio\n\n\nuse html document as basis, convert to revealjs\nrender\nstart adapting to make slides\nshow tabset"
+  },
+  {
+    "objectID": "01_presentation.html#exercise-7",
+    "href": "01_presentation.html#exercise-7",
+    "title": "Quarto",
+    "section": "Exercise",
+    "text": "Exercise\n\nAdapt the remaining of the document so that you have distinct slides for all content\nMake a slide without a header\nMake a slide with two columns of content\n\n\n\n\n−+\n10:00"
+  },
+  {
+    "objectID": "01_presentation.html#adding-citations",
+    "href": "01_presentation.html#adding-citations",
+    "title": "Quarto",
+    "section": "Adding citations",
+    "text": "Adding citations\n\nCan be added via insert -> citation\n\nBrings up the UI\nThe UI can help you find refs, in addition to adding them to the doc.\n\nCan also be added directly with @\nReferences are stored in bibtex files in your project"
   }
 ]

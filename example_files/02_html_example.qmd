@@ -45,9 +45,6 @@ ggplot(penguins,
   geom_point(aes(colour = species)) +
   geom_smooth(method = "lm", 
               color = "black") +
-  geom_smooth(aes(colour = species), 
-              method = "lm") +
-  scale_colour_viridis_d(alpha = .7) +
   theme_minimal()
 ```
 
@@ -59,21 +56,12 @@ And the order of the figures does not really matter. If you change the order to 
 
 ```{r}
 #| label: fig-penguin-density
-#| fig-cap: Penguin density by species
+#| fig-cap: Penguin density
 
 penguins |> 
-  pivot_longer(contains("_"),
-               names_to = c("part",
-                            "measure",
-                            "unit"),
-               names_sep = "_",
-               values_to = "value") |> 
-  ggplot(aes(x = value,
+  ggplot(aes(x = bill_length_mm,
              fill = species)) + 
   geom_density() +
-  facet_grid(part ~ measure, 
-             scales = "free") +
-  scale_fill_viridis_d(alpha = .7) +
   theme_minimal()
 ```
 
@@ -124,4 +112,3 @@ penguins |>
                notation = "none") |> 
   collapse_rows(1:2)
 ```
-

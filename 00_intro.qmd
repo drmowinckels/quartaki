@@ -11,7 +11,7 @@ format:
 
 ## Next generation R Markdown {.center}
 
-> Quarto is a multi-language, [next-generation](https://quarto.org/docs/faq/rmarkdown.html) version of R Markdown from RStudio, and includes dozens of new features and capabilities while at the same being able to render most existing Rmd files without modification.
+> Quarto is a multi-language, [next-generation](https://quarto.org/docs/faq/rmarkdown.html) version of R Markdown from Posit, and includes dozens of new features and capabilities while at the same being able to render most existing Rmd files without modification.
 
 ## Multi-lingual {.center}
 
@@ -406,6 +406,10 @@ Code chunks can be provided inside the code chunk
 
 ::: columns
 ::: {.column width="50%"}
+**\`\`\`{r** echo = TRUE, message = FALSE **\`\`\`**
+:::
+
+::: {.column width="50%"}
 **\`\`\`{r}**
 
 #\| echo: true
@@ -413,10 +417,6 @@ Code chunks can be provided inside the code chunk
 #\| message: false
 
 **\`\`\`**
-:::
-
-::: {.column width="50%"}
-**\`\`\`{r** echo = TRUE, message = FALSE **\`\`\`**
 :::
 :::
 
