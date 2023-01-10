@@ -31,6 +31,10 @@ website:
         text: Introduction
       - href: 01_presentation.qmd
         text: Workshop slides
+      - text: Collaborative docs
+        menu:
+        - href: https://hackmd.io/@AWu8JfbKRr6CxA2o1ph1JQ/ryl9zeo9i/edit
+          text: 2022-01-13 DSD UiO
     right:
       - href: https://github.com/drmowinckels
         icon: github
