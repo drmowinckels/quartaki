@@ -50,7 +50,12 @@ Source: [RStudio - HTML Basics](https://quarto.org/docs/output-formats/html-code
 :::
 
 ::: notes
-Divs start with a fence containing at least three consecutive colons plus some attributes. The attributes may optionally be followed by another string of consecutive colons. The Div ends with another line containing a string of at least three consecutive colons. The Div should be separated by blank lines from preceding and following blocks. Divs may also be nested. For example
+Divs start with a fence containing at least three consecutive colons plus some attributes.
+The attributes may optionally be followed by another string of consecutive colons.
+The Div ends with another line containing a string of at least three consecutive colons.
+The Div should be separated by blank lines from preceding and following blocks.
+Divs may also be nested.
+For example
 :::
 
 ## Divs {.center}
@@ -90,9 +95,10 @@ Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-b
 :::
 
 ::: notes
-Fences without attributes are always closing fences. Unlike with fenced code blocks, the number of colons in the closing fence need not match the number in the opening fence. However, it can be helpful for visual clarity to use fences of different lengths to distinguish nested divs from their parents.
+Fences without attributes are always closing fences.
+Unlike with fenced code blocks, the number of colons in the closing fence need not match the number in the opening fence.
+However, it can be helpful for visual clarity to use fences of different lengths to distinguish nested divs from their parents.
 :::
-
 
 ## css and filters {.center}
 
@@ -120,12 +126,13 @@ Source: [RStudio - HTML Basics](https://quarto.org/docs/output-formats/html-code
 ## Exercise
 
 ::: nonincremental
--   Write a little bit about your self. A sentence or two about your background and education.  
+-   Write a little bit about your self.
+    A sentence or two about your background and education.
 
--   Create a list in your document, listing your favourite foods, at least the top three. Render it.
+-   Create a list in your document, listing your favourite foods, at least the top three.
+    Render it.
 
 -   Make the list *ordered.* Render it.
-
 
 ```{r}
 #| echo: false
@@ -195,7 +202,6 @@ More: [RStudio - HTML yaml](https://quarto.org/docs/output-formats/html-code.htm
 ## Exercise
 
 ::: nonincremental
-
 -   Change the title of the Table of Contents.
 
 -   Change the location of the Table of Contents.
@@ -222,7 +228,6 @@ countdown::countdown(
 ```
 :::
 
-
 ## Go to RStudio
 
 ::: notes
@@ -234,12 +239,12 @@ countdown::countdown(
 ## Exercise
 
 ::: nonincremental
-
 -   Add a call out block with a tip about your favourite drink
 
 -   Add a horizontal rule
 
--   Add a comment. What does that look like?
+-   Add a comment.
+    What does that look like?
 
 ```{r}
 #| echo: false
@@ -331,12 +336,12 @@ Have a look at @fig-counter.
 ![Counter screenshot](images/paste-04E127A0.png){#fig-counter}
 :::
 
-
 # Citation
 
 ## Adding citations
 
 -   Can be added via `insert -> citation`
+
     -   Brings up the UI
     -   The UI can help you find refs, in addition to adding them to the doc.
 

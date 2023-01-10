@@ -1,11 +1,11 @@
 ::: callout-tip
 ## Aims
 
-Understand the basics of markdown
+-   Understand the basics of markdown
 
-Ability to generate html & pdf reports, and presentations
+-   Ability to generate html & pdf reports, and presentations
 
-Ability to cross-reference report content and add citations
+-   Ability to cross-reference report content and add citations
 
-Be able to use Academic Journal templates
+-   Be able to use Academic Journal templates
 :::

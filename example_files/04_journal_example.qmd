@@ -23,7 +23,16 @@ penguins <- penguins
 ```
 
 \
-We can write text as normal, interspersed with code that outputs something. We can choose to have the code shown or hidden, or provide the reader with the option to see the code if they wish. We can also reference the figures @fig-penguin-smooth and @fig-penguin-density
+We can write text as normal, interspersed with code that outputs something. We can choose to have the code shown or hidden, or provide the reader with the option to see the code if they wish. 
+
+My favourite foods:
+
+1.   Souvlaki
+1.   Pasta with halloumi
+1.   Makaronia tou fournou (greek style lasagna)
+
+
+We can also reference the figures @fig-penguin-smooth and @fig-penguin-density
 
 ```{r}
 #| label: fig-penguin-smooth
@@ -35,9 +44,6 @@ ggplot(penguins,
   geom_point(aes(colour = species)) +
   geom_smooth(method = "lm", 
               color = "black") +
-  geom_smooth(aes(colour = species), 
-              method = "lm") +
-  scale_colour_viridis_d(alpha = .7) +
   theme_minimal()
 ```
 
@@ -49,21 +55,12 @@ And the order of the figures does not really matter. If you change the order to 
 
 ```{r}
 #| label: fig-penguin-density
-#| fig-cap: Penguin density by species
+#| fig-cap: Penguin density
 
 penguins |> 
-  pivot_longer(contains("_"),
-               names_to = c("part",
-                            "measure",
-                            "unit"),
-               names_sep = "_",
-               values_to = "value") |> 
-  ggplot(aes(x = value,
+  ggplot(aes(x = bill_length_mm,
              fill = species)) + 
   geom_density() +
-  facet_grid(part ~ measure, 
-             scales = "free") +
-  scale_fill_viridis_d(alpha = .7) +
   theme_minimal()
 ```
 
@@ -87,30 +84,9 @@ penguins |>
   mutate(
     name = str_replace_all(name, "_", " ")
   ) |> 
-  kable(booktabs = TRUE, digits = 3) |> 
+  kable(booktabs = TRUE, digits = 3,) |> 
   kable_classic() |> 
+  add_header_above(c(" " = 4, "Range" = 2, " " = 1)) |> 
   collapse_rows(1)
 ```
 
-```{r}
-#| label: tbl-models
-#| tbl-cap: Predicting bill length by bill depth, split by species and island.
-
-penguins |> 
-  nest_by(species, island) |> 
-  mutate(
-    model = list(lm(bill_length_mm ~ bill_depth_mm,
-                    data = data)),
-    table = list(broom::tidy(model))
-  ) |> 
-  unnest(table) |> 
-  select(-model, -data) |> 
-  mutate(
-    term = str_replace_all(term, "_", " ")
-  ) |> 
-  kable(booktabs = TRUE, digits = 3,) |> 
-  kable_classic() |> 
-  add_footnote("Models were run independently on data from the different island and species.",
-               notation = "none") |> 
-  collapse_rows(1:2)
-```

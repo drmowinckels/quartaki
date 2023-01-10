@@ -4,7 +4,11 @@ format: markdown_github
 
 # Quintro
 
-\-\-- 6 hour introduction to Quarto \-\--
+--- 6 hour introduction to Quarto ---
+
+<!-- badges: start -->
+[![website deploy](https://github.com/drmowinckels/quartaki/actions/workflows/publish.yaml/badge.svg)](https://github.com/drmowinckels/quartaki/actions/workflows/publish.yaml)
+<!-- badges: end -->
 
 ```{r}
 #| child: child_docs/intro.qmd
@@ -14,12 +18,31 @@ format: markdown_github
 #| child: child_docs/aims.qmd
 ```
 
-# Schedule
+## Schedule
 
 ```{r}
 #| child: child_docs/schedule.qmd
 ```
 
+
+## Prepare
 ```{r}
 #| child: child_docs/prep.qmd
 ```
+
+
+## Instructor's notes
+
+The sections of the workshop are intended to be run in sequence, as they prepare the learners for the section coming.
+Changing the order of the sections would also mean adapting content to make sure you don't skip ahead from where the learners are.
+In particular, the sections after lunch have little presentation, but mostly live coding and working.
+
+The [course website](https://drmowinckels.github.io/quartaki/) should contain most of the materials for learners to follow along presentations and the schedule.
+
+The output examples are found in their [own folder](example_files/), and have the entire code for the final outputs, after all parts of their respective section has been covered.
+
+In most cases, after the text and code chunks have been written, the course focuses on adapting yaml settings for the different format types.
+
+## Code of Conduct
+
+Please note that the quartaki project is released with a [Contributor Code of Conduct](https://contributor-covenant.org/version/2/1/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.

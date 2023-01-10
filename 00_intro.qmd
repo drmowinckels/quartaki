@@ -82,8 +82,6 @@ Extensions are a powerful way to modify and extend the behavior of Quarto.
 -   Quarto
 
 -   RStudio
-
--   R
 :::
 
 ::: {.column width="10%"}
@@ -91,6 +89,8 @@ Extensions are a powerful way to modify and extend the behavior of Quarto.
 
 ::: {.column width="45%"}
 ### Not taught
+
+-   R
 
 -   python / julia / js
 
@@ -101,7 +101,8 @@ Extensions are a powerful way to modify and extend the behavior of Quarto.
 ::: notes
 Using these tools, you will be able to follow along everything I do, and I can help when things go wrong
 
-If you choose another setup, you are very welcome to that. But I will not be able to help as easily (or set aside time to do so), and you will need to think of your own code examples in other languages.
+If you choose another setup, you are very welcome to that.
+But I will not be able to help as easily (or set aside time to do so), and you will need to think of your own code examples in other languages.
 :::
 
 # Markdown elements

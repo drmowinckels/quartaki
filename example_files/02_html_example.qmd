@@ -14,11 +14,13 @@ format:
     smooth-scroll: true
     code-fold: true
     code-summary: "Show the code"
+    embed-resources: true
+    self-contained-math: true
 editor: visual
 execute: 
   warning: false
   message: false
-  echo: false
+  echo: true
 ---
 
 ```{r}
@@ -33,7 +35,16 @@ penguins <- penguins
 ```
 
 \
-We can write text as normal, interspersed with code that outputs something. We can choose to have the code shown or hidden, or provide the reader with the option to see the code if they wish. We can also reference the figures @fig-penguin-smooth and @fig-penguin-density
+We can write text as normal, interspersed with code that outputs something. We can choose to have the code shown or hidden, or provide the reader with the option to see the code if they wish. 
+
+My favourite foods:
+
+1.   Souvlaki
+1.   Pasta with halloumi
+1.   Makaronia tou fournou (greek style lasagna)
+
+
+We can also reference the figures @fig-penguin-smooth and @fig-penguin-density
 
 ```{r}
 #| label: fig-penguin-smooth
@@ -87,28 +98,7 @@ penguins |>
   ) |> 
   kable(booktabs = TRUE, digits = 3,) |> 
   kable_classic() |> 
+  add_header_above(c(" " = 4, "Range" = 2, " " = 1)) |> 
   collapse_rows(1)
 ```
 
-```{r}
-#| label: tbl-models
-#| tbl-cap: Predicting bill length by bill depth, split by species and island.
-
-penguins |> 
-  nest_by(species, island) |> 
-  mutate(
-    model = list(lm(bill_length_mm ~ bill_depth_mm,
-                    data = data)),
-    table = list(broom::tidy(model))
-  ) |> 
-  unnest(table) |> 
-  select(-model, -data) |> 
-  mutate(
-    term = str_replace_all(term, "_", " ")
-  ) |>
-  kable(booktabs = TRUE, digits = 3,) |> 
-  kable_classic() |> 
-  add_footnote("Models were run independently on data from the different island and species.",
-               notation = "none") |> 
-  collapse_rows(1:2)
-```

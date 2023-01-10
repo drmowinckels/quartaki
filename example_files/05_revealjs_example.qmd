@@ -25,49 +25,27 @@ penguins <- penguins
 
 ```
 
-::: panel-tabset
 ## Text
 
-::: panel-tabset
 We can write text as normal, interspersed with code that outputs something. We can choose to have the code shown or hidden, or provide the reader with the option to see the code if they wish. We can also reference the figures @fig-penguin-smooth and @fig-penguin-density
-:::
 
+::: .fragment
 ## Code
-
-```{r}
-#| eval: false
-
-ggplot(penguins,
-       aes(x = bill_length_mm,
-           y = bill_depth_mm)) +
-  geom_point(aes(colour = species)) +
-  geom_smooth(method = "lm", 
-              color = "black") +
-  geom_smooth(aes(colour = species), 
-              method = "lm") +
-  scale_colour_viridis_d(alpha = .7) +
-  theme_minimal()
-```
-
-## Plot
 
 ```{r}
 #| label: fig-penguin-smooth
 #| fig-cap: Penguin bill length and depth ratio by species
-#| echo: false
+#| output-location: fragment
 
 ggplot(penguins,
        aes(x = bill_length_mm,
            y = bill_depth_mm)) +
   geom_point(aes(colour = species)) +
   geom_smooth(method = "lm", 
-              color = "black") +
-  geom_smooth(aes(colour = species), 
-              method = "lm") +
-  scale_colour_viridis_d(alpha = .7) +
-  theme_minimal()
+              color = "black")
 ```
 :::
+
 
 # Another slide
 
@@ -165,4 +143,3 @@ penguins |>
                notation = "none") |> 
   collapse_rows(1:2)
 ```
-
