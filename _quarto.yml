@@ -5,6 +5,7 @@ project:
     - "index.qmd"
     - "00_intro.qmd"
     - "01_presentation.qmd"
+    - "example_files/*qmd"
 
 website:
   page-navigation: true
@@ -27,10 +28,12 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: 00_intro.qmd
-        text: Introduction
-      - href: 01_presentation.qmd
-        text: Workshop slides
+      - text: Workshop slides
+        menu: 
+        - href: 00_intro.qmd
+          text: Introduction
+        - href: 01_presentation.qmd
+          text: Workshop
       - text: Collaborative docs
         menu:
         - href: https://hackmd.io/@AWu8JfbKRr6CxA2o1ph1JQ/ryl9zeo9i/edit

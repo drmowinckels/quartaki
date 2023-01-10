@@ -7,7 +7,9 @@ format: markdown_github
 --- 6 hour introduction to Quarto ---
 
 <!-- badges: start -->
-[![website deploy](https://github.com/drmowinckels/quartaki/actions/workflows/publish.yaml/badge.svg)](https://github.com/drmowinckels/quartaki/actions/workflows/publish.yaml)
+
+[![](https://github.com/drmowinckels/quartaki/actions/workflows/publish.yaml/badge.svg)](https://github.com/drmowinckels/quartaki/actions/workflows/publish.yaml) ![Contributors](https://img.shields.io/github/contributors/drmowinckels/quartaki) ![GitHub last commit](https://img.shields.io/github/last-commit/drmowinckels/quartaki)
+
 <!-- badges: end -->
 
 ```{r}
@@ -24,12 +26,11 @@ format: markdown_github
 #| child: child_docs/schedule.qmd
 ```
 
-
 ## Prepare
+
 ```{r}
 #| child: child_docs/prep.qmd
 ```
-
 
 ## Instructor's notes
 
@@ -45,4 +46,5 @@ In most cases, after the text and code chunks have been written, the course focu
 
 ## Code of Conduct
 
-Please note that the quartaki project is released with a [Contributor Code of Conduct](https://contributor-covenant.org/version/2/1/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.
+Please note that the quartaki project is released with a [Contributor Code of Conduct](https://contributor-covenant.org/version/2/1/CODE_OF_CONDUCT.html).
+By contributing to this project, you agree to abide by its terms.

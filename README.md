@@ -5,8 +5,11 @@
 
 <!-- badges: start -->
 
-[![website
-deploy](https://github.com/drmowinckels/quartaki/actions/workflows/publish.yaml/badge.svg)](https://github.com/drmowinckels/quartaki/actions/workflows/publish.yaml)
+[![](https://github.com/drmowinckels/quartaki/actions/workflows/publish.yaml/badge.svg)](https://github.com/drmowinckels/quartaki/actions/workflows/publish.yaml)
+![Contributors](https://img.shields.io/github/contributors/drmowinckels/quartaki.png)
+![GitHub last
+commit](https://img.shields.io/github/last-commit/drmowinckels/quartaki.png)
+
 <!-- badges: end -->
 
 There are increasing demands on scientific staff in preparing reports
