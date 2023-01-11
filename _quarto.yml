@@ -53,6 +53,8 @@ format:
     code-copy: true
     code-overflow: scroll
     highlight-style: a11y
+    
+callout-appearance: simple
 
 editor: visual
 

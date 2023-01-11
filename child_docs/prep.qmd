@@ -34,6 +34,7 @@ In addition to Quarto, a series of R packages will also be needed to show-case t
 ``` r
 # Run in R
 install.packages(c(
+  "tinytex",       # for pdf rendering
   "tidyverse",     # data-wrangling
   "knitr",         # table printing
   "kableExtra",    # pretty table printing
@@ -44,24 +45,28 @@ install.packages(c(
 ## Tinytex
 
 When creating PDFs from Quarto, we need to have LaTeX installed for that conversion to happen.
-To install tinytex, open your RStudio and look for a tab called `Console` (by default it should be in the lower left corner).
-Next to the console, there should be a tab called Terminal, and run the following command:
+We will use the tinytex package to get a light-weight latex distribution installed on your computer.
+
+Open RStudio, and find the section called "Console".
+
+```{r}
+#| eval: false
+tinytex::install_tinytex()
+tinytex:::install_yihui_pkgs()
+```
+
+::: callout-note
+## Non-R participants
+
+If you are joining the course using another language than R, you will need to install tinytex in another way.
+Open your terminal application and run the following command
 
 ``` bash
 quarto install tinytex
 ```
-
-::: callout-note
-## I can't see the terminal!
-
-If the terminal is not visible next to the console, you need to enable it.
-Go to `Tools -> Terminal -> Move focus to Terminal` and it should pop up.\
-
-\
-On macOS or Linux, you may also do this in the Terminal application directly (rather than through RStudio).
 :::
 
-::: callout-important
+::: callout-warning
 ## Tinytex install issues
 
 If you are struggling to get tinytex installed via RStudio, or because your work administers your computer and you need IT help to get things installed, we have additional resources for you.\
@@ -95,4 +100,27 @@ This means everything went fine and you are ready!
 
 ## Troubleshooting
 
-If you have problems getting things installed, please contact me [on email](mailto:a.m.mowinckel@psykologi.uio.no) or through a [GitHub issue](https://github.com/drmowinckels/quartaki/issues), and I will try help you get sorted.
+If the PDF generation fails with a message containing:\
+
+```{! LaTeX Error: File `pdfcol.sty' not found.}
+```
+
+This is an extra LaTeX package we will need to get installed.
+To do that, open RStudio and locate a tab called "Terminal".
+Run the following command:\
+
+```{bash}
+#| eval: false
+tlmgr install pdfcol
+```
+
+::: callout-warning
+## I can't see the terminal!
+
+If the terminal is not visible next to the console, you need to enable it.
+Go to `Tools -> Terminal -> Move focus to Terminal` and it should pop up.
+
+On macOS or Linux, you may also do this in the Terminal application directly (rather than through RStudio).
+:::
+
+If you still have problems getting things installed, please contact me [on email](mailto:a.m.mowinckel@psykologi.uio.no) or through a [GitHub issue](https://github.com/drmowinckels/quartaki/issues), and I will try help you get sorted.
