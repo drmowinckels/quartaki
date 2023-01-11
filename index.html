@@ -247,7 +247,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </header>
 
 <p>There are increasing demands on scientific staff in preparing reports for governmental and public dissemination, as well as scientific dissemination. Creating reports is a time-consuming task, as it often requires switching between programs for writing, doing analyses and creating tables and figures, as well as other graphical and textual programs. Learning efficient tools in combining programming and report generation are becoming increasingly important to alleviate the manual and burdensome process of switching programs. Quarto is a second generation report framework based on the popular markdown plain text format. Combining writing in markdown with the ability to run code to format, analyse, and visualise data, all in the same place, creates a seamless environment for the researchers to produce reports. While this workshop will focus on using Quarto with R, it also has native abilities to interact with python, observable.js and Julia, without needing R installed. This makes Quarto a great tool to learn, no matter which language you focus on.</p>
-<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-tip callout callout-style-simple callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -281,7 +281,7 @@ Aims
 <h1>Preparations</h1>
 <p>This introductory workshop to Quarto is being instructed using R and RStudio. It would be easiest for learners to follow along, and the instructor to help you , if you also use this set-up.</p>
 <p>Install instructions can be found on the <a href="https://quarto.org/docs/get-started/">Quarto webpages</a>.</p>
-<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-note callout callout-style-simple callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -299,7 +299,7 @@ Install summary
 </div>
 </div>
 <p>A new version of RStudio and R is recommended. Quarto is in rapid development, please make sure your RStudio is the newest version available (which will also install newest Quarto) to be able to follow along the workshop. Even if you have R, RStudio and Quarto installed on your system, you should update all three before the workshop.</p>
-<div class="callout-caution callout callout-style-default callout-captioned">
+<div class="callout-caution callout callout-style-simple callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -317,33 +317,36 @@ Using another setup
 <p>In addition to Quarto, a series of R packages will also be needed to show-case the ways we can use Quarto to generate reports.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Run in R</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"tidyverse"</span>,     <span class="co"># data-wrangling</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"knitr"</span>,         <span class="co"># table printing</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"kableExtra"</span>,    <span class="co"># pretty table printing</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">"palmerpenguins"</span> <span class="co"># dataset</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"tinytex"</span>,       <span class="co"># for pdf rendering</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"tidyverse"</span>,     <span class="co"># data-wrangling</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"knitr"</span>,         <span class="co"># table printing</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">"kableExtra"</span>,    <span class="co"># pretty table printing</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">"palmerpenguins"</span> <span class="co"># dataset</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="tinytex" class="level2">
 <h2 class="anchored" data-anchor-id="tinytex">Tinytex</h2>
-<p>When creating PDFs from Quarto, we need to have LaTeX installed for that conversion to happen. To install tinytex, open your RStudio and look for a tab called <code>Console</code> (by default it should be in the lower left corner). Next to the console, there should be a tab called Terminal, and run the following command:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> install tinytex</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="callout-note callout callout-style-default callout-captioned">
+<p>When creating PDFs from Quarto, we need to have LaTeX installed for that conversion to happen. We will use the tinytex package to get a light-weight latex distribution installed on your computer.</p>
+<p>Open RStudio, and find the section called “Console”.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>tinytex<span class="sc">::</span><span class="fu">install_tinytex</span>()</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>tinytex<span class="sc">:::</span><span class="fu">install_yihui_pkgs</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="callout-note callout callout-style-simple callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-caption-container flex-fill">
-I can’t see the terminal!
+Non-R participants
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>If the terminal is not visible next to the console, you need to enable it. Go to <code>Tools -&gt; Terminal -&gt; Move focus to Terminal</code> and it should pop up.<br>
-</p>
-<p><br>
-On macOS or Linux, you may also do this in the Terminal application directly (rather than through RStudio).</p>
+<p>If you are joining the course using another language than R, you will need to install tinytex in another way. Open your terminal application and run the following command</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> install tinytex</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-warning callout callout-style-simple callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -373,7 +376,29 @@ If you find these instructions too technical, please contact me as indicated at 
 </section>
 <section id="troubleshooting" class="level2">
 <h2 class="anchored" data-anchor-id="troubleshooting">Troubleshooting</h2>
-<p>If you have problems getting things installed, please contact me <a href="mailto:a.m.mowinckel@psykologi.uio.no">on email</a> or through a <a href="https://github.com/drmowinckels/quartaki/issues">GitHub issue</a>, and I will try help you get sorted.</p>
+<p>If the PDF generation fails with a message containing:<br>
+</p>
+<p><code>{! LaTeX Error: File `pdfcol.sty' not found.}</code></p>
+<p>This is an extra LaTeX package we will need to get installed. To do that, open RStudio and locate a tab called “Terminal”. Run the following command:<br>
+</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">tlmgr</span> install pdfcol</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="callout-warning callout callout-style-simple callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+I can’t see the terminal!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If the terminal is not visible next to the console, you need to enable it. Go to <code>Tools -&gt; Terminal -&gt; Move focus to Terminal</code> and it should pop up.</p>
+<p>On macOS or Linux, you may also do this in the Terminal application directly (rather than through RStudio).</p>
+</div>
+</div>
+<p>If you still have problems getting things installed, please contact me <a href="mailto:a.m.mowinckel@psykologi.uio.no">on email</a> or through a <a href="https://github.com/drmowinckels/quartaki/issues">GitHub issue</a>, and I will try help you get sorted.</p>
 
 
 </section>
