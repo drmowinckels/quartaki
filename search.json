@@ -18,14 +18,14 @@
     "href": "index.html#r-packages",
     "title": "Quartaki",
     "section": "R packages",
-    "text": "R packages\nIn addition to Quarto, a series of R packages will also be needed to show-case the ways we can use Quarto to generate reports.\n# Run in R\ninstall.packages(c(\n  \"tinytex\",       # for pdf rendering\n  \"tidyverse\",     # data-wrangling\n  \"knitr\",         # table printing\n  \"kableExtra\",    # pretty table printing\n  \"palmerpenguins\" # dataset\n))"
+    "text": "R packages\nIn addition to Quarto, a series of R packages will also be needed to show-case the ways we can use Quarto to generate reports.\n# Run in R\ninstall.packages(c(\n  \"tinytex\",       # for pdf rendering\n  \"rmarkdown\",     # rendering everything\n  \"tidyverse\",     # data-wrangling\n  \"knitr\",         # table printing\n  \"kableExtra\",    # pretty table printing\n  \"palmerpenguins\" # dataset\n))"
   },
   {
     "objectID": "index.html#tinytex",
     "href": "index.html#tinytex",
     "title": "Quartaki",
     "section": "Tinytex",
-    "text": "Tinytex\nWhen creating PDFs from Quarto, we need to have LaTeX installed for that conversion to happen. We will use the tinytex package to get a light-weight latex distribution installed on your computer.\nOpen RStudio, and find the section called “Console”.\n\ntinytex::install_tinytex()\ntinytex:::install_yihui_pkgs()\n\n\n\n\n\n\n\nNon-R participants\n\n\n\nIf you are joining the course using another language than R, you will need to install tinytex in another way. Open your terminal application and run the following command\nquarto install tinytex\n\n\n\n\n\n\n\n\nTinytex install issues\n\n\n\nIf you are struggling to get tinytex installed via RStudio, or because your work administers your computer and you need IT help to get things installed, we have additional resources for you.\n\n\nYihui, the creator of tinytex, has a great post about installing tinytex. It is somewhat on the technical side, so it is great for pointing your IT department to for help in installing.\n\nIf you find these instructions too technical, please contact me as indicated at the bottom of this section."
+    "text": "Tinytex\nWhen creating PDFs from Quarto, we need to have LaTeX installed for that conversion to happen. We will use the tinytex package to get a light-weight latex distribution installed on your computer.\nOpen RStudio, and find the section called “Console”.\n\ntinytex::install_tinytex()\ntinytex:::install_yihui_pkgs()\n\n\n\n\n\n\n\nNon-R participants\n\n\n\nIf you are joining the course using another language than R, you will need to install tinytex in another way. Open your terminal application and run the following command\nquarto install tinytex\n\n\n\n\n\n\n\n\nTinytex install issues\n\n\n\nIf you are struggling to get tinytex installed via RStudio, or because your work administers your computer and you need IT help to get things installed, we have additional resources for you.\n\n\nYihui, the creator of tinytex, has a great post about installing tinytex. It is somewhat on the technical side, so it is great for pointing your IT department to for help in installing.\n\n\nIf you find these instructions too technical, please contact me as indicated at the bottom of this section."
   },
   {
     "objectID": "index.html#check-the-install",
