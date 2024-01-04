@@ -4,9 +4,6 @@
 .Ruserdata
 
 /.quarto/
-example_files/*html
-example_files/*pdf
-example_files/*files/
 *_files/
 
 docs/
