@@ -1,7 +1,6 @@
 # Preparations
 
-This introductory workshop to Quarto is being instructed using R and RStudio.
-It would be easiest for learners to follow along, and the instructor to help you , if you also use this set-up.
+This introductory workshop to Quarto is being instructed using R and RStudio. It would be easiest for learners to follow along, and the instructor to help you , if you also use this set-up.
 
 Install instructions can be found on the [Quarto webpages](https://quarto.org/docs/get-started/).
 
@@ -15,16 +14,12 @@ Install instructions can be found on the [Quarto webpages](https://quarto.org/do
 -   install/update [RStudio](https://posit.co/download/rstudio-desktop/)
 :::
 
-A new version of RStudio and R is recommended.
-Quarto is in rapid development, please make sure your RStudio is the newest version available (which will also install newest Quarto) to be able to follow along the workshop.
-Even if you have R, RStudio and Quarto installed on your system, you should update all three before the workshop.
+A new version of RStudio and R is recommended. Quarto is in rapid development, please make sure your RStudio is the newest version available (which will also install newest Quarto) to be able to follow along the workshop. Even if you have R, RStudio and Quarto installed on your system, you should update all three before the workshop.
 
 ::: callout-caution
 ## Using another setup
 
-You may choose to use vscode or another IDE, or even to do python in stead of R.
-However, know that the instructor will be less available to help using these tools, and code examples will need to be thought of by the learners them selves.
-Some examples on using other set-ups than R and RStudio can be found on the [Quarto webpages](https://quarto.org/).
+You may choose to use vscode or another IDE, or even to do python in stead of R. However, know that the instructor will be less available to help using these tools, and code examples will need to be thought of by the learners them selves. Some examples on using other set-ups than R and RStudio can be found on the [Quarto webpages](https://quarto.org/).
 :::
 
 ## R packages
@@ -45,8 +40,7 @@ install.packages(c(
 
 ## Tinytex
 
-When creating PDFs from Quarto, we need to have LaTeX installed for that conversion to happen.
-We will use the tinytex package to get a light-weight latex distribution installed on your computer.
+When creating PDFs from Quarto, we need to have LaTeX installed for that conversion to happen. We will use the tinytex package to get a light-weight latex distribution installed on your computer.
 
 Open RStudio, and find the section called "Console".
 
@@ -59,8 +53,7 @@ tinytex:::install_yihui_pkgs()
 ::: callout-note
 ## Non-R participants
 
-If you are joining the course using another language than R, you will need to install tinytex in another way.
-Open your terminal application and run the following command
+If you are joining the course using another language than R, you will need to install tinytex in another way. Open your terminal application and run the following command
 
 ``` bash
 quarto install tinytex
@@ -73,8 +66,7 @@ quarto install tinytex
 If you are struggling to get tinytex installed via RStudio, or because your work administers your computer and you need IT help to get things installed, we have additional resources for you.\
 
 \
-Yihui, the creator of tinytex, has a great post about [installing tinytex](https://yihui.org/tinytex/).
-It is somewhat on the technical side, so it is great for pointing your IT department to for help in installing.\
+Yihui, the creator of tinytex, has a great post about [installing tinytex](https://yihui.org/tinytex/). It is somewhat on the technical side, so it is great for pointing your IT department to for help in installing.\
 
 \
 If you find these instructions too technical, please contact me as indicated at the bottom of this section.
@@ -82,20 +74,13 @@ If you find these instructions too technical, please contact me as indicated at 
 
 ## Check the install
 
-The best way to confirm that everything is installed correctly, is to create a test quarto document.
-In RStudio, go to `File -> New file -> Quarto document`
+The best way to confirm that everything is installed correctly, is to create a test quarto document. In RStudio, go to `File -> New file -> Quarto document`
 
 ![](images/image-698515572.png)\
 
-Fill in the title, and choose to create a PDF document (this will also verify tinytex installation is successful).
-Click on `Create`.
+Fill in the title, and choose to create a PDF document (this will also verify tinytex installation is successful). Click on `Create`.
 
-RStudio should open a document for you, which is the test document you will render.
-Don't think about the content just now, but find the `Render` button at the top of the document.
-Click it and you should see some action in a new tab called "Background jobs".
-It will call on latex and maybe install some latex packages to create your document.
-If it is successful, the RStudio Viewer window should come into focus and you will see a preview of a PDF document with the title "Test document".
-This means everything went fine and you are ready!
+RStudio should open a document for you, which is the test document you will render. Don't think about the content just now, but find the `Render` button at the top of the document. Click it and you should see some action in a new tab called "Background jobs". It will call on latex and maybe install some latex packages to create your document. If it is successful, the RStudio Viewer window should come into focus and you will see a preview of a PDF document with the title "Test document". This means everything went fine and you are ready!
 
 ![](images/image-676971779.png)
 
@@ -105,9 +90,7 @@ If the PDF generation fails with a message containing:\
 
 `` {! LaTeX Error: File `pdfcol.sty' not found.} ``
 
-This is an extra LaTeX package we will need to get installed.
-To do that, open RStudio and locate a tab called "Terminal".
-Run the following command:\
+This is an extra LaTeX package we will need to get installed. To do that, open RStudio and locate a tab called "Terminal". Run the following command:\
 
 ```{bash}
 #| eval: false
@@ -117,10 +100,14 @@ tlmgr install pdfcol
 ::: callout-warning
 ## I can't see the terminal!
 
-If the terminal is not visible next to the console, you need to enable it.
-Go to `Tools -> Terminal -> Move focus to Terminal` and it should pop up.
+If the terminal is not visible next to the console, you need to enable it. Go to `Tools -> Terminal -> Move focus to Terminal` and it should pop up.
 
 On macOS or Linux, you may also do this in the Terminal application directly (rather than through RStudio).
 :::
 
 If you still have problems getting things installed, please contact me [on email](mailto:a.m.mowinckel@psykologi.uio.no) or through a [GitHub issue](https://github.com/drmowinckels/quartaki/issues), and I will try help you get sorted.
+
+### When everything else fails
+
+If you cannot get Quarto installed correctly or get a pdf to be generated, we will unfortunately need to resort to using Posit Cloud so you can follow along.\
+The downside to this is that you will not have Quarto ready to use on your own system, and will thus need help to get that working later.

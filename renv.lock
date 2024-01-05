@@ -3,18 +3,6 @@
     "Version": "4.3.2",
     "Repositories": [
       {
-        "Name": "ggseg",
-        "URL": "https://ggseg.r-universe.dev"
-      },
-      {
-        "Name": "lcbc",
-        "URL": "https://lcbc-uio.r-universe.dev"
-      },
-      {
-        "Name": "stan",
-        "URL": "https://mc-stan.org/r-packages"
-      },
-      {
         "Name": "CRAN",
         "URL": "https://cloud.r-project.org"
       }
@@ -248,6 +236,14 @@
       "Source": "Repository",
       "Repository": "RSPM",
       "Hash": "18e9c28c1d3ca1560ce30658b22ce104",
+      "Requirements": []
+    },
+    "palmerpenguins": {
+      "Package": "palmerpenguins",
+      "Version": "0.1.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "6c6861efbc13c1d543749e9c7be4a592",
       "Requirements": []
     },
     "prismatic": {

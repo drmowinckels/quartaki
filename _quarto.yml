@@ -43,8 +43,8 @@ website:
         icon: github
       - href: https://drmowinckels.io
         icon: globe
-      - href: https://twitter.com/DrMowinckels
-        icon: twitter
+      - href: https://fosstodon.org/@Drmowinckels
+        icon: mastodon
 
 format:
   html:
