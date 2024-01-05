@@ -3,8 +3,7 @@ project:
   output-dir: docs
   render: 
     - "index.qmd"
-    - "00_intro.qmd"
-    - "01_presentation.qmd"
+    - "slides/*.qmd"
     - "example_files/*qmd"
 
 website:
@@ -30,9 +29,11 @@ website:
         text: Home
       - text: Workshop slides
         menu: 
-        - href: 00_intro.qmd
+        - href: slides/00_intro.qmd
           text: Introduction
-        - href: 01_presentation.qmd
+        - href: slides/01_elements.qmd
+          text: Markdown elements
+        - href: slides/02_presentation.qmd
           text: Workshop
       - text: Collaborative docs
         menu:
