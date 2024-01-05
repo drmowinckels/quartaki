@@ -3,6 +3,7 @@ project:
   output-dir: docs
   render: 
     - "index.qmd"
+    - "helper.qmd"
     - "[0-9]*.qmd"
     - "example_files/*qmd"
 
@@ -10,7 +11,7 @@ website:
   page-navigation: true
   title: "Quartaki"
   description: "Workshop materials for 1 day workshop on Quarto"
-  site-url: "https://drmowinckels.github.io/quartaki/"
+  site-url: https://drmowinckels.io/quartaki/
 
   repo-url: https://github.com/drmowinckels/quartaki
   repo-actions: [edit, issue]

@@ -1,0 +1,297 @@
+---
+title: "Helper's Document"
+---
+
+In this file, all the code bits that need pasting into the collaborative doc will be, as well as some helpful tips to the helpers for this workshop. After a workshop has run, I'd greatly appreciate any help in improving the helper doc for future workshops, so if you have ideas let me know. If you are comfortable with GitHub, a PR directly to this repo with suggestions is highly appreciated.
+
+## Open tabs
+
+During the workshop, I think its a good idea for helpers to have on their computers certain tabs open at all times, so you can easily navigate to them at need
+
+-   the collaborative document
+
+-   the workshop website
+
+-   the slides the instructor is currently running through
+
+## Schedule
+
+```{r}
+#| child: child_docs/schedule.qmd
+```
+
+## Workshop progression
+
+In this section, we have anything that is related to the workshop as it is progressing. Each section has its own subtitle here, and these should also match sections in the collaborative document. This way, helpers can easily navigate to the relevant section in the helper document.
+
+### Intro
+
+The intro section does not contain any exercises or code to copy. This part is mainly information and links to further resources for the learners.
+
+**What you should be doing**
+
+-   Look out for questions in the collaborative doc
+
+-   Help me notice raised hands I might not see
+
+-   Help paste urls and resources asked for in the collaborative doc
+
+## Markdown elements
+
+This section also has no exercise, it is another very quick information run down. This is intended as a very brief glimpse into plain markdown formatting, and we will not spend time on this as lecture, but will be doing it in practice together later. It is meant as a quick reference for the learners in the workshop, for later exercises.
+
+**What you should be doing**
+
+-   Look out for questions in the collaborative doc
+
+-   Help me notice raised hands I might not see
+
+-   Help paste urls and resources asked for in the collaborative doc
+
+## Presentation - live demos
+
+This section is where we start live coding and working together on a document. The documents we are working towards can be found in their entirety in [/example_files](/example_files) of this repository.
+
+We start with html, then pdf, and lastly html presentations at the end.
+
+### HTML
+
+#### 1
+
+##### Live demo section Lists
+
+::: notes
+-   File \> New File \> Quarto Document
+-   Have a look at its components
+-   Render
+-   Render on save
+-   Run chunk by chunk
+-   Alter chunk code to see difference
+:::
+
+##### Exercise section
+
+-   Write a little bit about your self. A sentence or two about your background and education.
+
+    -   They should just write some simple sentences in the document. There is a <Lorem Ipsum> at the bottom of the collaborative doc, if people want to test a large bulk of text.
+
+-   Create a list in your document, listing your favourite foods, at least the top three. Render it.
+
+    -   Making a list means using the markdown syntax for lists. Learners can use [markdown guide](https://quarto.org/docs/authoring/markdown-basics.html#lists) or look at the slides from the markdown elements session to see how to do that.
+
+-   Make the list *ordered* Render it.
+
+    -   This means changing the markdown syntax for lists to an ordered list. Learners can use [markdown guide](https://quarto.org/docs/authoring/markdown-basics.html#lists) or look at the slides from the markdown elements session to see how to do that.
+
+#### 2
+
+##### Live demo section
+
+::: notes
+-   Add toc
+-   Alter output format
+-   Switch back to html format
+:::
+
+##### Exercise section
+
+Here, learners should learn to explore what can be done in the yaml section, so that they get an idea of what is possible and how to explore the possibilities.
+
+::: tip
+One helpful thing here is that RStudio can provide suggestions once they type in three characters in the yaml, and then they can flip through the possible suggestions. It will also provide suggestions for values that are possible for that option. Learners can use [html guide](https://quarto.org/docs/output-formats/html-basics.html) for possible alternatives
+:::
+
+-   Change the title of the Table of Contents.
+
+    -   This means changing the yaml option for the title of the `toc-title`.
+
+-   Change the location of the Table of Contents.
+
+    -   This is done through the `toc-location` option
+
+-   Turn on Anchored sections, what did that do?
+
+    -   This is done through the `anchor-sections: true` option
+
+-   Turn on smooth-scroll, what did that do?
+
+    -   This is done through the `smooth-scroll: true` option
+
+#### 3
+
+##### Live demo section
+
+::: notes
+-   Show visual editor shortcuts and inserts
+-   Start adding penguins stuff
+-   Add columns
+:::
+
+Code chunks we will be adding during this demo section
+
+```{{r}}
+library(palmerpenguins)
+library(knitr)
+library(kableExtra)
+library(tidyverse)
+penguins <- penguins
+
+```
+
+```{{r}}
+ggplot(penguins,
+       aes(x = bill_length_mm,
+           y = bill_depth_mm)) +
+  geom_point(aes(colour = species)) +
+  geom_smooth(method = "lm", 
+              color = "black") +
+  theme_minimal()
+```
+
+##### Exercise section
+
+-   Add a call out block with a tip about your favourite drink
+
+    -   This means adding a block with the `::: tip` option
+
+-   Add a horizontal rule
+
+    -   This means adding a block with the `---` option
+
+-   Add a comment to the code AND in the text. What does that look like?
+
+    -   code comments are normal `#`
+
+    -   text comments are `<!-- text -->`
+
+#### 4
+
+##### Live demo section
+
+Showing how we add cross references to figures and tables
+
+-   Add cross-refs to tabs and figs
+
+We add the necessary pieces of information to the plot code chunk
+
+```{{r}}
+#| label: fig-penguin-smooth
+#| fig-cap: Penguin bill length and depth ratio by species
+
+ggplot(penguins,
+       aes(x = bill_length_mm,
+           y = bill_depth_mm)) +
+  geom_point(aes(colour = species)) +
+  geom_smooth(method = "lm", 
+              color = "black") +
+  theme_minimal()
+```
+
+and reference with `@fig-penguin-smooth`
+
+```{{r}}
+#| label: fig-penguin-density
+#| fig-cap: Penguin density
+
+penguins |> 
+  ggplot(aes(x = bill_length_mm,
+             fill = species)) + 
+  geom_density() +
+  theme_minimal()
+```
+
+and reference with `@fig-penguin-density`
+
+```{{r}}
+#| label: tbl-penguins
+#| tbl-cap: Penguin summary
+
+penguins |> 
+  pivot_longer(contains("_"),
+               values_drop_na = TRUE) |> 
+  group_by(name, species) |> 
+  summarise(across(value, 
+                   list(Mean = mean, 
+                        SD = sd,
+                        Min = min,
+                        Max = max,
+                        N = length),
+                   .names = "{.fn}")) |> 
+  mutate(
+    name = str_replace_all(name, "_", " ")
+  ) |> 
+  kable(booktabs = TRUE, digits = 3,) |> 
+  kable_classic() |> 
+  add_header_above(c(" " = 4, "Range" = 2, " " = 1)) |> 
+  collapse_rows(1)
+```
+
+and reference with `@tbl-penguins`
+
+##### Exercise section
+
+-   Take a screenshot of something on your screen, and add the image to your document.
+    -   They can copy+paste an image straight into the visual editor
+    -   They can also use the `Insert` button in the visual editor to add an image
+    -   They can also use the markdown syntax for images to add an image
+    -   to give this a label they need to give it a "label" (or an ID) either in the markdown code, or through the attributes in the visual editor
+-   Give the image a caption, and reference it in a piece of text.
+    -   This means adding a caption to the image, and then referencing it with `@fig-label`
+    -   caption can be added either as markdown, or through double clicking the image and adding it in the visual editor
+
+#### 5
+
+##### Live demo section
+
+-   Show the insert citation tool
+
+-   Search for doi `10.1177/2515245920928009`
+
+-   Search pubmed
+
+inform about zotero and better bibtex integration
+
+##### Exercise section
+
+-   Add a citation to an important paper in your field searching for its DOI
+-   Cite it in text using three different ways of controlling citation appearance
+    1.  standard
+    2.  name & year in parentheses
+    3.  year only
+
+### PDF
+
+#### 6
+
+##### Live demo section
+
+-   Change html document to pdf
+-   Try to render
+-   What are differences?
+
+##### Exercise section
+
+-   Add some headers, what does that do?
+    -   Adding headers either in the markdown (`##`) or in the visual editor
+-   Add section numbering, what does that do?
+    -   Adding section numbering in the yaml `number-sections: true`
+
+### Presentations
+
+#### 7
+
+##### Live demo section
+
+-   use html document as basis, convert to revealjs
+-   render
+-   start adapting to make slides
+-   show tabset
+
+##### Exercise section
+
+-   Adapt the remaining of the document so that you have distinct slides for all content
+    -   this is done by making more headers
+-   Make a slide without a header
+    -   adding three `---` where a new slide should start
+-   Make a slide with two columns of content
+    -   best done with visual editor looking for `/columns` in the insert menu

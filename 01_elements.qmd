@@ -13,25 +13,25 @@ format:
 
 ## Text Formatting {.center}
 
-+-----------------------------------+-------------------------------+
-| Markdown Syntax                   | Output                        |
-+===================================+===============================+
-| ```                               | *italics* and **bold**        |
-| *italics* and **bold**            |                               |
-| ```                               |                               |
-+-----------------------------------+-------------------------------+
-| ```                               | superscript^2^ / subscript~2~ |
-| superscript^2^ / subscript~2~     |                               |
-| ```                               |                               |
-+-----------------------------------+-------------------------------+
-| ```                               | ~~strikethrough~~             |
-| ~~strikethrough~~                 |                               |
-| ```                               |                               |
-+-----------------------------------+-------------------------------+
-| ```                               | `verbatim code`               |
-| `verbatim code`                   |                               |
-| ```                               |                               |
-+-----------------------------------+-------------------------------+
++-------------------------------+-------------------------------+
+| Markdown Syntax               | Output                        |
++===============================+===============================+
+| ```                           | *italics* and **bold**        |
+| *italics* and **bold**        |                               |
+| ```                           |                               |
++-------------------------------+-------------------------------+
+| ```                           | superscript^2^ / subscript~2~ |
+| superscript^2^ / subscript~2~ |                               |
+| ```                           |                               |
++-------------------------------+-------------------------------+
+| ```                           | ~~strikethrough~~             |
+| ~~strikethrough~~             |                               |
+| ```                           |                               |
++-------------------------------+-------------------------------+
+| ```                           | `verbatim code`               |
+| `verbatim code`               |                               |
+| ```                           |                               |
++-------------------------------+-------------------------------+
 
 ::: footer
 Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html)
@@ -39,33 +39,53 @@ Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-b
 
 ## Headings {.center}
 
-+--------------------+-----------------+
-| Markdown Syntax    | Output          |
-+====================+=================+
-| ```                | # Header 1      |
-| # Header 1         |                 |
-| ```                |                 |
-+--------------------+-----------------+
-| ```                | ## Header 2     |
-| ## Header 2        |                 |
-| ```                |                 |
-+--------------------+-----------------+
-| ```                | ### Header 3    |
-| ### Header 3       |                 |
-| ```                |                 |
-+--------------------+-----------------+
-| ```                | #### Header 4   |
-| #### Header 4      |                 |
-| ```                |                 |
-+--------------------+-----------------+
-| ```                | ##### Header 5  |
-| ##### Header 5     |                 |
-| ```                |                 |
-+--------------------+-----------------+
-| ```                | ###### Header 6 |
-| ###### Header 6    |                 |
-| ```                |                 |
-+--------------------+-----------------+
++-----------------+-----------------+
+| Markdown Syntax | Output          |
++=================+=================+
+| ```             | # Header 1      |
+| # Header 1      |                 |
+| ```             |                 |
++-----------------+-----------------+
+| ```             | ## Header 2     |
+| ## Header 2     |                 |
+| ```             |                 |
++-----------------+-----------------+
+| ```             | ### Header 3    |
+| ### Header 3    |                 |
+| ```             |                 |
++-----------------+-----------------+
+| ```             | #### Header 4   |
+| #### Header 4   |                 |
+| ```             |                 |
++-----------------+-----------------+
+| ```             | ##### Header 5  |
+| ##### Header 5  |                 |
+| ```             |                 |
++-----------------+-----------------+
+| ```             | ###### Header 6 |
+| ###### Header 6 |                 |
+| ```             |                 |
++-----------------+-----------------+
+
+::: footer
+Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html)
+:::
+
+## Lists {.center}
+
+::: nonincremental
++--------------------------+----------------------------+
+| Markdown Syntax          | Output                     |
++==========================+============================+
+| ```                      | -   unordered list         |
+| * unordered list         |                            |
+|     + sub-item 1         |     -   sub-item 1         |
+|     + sub-item 2         |                            |
+|         - sub-sub-item 1 |     -   sub-item 2         |
+| ```                      |                            |
+|                          |         -   sub-sub-item 1 |
++--------------------------+----------------------------+
+:::
 
 ::: footer
 Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html)
@@ -77,34 +97,14 @@ Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-b
 +-----------------------------+----------------------------+
 | Markdown Syntax             | Output                     |
 +=============================+============================+
-| ```                         | -   unordered list         |
-| * unordered list            |                            |
-|     + sub-item 1            |     -   sub-item 1         |
-|     + sub-item 2            |                            |
-|         - sub-sub-item 1    |     -   sub-item 2         |
+| ```                         | 1.  ordered list           |
+| 1. ordered list             |                            |
+| 2. item 2                   | 2.  item 2                 |
+|     i) sub-item 1           |                            |
+|          A.  sub-sub-item 1 |     i)  sub-item 1         |
 | ```                         |                            |
-|                             |         -   sub-sub-item 1 |
+|                             |         A.  sub-sub-item 1 |
 +-----------------------------+----------------------------+
-:::
-
-::: footer
-Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html)
-:::
-
-## Lists {.center}
-
-::: nonincremental
-+--------------------------------+----------------------------+
-| Markdown Syntax                | Output                     |
-+================================+============================+
-| ```                            | 1.  ordered list           |
-| 1. ordered list                |                            |
-| 2. item 2                      | 2.  item 2                 |
-|     i) sub-item 1              |                            |
-|          A.  sub-sub-item 1    |     i)  sub-item 1         |
-| ```                            |                            |
-|                                |         A.  sub-sub-item 1 |
-+--------------------------------+----------------------------+
 :::
 
 ::: footer
@@ -143,19 +143,19 @@ Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-b
 
 ## Equations {.center}
 
-+------------------------------+----------------+
-| Markdown Syntax              | Output         |
-+==============================+================+
-| ```                          | $E=mc^{2}$     |
-| inline math: $E = mc^{2}$    |                |
-| ```                          |                |
-+------------------------------+----------------+
-| ```                          | $$E = mc^{2}$$ |
-| display math:                |                |
-|                              |                |
-| $$E = mc^{2}$$               |                |
-| ```                          |                |
-+------------------------------+----------------+
++---------------------------+----------------+
+| Markdown Syntax           | Output         |
++===========================+================+
+| ```                       | $E=mc^{2}$     |
+| inline math: $E = mc^{2}$ |                |
+| ```                       |                |
++---------------------------+----------------+
+| ```                       | $$E = mc^{2}$$ |
+| display math:             |                |
+|                           |                |
+| $$E = mc^{2}$$            |                |
+| ```                       |                |
++---------------------------+----------------+
 
 ::: footer
 Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html)
@@ -163,19 +163,19 @@ Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-b
 
 ## Blocks {.center}
 
-+----------------------------+--------------------------+
-| Markdown Syntax            | Output                   |
-+============================+==========================+
-| ```                        | > Blockquote             |
-| > Blockquote               |                          |
-| ```                        |                          |
-+----------------------------+--------------------------+
-| ```                        | | Line Block             |
-| | Line Block               | |    Spaces and newlines |
-| |   Spaces and newlines    | |    are preserved       |
-| |   are preserved          |                          |
-| ```                        |                          |
-+----------------------------+--------------------------+
++-------------------------+--------------------------+
+| Markdown Syntax         | Output                   |
++=========================+==========================+
+| ```                     | > Blockquote             |
+| > Blockquote            |                          |
+| ```                     |                          |
++-------------------------+--------------------------+
+| ```                     | | Line Block             |
+| | Line Block            | |    Spaces and newlines |
+| |   Spaces and newlines | |    are preserved       |
+| |   are preserved       |                          |
+| ```                     |                          |
++-------------------------+--------------------------+
 
 ::: footer
 Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html)
@@ -281,7 +281,6 @@ format: revealjs
     -   some depending on template
 :::
 :::
-
 
 # Break {.center}
 

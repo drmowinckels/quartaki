@@ -9,6 +9,7 @@ format:
     toc-title: Contents
     css: styles.css
     keep-tex: true
+    number-sections: true
 editor: visual
 execute: 
   warning: false
@@ -94,3 +95,4 @@ penguins |>
   add_header_above(c(" " = 4, "Range" = 2, " " = 1)) |> 
   collapse_rows(1)
 ```
+

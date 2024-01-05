@@ -35,14 +35,13 @@ penguins <- penguins
 ```
 
 \
-We can write text as normal, interspersed with code that outputs something. We can choose to have the code shown or hidden, or provide the reader with the option to see the code if they wish. 
+We can write text as normal, interspersed with code that outputs something. We can choose to have the code shown or hidden, or provide the reader with the option to see the code if they wish.
 
 My favourite foods:
 
-1.   Souvlaki
-1.   Pasta with halloumi
-1.   Makaronia tou fournou (greek style lasagna)
-
+1.  Souvlaki
+2.  Pasta with halloumi
+3.  Makaronia tou fournou (greek style lasagna)
 
 We can also reference the figures @fig-penguin-smooth and @fig-penguin-density
 
@@ -101,4 +100,3 @@ penguins |>
   add_header_above(c(" " = 4, "Range" = 2, " " = 1)) |> 
   collapse_rows(1)
 ```
-

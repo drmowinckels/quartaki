@@ -123,7 +123,7 @@ Source: [RStudio - HTML Basics](https://quarto.org/docs/output-formats/html-code
 
 -   Create a list in your document, listing your favourite foods, at least the top three. Render it.
 
--   Make the list *ordered.* Render it.
+-   Make the list *ordered* Render it.
 
 ```{r}
 #| echo: false
@@ -420,8 +420,7 @@ Currently, only Zotero is supported as a connected reference manager.
 
 ::: nonincremental
 -   Add a citation to an important paper in your field searching for its DOI
--   Cite it in text using three different ways of controlling citation appearance (1. standard, 2. name & year in parentheses, 3. year only)
--   Redirect the reference generation to a specific spot in your document
+-   Cite it in text using three different ways of controlling citation appearance (1. standard, 2. name & year in parentheses, 3. year only)tion to a specific spot in your document
 
 ```{r, echo = FALSE}
 countdown::countdown(
@@ -529,102 +528,6 @@ countdown::countdown(
 )
 ```
 
-# Academic journal templates
-
-::: footer
-Source: [RStudio - Quarto Journal templates](https://quarto.org/docs/extensions/listing-journals.html)
-:::
-
-## Authors and affiliations
-
-::: columns
-::: column
-``` yaml
-author:
-  - name:
-      given: Norah
-      family: Jones
-      literal: Norah Jones
-      affiliations:
-        - ref: cmu
-        - ref: chicago
-    attributes:
-      corresponding: true
-```
-:::
-
-::: column
-``` yaml
-affiliations:
-  - id: cmu
-    name: Carnegie Mellon University
-    city: Pittsburgh
-    state: PA
-  - id: chicago
-    name: University of Chicago
-    city: Chicago
-    state: IL
-```
-:::
-:::
-
-::: footer
-Source: [RStudio - Quarto Journal authors](https://quarto.org/docs/journals/authors.html)
-:::
-
-## Go to RStudio
-
-::: notes
--   get arxiv template\
-    `quarto use template mikemahoney218/quarto-arxiv`
-
--   render it
-
--   walk through it
-
--   test another template\
-    `quarto use template quarto-journals/plos`\`
-:::
-
-## Exercise
-
--   Adapt the plos template to include the same content as our pdf document
-
--   Adapt the yaml to reflect you as an author
-
-```{r, echo = FALSE}
-countdown::countdown(
-  minutes = 10,
-  left = 0,
-  right = 0,
-  top = "80%",
-  padding = "50px",
-  margin = "10%",
-  font_size = "4em",
-  color_running_background  = "transparent",
-  color_finished_background = "#ffffff",
-  play_sound = TRUE,
-  warn_when = 30
-)
-```
-
-# Break
-
-```{r, echo = FALSE}
-countdown::countdown(
-  minutes = 5,
-  left = 0,
-  right = 0,
-  top = "80%",
-  padding = "50px",
-  margin = "10%",
-  font_size = "4em",
-  color_running_background  = "transparent",
-  color_finished_background = "#ffffff",
-  play_sound = TRUE,
-  warn_when = 30
-)
-```
 
 # Presentations
 
