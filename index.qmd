@@ -1,7 +1,12 @@
 ---
 title: "Quartaki"
 subtitle: "--- 6 hour introduction to Quarto ---"
-author: Athanasia Mo Mowinckel
+author: 
+  - name: Athanasia Monika Mowinckel
+    orcid: 0000-0002-5756-0223
+    affiliations:
+      - name: CAPRO
+        url: https://capro.dev/
 ---
 
 ```{r}

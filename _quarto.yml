@@ -43,8 +43,6 @@ website:
         - href: https://hackmd.io/@AWu8JfbKRr6CxA2o1ph1JQ/ryl9zeo9i/edit
           text: DSD UiO 2024-01-10
     right:
-      - href: https://github.com/drmowinckels
-        icon: github
       - href: https://drmowinckels.io
         icon: globe
       - href: https://fosstodon.org/@Drmowinckels
