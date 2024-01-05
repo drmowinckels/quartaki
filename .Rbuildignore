@@ -2,3 +2,5 @@
 ^renv\.lock$
 ^LICENSE\.md$
 ^\.github$
+^.*\.Rproj$
+^\.Rproj\.user$
