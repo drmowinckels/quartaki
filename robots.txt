@@ -1,1 +1,1 @@
-Sitemap: https://drmowinckels.github.io/quartaki/sitemap.xml
+Sitemap: https://drmowinckels.io/quartaki/sitemap.xml

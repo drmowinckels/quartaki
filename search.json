@@ -67,7 +67,7 @@
     "href": "02_presentation.html#exercise",
     "title": "Quarto",
     "section": "Exercise",
-    "text": "Exercise\n\n\nWrite a little bit about your self. A sentence or two about your background and education.\nCreate a list in your document, listing your favourite foods, at least the top three. Render it.\nMake the list ordered. Render it.\n\n\n\n\n−+\n10:00"
+    "text": "Exercise\n\n\nWrite a little bit about your self. A sentence or two about your background and education.\nCreate a list in your document, listing your favourite foods, at least the top three. Render it.\nMake the list ordered Render it.\n\n\n\n\n−+\n10:00"
   },
   {
     "objectID": "02_presentation.html#exercise-1",
@@ -144,7 +144,7 @@
     "href": "02_presentation.html#exercise-4",
     "title": "Quarto",
     "section": "Exercise",
-    "text": "Exercise\n\n\nAdd a citation to an important paper in your field searching for its DOI\nCite it in text using three different ways of controlling citation appearance (1. standard, 2. name & year in parentheses, 3. year only)\nRedirect the reference generation to a specific spot in your document\n\n\n\n\n−+\n10:00"
+    "text": "Exercise\n\n\nAdd a citation to an important paper in your field searching for its DOI\nCite it in text using three different ways of controlling citation appearance (1. standard, 2. name & year in parentheses, 3. year only)tion to a specific spot in your document\n\n\n\n\n−+\n10:00"
   },
   {
     "objectID": "02_presentation.html#very-controlled-by-yaml",
@@ -152,27 +152,6 @@
     "title": "Quarto",
     "section": "Very controlled by yaml",
     "text": "Very controlled by yaml\n---\ntitle: \"My document\"\nformat:\n  pdf:\n    toc: true\n    toc-depth: 2\n    toc-title: Contents\n    number-sections: true\n    colorlinks: true\n    keep-tex: true\n---\n\nSource: RStudio - Quarto PDF basics"
-  },
-  {
-    "objectID": "02_presentation.html#authors-and-affiliations",
-    "href": "02_presentation.html#authors-and-affiliations",
-    "title": "Quarto",
-    "section": "Authors and affiliations",
-    "text": "Authors and affiliations\n\n\nauthor:\n  - name:\n      given: Norah\n      family: Jones\n      literal: Norah Jones\n      affiliations:\n        - ref: cmu\n        - ref: chicago\n    attributes:\n      corresponding: true\n\naffiliations:\n  - id: cmu\n    name: Carnegie Mellon University\n    city: Pittsburgh\n    state: PA\n  - id: chicago\n    name: University of Chicago\n    city: Chicago\n    state: IL\n\n\n\nSource: RStudio - Quarto Journal authors"
-  },
-  {
-    "objectID": "02_presentation.html#go-to-rstudio-6",
-    "href": "02_presentation.html#go-to-rstudio-6",
-    "title": "Quarto",
-    "section": "Go to RStudio",
-    "text": "Go to RStudio\n\n\nget arxiv template\nquarto use template mikemahoney218/quarto-arxiv\nrender it\nwalk through it\ntest another template\nquarto use template quarto-journals/plos`"
-  },
-  {
-    "objectID": "02_presentation.html#exercise-6",
-    "href": "02_presentation.html#exercise-6",
-    "title": "Quarto",
-    "section": "Exercise",
-    "text": "Exercise\n\nAdapt the plos template to include the same content as our pdf document\nAdapt the yaml to reflect you as an author\n\n\n\n\n−+\n10:00"
   },
   {
     "objectID": "02_presentation.html#formats",
@@ -196,15 +175,15 @@
     "text": "Or adding horizontal rules (no header)\n---\ntitle: \"9 to 5\"\nauthor: \"Dolly Parton\"\nformat: revealjs\n---\n\n# Tumble out of bed \n\n- I stumble to the kitchen\n- Pour myself a cup of ambition\n- yawn and stretch and try to come to life\n\n---\n\n- Jump in the shower \n- the blood starts pumpin'\n- Out on the street\n- the traffic starts jumpin'"
   },
   {
-    "objectID": "02_presentation.html#go-to-rstudio-7",
-    "href": "02_presentation.html#go-to-rstudio-7",
+    "objectID": "02_presentation.html#go-to-rstudio-6",
+    "href": "02_presentation.html#go-to-rstudio-6",
     "title": "Quarto",
     "section": "Go to RStudio",
     "text": "Go to RStudio\n\n\nuse html document as basis, convert to revealjs\nrender\nstart adapting to make slides\nshow tabset"
   },
   {
-    "objectID": "02_presentation.html#exercise-7",
-    "href": "02_presentation.html#exercise-7",
+    "objectID": "02_presentation.html#exercise-6",
+    "href": "02_presentation.html#exercise-6",
     "title": "Quarto",
     "section": "Exercise",
     "text": "Exercise\n\nAdapt the remaining of the document so that you have distinct slides for all content\nMake a slide without a header\nMake a slide with two columns of content\n\n\n\n\n−+\n10:00"
@@ -334,6 +313,48 @@
     "title": "Quartaki",
     "section": "Troubleshooting",
     "text": "Troubleshooting\nIf the PDF generation fails with a message containing:\n\n{! LaTeX Error: File `pdfcol.sty' not found.}\nThis is an extra LaTeX package we will need to get installed. To do that, open RStudio and locate a tab called “Terminal”. Run the following command:\n\n\ntlmgr install pdfcol\n\n\n\n\n\n\n\nI can’t see the terminal!\n\n\n\nIf the terminal is not visible next to the console, you need to enable it. Go to Tools -&gt; Terminal -&gt; Move focus to Terminal and it should pop up.\nOn macOS or Linux, you may also do this in the Terminal application directly (rather than through RStudio).\n\n\nIf you still have problems getting things installed, please contact me on email or through a GitHub issue, and I will try help you get sorted.\n\nWhen everything else fails\nIf you cannot get Quarto installed correctly or get a pdf to be generated, we will unfortunately need to resort to using Posit Cloud so you can follow along.\nThe downside to this is that you will not have Quarto ready to use on your own system, and will thus need help to get that working later."
+  },
+  {
+    "objectID": "helper.html",
+    "href": "helper.html",
+    "title": "Helper’s Document",
+    "section": "",
+    "text": "In this file, all the code bits that need pasting into the collaborative doc will be, as well as some helpful tips to the helpers for this workshop. After a workshop has run, I’d greatly appreciate any help in improving the helper doc for future workshops, so if you have ideas let me know. If you are comfortable with GitHub, a PR directly to this repo with suggestions is highly appreciated."
+  },
+  {
+    "objectID": "helper.html#open-tabs",
+    "href": "helper.html#open-tabs",
+    "title": "Helper’s Document",
+    "section": "Open tabs",
+    "text": "Open tabs\nDuring the workshop, I think its a good idea for helpers to have on their computers certain tabs open at all times, so you can easily navigate to them at need\n\nthe collaborative document\nthe workshop website\nthe slides the instructor is currently running through"
+  },
+  {
+    "objectID": "helper.html#schedule",
+    "href": "helper.html#schedule",
+    "title": "Helper’s Document",
+    "section": "Schedule",
+    "text": "Schedule\n\nElements of a qmd ( ~ 45 minutes)\nMaking our first html report ( ~ 45 minutes)\nCitations & cross-references ( ~ 45 minutes)\nLunch ( ~ 60 minutes)\nMaking our first pdf report (~ 45 minutes)\nMaking our first presentation ( ~ 45 minutes)"
+  },
+  {
+    "objectID": "helper.html#workshop-progression",
+    "href": "helper.html#workshop-progression",
+    "title": "Helper’s Document",
+    "section": "Workshop progression",
+    "text": "Workshop progression\nIn this section, we have anything that is related to the workshop as it is progressing. Each section has its own subtitle here, and these should also match sections in the collaborative document. This way, helpers can easily navigate to the relevant section in the helper document.\n\nIntro\nThe intro section does not contain any exercises or code to copy. This part is mainly information and links to further resources for the learners.\nWhat you should be doing\n\nLook out for questions in the collaborative doc\nHelp me notice raised hands I might not see\nHelp paste urls and resources asked for in the collaborative doc"
+  },
+  {
+    "objectID": "helper.html#markdown-elements",
+    "href": "helper.html#markdown-elements",
+    "title": "Helper’s Document",
+    "section": "Markdown elements",
+    "text": "Markdown elements\nThis section also has no exercise, it is another very quick information run down. This is intended as a very brief glimpse into plain markdown formatting, and we will not spend time on this as lecture, but will be doing it in practice together later. It is meant as a quick reference for the learners in the workshop, for later exercises.\nWhat you should be doing\n\nLook out for questions in the collaborative doc\nHelp me notice raised hands I might not see\nHelp paste urls and resources asked for in the collaborative doc"
+  },
+  {
+    "objectID": "helper.html#presentation---live-demos",
+    "href": "helper.html#presentation---live-demos",
+    "title": "Helper’s Document",
+    "section": "Presentation - live demos",
+    "text": "Presentation - live demos\nThis section is where we start live coding and working together on a document. The documents we are working towards can be found in their entirety in /example_files of this repository.\nWe start with html, then pdf, and lastly html presentations at the end.\n\nHTML\n\n1\n\nLive demo section Lists\n\n\nFile &gt; New File &gt; Quarto Document\nHave a look at its components\nRender\nRender on save\nRun chunk by chunk\nAlter chunk code to see difference\n\n\n\n\nExercise section\n\nWrite a little bit about your self. A sentence or two about your background and education.\n\nThey should just write some simple sentences in the document. There is a  at the bottom of the collaborative doc, if people want to test a large bulk of text.\n\nCreate a list in your document, listing your favourite foods, at least the top three. Render it.\n\nMaking a list means using the markdown syntax for lists. Learners can use markdown guide or look at the slides from the markdown elements session to see how to do that.\n\nMake the list ordered Render it.\n\nThis means changing the markdown syntax for lists to an ordered list. Learners can use markdown guide or look at the slides from the markdown elements session to see how to do that.\n\n\n\n\n\n2\n\nLive demo section\n\n\nAdd toc\nAlter output format\nSwitch back to html format\n\n\n\n\nExercise section\nHere, learners should learn to explore what can be done in the yaml section, so that they get an idea of what is possible and how to explore the possibilities.\n\nOne helpful thing here is that RStudio can provide suggestions once they type in three characters in the yaml, and then they can flip through the possible suggestions. It will also provide suggestions for values that are possible for that option. Learners can use html guide for possible alternatives\n\n\nChange the title of the Table of Contents.\n\nThis means changing the yaml option for the title of the toc-title.\n\nChange the location of the Table of Contents.\n\nThis is done through the toc-location option\n\nTurn on Anchored sections, what did that do?\n\nThis is done through the anchor-sections: true option\n\nTurn on smooth-scroll, what did that do?\n\nThis is done through the smooth-scroll: true option\n\n\n\n\n\n3\n\nLive demo section\n\n\nShow visual editor shortcuts and inserts\nStart adding penguins stuff\nAdd columns\n\n\nCode chunks we will be adding during this demo section\n```{r}\nlibrary(palmerpenguins)\nlibrary(knitr)\nlibrary(kableExtra)\nlibrary(tidyverse)\npenguins &lt;- penguins\n\n```\n```{r}\nggplot(penguins,\n       aes(x = bill_length_mm,\n           y = bill_depth_mm)) +\n  geom_point(aes(colour = species)) +\n  geom_smooth(method = \"lm\", \n              color = \"black\") +\n  theme_minimal()\n```\n\n\nExercise section\n\nAdd a call out block with a tip about your favourite drink\n\nThis means adding a block with the ::: tip option\n\nAdd a horizontal rule\n\nThis means adding a block with the --- option\n\nAdd a comment to the code AND in the text. What does that look like?\n\ncode comments are normal #\ntext comments are &lt;!-- text --&gt;\n\n\n\n\n\n4\n\nLive demo section\nShowing how we add cross references to figures and tables\n\nAdd cross-refs to tabs and figs\n\nWe add the necessary pieces of information to the plot code chunk\n```{r}\n#| label: fig-penguin-smooth\n#| fig-cap: Penguin bill length and depth ratio by species\n\nggplot(penguins,\n       aes(x = bill_length_mm,\n           y = bill_depth_mm)) +\n  geom_point(aes(colour = species)) +\n  geom_smooth(method = \"lm\", \n              color = \"black\") +\n  theme_minimal()\n```\nand reference with @fig-penguin-smooth\n```{r}\n#| label: fig-penguin-density\n#| fig-cap: Penguin density\n\npenguins |&gt; \n  ggplot(aes(x = bill_length_mm,\n             fill = species)) + \n  geom_density() +\n  theme_minimal()\n```\nand reference with @fig-penguin-density\n```{r}\n#| label: tbl-penguins\n#| tbl-cap: Penguin summary\n\npenguins |&gt; \n  pivot_longer(contains(\"_\"),\n               values_drop_na = TRUE) |&gt; \n  group_by(name, species) |&gt; \n  summarise(across(value, \n                   list(Mean = mean, \n                        SD = sd,\n                        Min = min,\n                        Max = max,\n                        N = length),\n                   .names = \"{.fn}\")) |&gt; \n  mutate(\n    name = str_replace_all(name, \"_\", \" \")\n  ) |&gt; \n  kable(booktabs = TRUE, digits = 3,) |&gt; \n  kable_classic() |&gt; \n  add_header_above(c(\" \" = 4, \"Range\" = 2, \" \" = 1)) |&gt; \n  collapse_rows(1)\n```\nand reference with @tbl-penguins\n\n\nExercise section\n\nTake a screenshot of something on your screen, and add the image to your document.\n\nThey can copy+paste an image straight into the visual editor\nThey can also use the Insert button in the visual editor to add an image\nThey can also use the markdown syntax for images to add an image\nto give this a label they need to give it a “label” (or an ID) either in the markdown code, or through the attributes in the visual editor\n\nGive the image a caption, and reference it in a piece of text.\n\nThis means adding a caption to the image, and then referencing it with @fig-label\ncaption can be added either as markdown, or through double clicking the image and adding it in the visual editor\n\n\n\n\n\n5\n\nLive demo section\n\nShow the insert citation tool\nSearch for doi 10.1177/2515245920928009\nSearch pubmed\n\ninform about zotero and better bibtex integration\n\n\nExercise section\n\nAdd a citation to an important paper in your field searching for its DOI\nCite it in text using three different ways of controlling citation appearance\n\nstandard\nname & year in parentheses\nyear only\n\n\n\n\n\n\nPDF\n\n6\n\nLive demo section\n\nChange html document to pdf\nTry to render\nWhat are differences?\n\n\n\nExercise section\n\nAdd some headers, what does that do?\n\nAdding headers either in the markdown (##) or in the visual editor\n\nAdd section numbering, what does that do?\n\nAdding section numbering in the yaml number-sections: true\n\n\n\n\n\n\nPresentations\n\n7\n\nLive demo section\n\nuse html document as basis, convert to revealjs\nrender\nstart adapting to make slides\nshow tabset\n\n\n\nExercise section\n\nAdapt the remaining of the document so that you have distinct slides for all content\n\nthis is done by making more headers\n\nMake a slide without a header\n\nadding three --- where a new slide should start\n\nMake a slide with two columns of content\n\nbest done with visual editor looking for /columns in the insert menu"
   },
   {
     "objectID": "01_elements.html#text-formatting",
