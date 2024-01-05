@@ -1,0 +1,30 @@
+/*-- scss:defaults --*/
+$primary:  #cc4c4c;
+$secondary: #85bfbf;
+
+// Base document colors
+$body-bg: #343a3f;
+$navbar-bg: #20242b;
+$body-color: #c0c2c4;
+$link-color: $secondary;
+
+// Code blocks
+$code-block-bg-alpha: -.8;
+
+nav:after{
+  display: block;
+  content: ' ';
+  background-image: url('https://www.capro.dev/images/capro_logo_dark.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 80%;
+  height: 50px;
+}
+
+// Call-outs
+$callout-color-default: #bfc2c4;
+$callout-color-note: saturate($secondary, 20%);
+$callout-color-tip: $secondary;
+$callout-color-caution: #bebf85;
+$callout-color-warning: lighten($primary, 10%);
+$callout-color-important: #a785bf;

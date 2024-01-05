@@ -48,7 +48,7 @@ website:
 
 format:
   html:
-    theme: [cosmo, drmowickel.scss]
+    theme: [cosmo, capro_quarto.scss]
     toc: true
     code-copy: true
     code-overflow: scroll
