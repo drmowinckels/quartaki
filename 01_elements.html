@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-html/tabby.min.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-html/tabby.min.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.3.450">
 
-  <meta name="author" content="Athanasia Mo Mowinckel">
-  <meta name="dcterms.date" content="2022-10-26">
-  <title>Quartaki - Palmer penguins</title>
+  <title>Quartaki - Quarto</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -96,13 +94,11 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
-  <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
-  <link href="../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
-  <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto.css">
+  <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
   .callout {
@@ -387,422 +383,447 @@
       margin-right: 0; 
     }
   </style>
-  
-  <script src="../site_libs/kePrint-0.0.1/kePrint.js"></script>
-  <link href="../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+  <link href="site_libs/countdown-0.4.0/countdown.css" rel="stylesheet">
+  <script src="site_libs/countdown-0.4.0/countdown.js"></script>
 </head>
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Palmer penguins</h1>
+  <h1 class="title">Quarto</h1>
+  <p class="subtitle">markdown elementals</p>
 
 <div class="quarto-title-authors">
-<div class="quarto-title-author">
-<div class="quarto-title-author-name">
-Athanasia Mo Mowinckel 
-</div>
-</div>
 </div>
 
-  <p class="date">2022-10-26</p>
-</section>
-<section id="text" class="slide level2">
-<h2>Text</h2>
-<p>We can write text as normal, interspersed with code that outputs something. We can choose to have the code shown or hidden, or provide the reader with the option to see the code if they wish. We can also reference the figures <a href="#/code">Figure&nbsp;1</a> and <a href="#/fig-penguin-density">Figure&nbsp;2</a></p>
-</section>
-<section id="code" class="slide level2 .fragment">
-<h2>Code</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">ggplot</span>(penguins,</span>
-<span id="cb1-2"><a href="#cb1-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm,</span>
-<span id="cb1-3"><a href="#cb1-3"></a>           <span class="at">y =</span> bill_depth_mm)) <span class="sc">+</span></span>
-<span id="cb1-4"><a href="#cb1-4"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">colour =</span> species)) <span class="sc">+</span></span>
-<span id="cb1-5"><a href="#cb1-5"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, </span>
-<span id="cb1-6"><a href="#cb1-6"></a>              <span class="at">color =</span> <span class="st">"black"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell fragment">
-<div class="cell-output-display">
-<div id="fig-penguin-smooth" class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="05_revealjs_example_files/figure-revealjs/fig-penguin-smooth-1.png" width="960"></p>
-<figcaption>Figure&nbsp;1: Penguin bill length and depth ratio by species</figcaption>
-</figure>
-</div>
-</div>
-</div>
 </section>
 <section>
-<section id="another-slide" class="title-slide slide level1 center">
-<h1>Another slide</h1>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p>And the order of the figures does not really matter.</p>
-</div><div class="column" style="width:50%;">
-<p>If you change the order to the figures, but keep their labels, no references will be broken in the report.</p>
-</div>
-</div>
-</section>
-<section id="inline-computation" class="slide level2">
-<h2>Inline computation</h2>
-<p>Like the number of rows in the data being 344, and the number of female penguins being 165. We can also add footnotes<sup>1</sup>, and they will keep themselves numbered and placed correctly<sup>2</sup></p>
-<aside><ol class="aside-footnotes"><li id="fn1"><p>which can be very convenient</p></li><li id="fn2"><p>without us really needing to keep it all in mind.</p></li></ol></aside></section>
-<section id="density" class="slide level2">
-<h2>Density</h2>
-<div class="cell">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>penguins <span class="sc">|&gt;</span> </span>
-<span id="cb2-2"><a href="#cb2-2"></a>  <span class="fu">pivot_longer</span>(<span class="fu">contains</span>(<span class="st">"_"</span>),</span>
-<span id="cb2-3"><a href="#cb2-3"></a>               <span class="at">names_to =</span> <span class="fu">c</span>(<span class="st">"part"</span>,</span>
-<span id="cb2-4"><a href="#cb2-4"></a>                            <span class="st">"measure"</span>,</span>
-<span id="cb2-5"><a href="#cb2-5"></a>                            <span class="st">"unit"</span>),</span>
-<span id="cb2-6"><a href="#cb2-6"></a>               <span class="at">names_sep =</span> <span class="st">"_"</span>,</span>
-<span id="cb2-7"><a href="#cb2-7"></a>               <span class="at">values_to =</span> <span class="st">"value"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb2-8"><a href="#cb2-8"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> value,</span>
-<span id="cb2-9"><a href="#cb2-9"></a>             <span class="at">fill =</span> species)) <span class="sc">+</span> </span>
-<span id="cb2-10"><a href="#cb2-10"></a>  <span class="fu">geom_density</span>() <span class="sc">+</span></span>
-<span id="cb2-11"><a href="#cb2-11"></a>  <span class="fu">facet_grid</span>(part <span class="sc">~</span> measure, </span>
-<span id="cb2-12"><a href="#cb2-12"></a>             <span class="at">scales =</span> <span class="st">"free"</span>) <span class="sc">+</span></span>
-<span id="cb2-13"><a href="#cb2-13"></a>  <span class="fu">scale_fill_viridis_d</span>(<span class="at">alpha =</span> .<span class="dv">7</span>) <span class="sc">+</span></span>
-<span id="cb2-14"><a href="#cb2-14"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
+<section id="markdown-elements" class="title-slide slide level1 center">
+<h1>Markdown elements</h1>
 
-</div>
-<img data-src="05_revealjs_example_files/figure-revealjs/fig-penguin-density-1.png" width="960" class="r-stretch quarto-figure-center"><p class="caption">Figure&nbsp;2: Penguin density by species</p></section>
-<section id="summary" class="slide level2">
-<h2>summary</h2>
-<p>A summary of the observed penguin data can be found in <a href="#/table">Table&nbsp;1</a>. For this cross-reference to work, we <em>need</em> to have the <code>tbl-</code> prefix in the label name of the chunk that creates the table. The number of the table will update if another table appears before it, meaning you no longer need to deal with number your content correctly.<br>
-</p>
-</section></section>
-<section>
-<section id="table" class="title-slide slide level1 smaller center">
-<h1>Table</h1>
-<div class="cell">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>penguins <span class="sc">|&gt;</span> </span>
-<span id="cb3-2"><a href="#cb3-2"></a>  <span class="fu">pivot_longer</span>(<span class="fu">contains</span>(<span class="st">"_"</span>),</span>
-<span id="cb3-3"><a href="#cb3-3"></a>               <span class="at">values_drop_na =</span> <span class="cn">TRUE</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb3-4"><a href="#cb3-4"></a>  <span class="fu">group_by</span>(name, species) <span class="sc">|&gt;</span> </span>
-<span id="cb3-5"><a href="#cb3-5"></a>  <span class="fu">summarise</span>(<span class="fu">across</span>(value, </span>
-<span id="cb3-6"><a href="#cb3-6"></a>                   <span class="fu">list</span>(<span class="at">Mean =</span> mean, </span>
-<span id="cb3-7"><a href="#cb3-7"></a>                        <span class="at">SD =</span> sd,</span>
-<span id="cb3-8"><a href="#cb3-8"></a>                        <span class="at">Min =</span> min,</span>
-<span id="cb3-9"><a href="#cb3-9"></a>                        <span class="at">Max =</span> max,</span>
-<span id="cb3-10"><a href="#cb3-10"></a>                        <span class="at">N =</span> length),</span>
-<span id="cb3-11"><a href="#cb3-11"></a>                   <span class="at">.names =</span> <span class="st">"{.fn}"</span>)) <span class="sc">|&gt;</span> </span>
-<span id="cb3-12"><a href="#cb3-12"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb3-13"><a href="#cb3-13"></a>    <span class="at">name =</span> <span class="fu">str_replace_all</span>(name, <span class="st">"_"</span>, <span class="st">" "</span>)</span>
-<span id="cb3-14"><a href="#cb3-14"></a>  ) <span class="sc">|&gt;</span> </span>
-<span id="cb3-15"><a href="#cb3-15"></a>  <span class="fu">kable</span>(<span class="at">booktabs =</span> <span class="cn">TRUE</span>, <span class="at">digits =</span> <span class="dv">3</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb3-16"><a href="#cb3-16"></a>  <span class="fu">kable_classic</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb3-17"><a href="#cb3-17"></a>  <span class="fu">collapse_rows</span>(<span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output-display">
-<div id="tbl-penguins">
-<table class="lightable-classic" data-quarto-postprocess="true" style="font-family: &quot;Arial Narrow&quot;, &quot;Source Sans Pro&quot;, sans-serif; margin-left: auto; margin-right: auto;">
-<caption>Table&nbsp;1: Penguin summary</caption>
+</section>
+<section id="text-formatting" class="slide level2 center">
+<h2>Text Formatting</h2>
+<table style="width:94%;">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 44%">
+</colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;" data-quarto-table-cell-role="th">name</th>
-<th style="text-align: left;" data-quarto-table-cell-role="th">species</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">Mean</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">SD</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">Min</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">Max</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">N</th>
+<th>Markdown Syntax</th>
+<th>Output</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">bill depth mm</td>
-<td style="text-align: left;">Adelie</td>
-<td style="text-align: right;">18.346</td>
-<td style="text-align: right;">1.217</td>
-<td style="text-align: right;">15.5</td>
-<td style="text-align: right;">21.5</td>
-<td style="text-align: right;">151</td>
+<td><pre><code>*italics* and **bold**</code></pre></td>
+<td><em>italics</em> and <strong>bold</strong></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">bill depth mm</td>
-<td style="text-align: left;">Chinstrap</td>
-<td style="text-align: right;">18.421</td>
-<td style="text-align: right;">1.135</td>
-<td style="text-align: right;">16.4</td>
-<td style="text-align: right;">20.8</td>
-<td style="text-align: right;">68</td>
+<td><pre><code>superscript^2^ / subscript~2~</code></pre></td>
+<td>superscript<sup>2</sup> / subscript<sub>2</sub></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">bill depth mm</td>
-<td style="text-align: left;">Gentoo</td>
-<td style="text-align: right;">14.982</td>
-<td style="text-align: right;">0.981</td>
-<td style="text-align: right;">13.1</td>
-<td style="text-align: right;">17.3</td>
-<td style="text-align: right;">123</td>
+<td><pre><code>~~strikethrough~~</code></pre></td>
+<td><del>strikethrough</del></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">bill length mm</td>
-<td style="text-align: left;">Adelie</td>
-<td style="text-align: right;">38.791</td>
-<td style="text-align: right;">2.663</td>
-<td style="text-align: right;">32.1</td>
-<td style="text-align: right;">46.0</td>
-<td style="text-align: right;">151</td>
+<td><pre><code>`verbatim code`</code></pre></td>
+<td><code>verbatim code</code></td>
+</tr>
+</tbody>
+</table>
+<div class="footer">
+<p>Source: <a href="https://quarto.org/docs/authoring/markdown-basics.html">RStudio - Markdown basics</a></p>
+</div>
+</section>
+<section id="headings" class="slide level2 center">
+<h2>Headings</h2>
+<table style="width:54%;">
+<colgroup>
+<col style="width: 29%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Markdown Syntax</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><pre><code># Header 1</code></pre></td>
+<td><h1 id="header-1">Header 1</h1></td>
+</tr>
+<tr class="even">
+<td><pre><code>## Header 2</code></pre></td>
+<td><h2 id="header-2">Header 2</h2></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">bill length mm</td>
-<td style="text-align: left;">Chinstrap</td>
-<td style="text-align: right;">48.834</td>
-<td style="text-align: right;">3.339</td>
-<td style="text-align: right;">40.9</td>
-<td style="text-align: right;">58.0</td>
-<td style="text-align: right;">68</td>
+<td><pre><code>### Header 3</code></pre></td>
+<td><h3 id="header-3">Header 3</h3></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">bill length mm</td>
-<td style="text-align: left;">Gentoo</td>
-<td style="text-align: right;">47.505</td>
-<td style="text-align: right;">3.082</td>
-<td style="text-align: right;">40.9</td>
-<td style="text-align: right;">59.6</td>
-<td style="text-align: right;">123</td>
+<td><pre><code>#### Header 4</code></pre></td>
+<td><h4 id="header-4">Header 4</h4></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">body mass g</td>
-<td style="text-align: left;">Adelie</td>
-<td style="text-align: right;">3700.662</td>
-<td style="text-align: right;">458.566</td>
-<td style="text-align: right;">2850.0</td>
-<td style="text-align: right;">4775.0</td>
-<td style="text-align: right;">151</td>
+<td><pre><code>##### Header 5</code></pre></td>
+<td><h5 id="header-5">Header 5</h5></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">body mass g</td>
-<td style="text-align: left;">Chinstrap</td>
-<td style="text-align: right;">3733.088</td>
-<td style="text-align: right;">384.335</td>
-<td style="text-align: right;">2700.0</td>
-<td style="text-align: right;">4800.0</td>
-<td style="text-align: right;">68</td>
+<td><pre><code>###### Header 6</code></pre></td>
+<td><h6 id="header-6">Header 6</h6></td>
 </tr>
+</tbody>
+</table>
+<div class="footer">
+<p>Source: <a href="https://quarto.org/docs/authoring/markdown-basics.html">RStudio - Markdown basics</a></p>
+</div>
+</section>
+<section id="lists" class="slide level2 center">
+<h2>Lists</h2>
+<div>
+<table style="width:82%;">
+<colgroup>
+<col style="width: 41%">
+<col style="width: 40%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Markdown Syntax</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
 <tr class="odd">
-<td style="text-align: left;">body mass g</td>
-<td style="text-align: left;">Gentoo</td>
-<td style="text-align: right;">5076.016</td>
-<td style="text-align: right;">504.116</td>
-<td style="text-align: right;">3950.0</td>
-<td style="text-align: right;">6300.0</td>
-<td style="text-align: right;">123</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">flipper length mm</td>
-<td style="text-align: left;">Adelie</td>
-<td style="text-align: right;">189.954</td>
-<td style="text-align: right;">6.539</td>
-<td style="text-align: right;">172.0</td>
-<td style="text-align: right;">210.0</td>
-<td style="text-align: right;">151</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">flipper length mm</td>
-<td style="text-align: left;">Chinstrap</td>
-<td style="text-align: right;">195.824</td>
-<td style="text-align: right;">7.132</td>
-<td style="text-align: right;">178.0</td>
-<td style="text-align: right;">212.0</td>
-<td style="text-align: right;">68</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">flipper length mm</td>
-<td style="text-align: left;">Gentoo</td>
-<td style="text-align: right;">217.187</td>
-<td style="text-align: right;">6.485</td>
-<td style="text-align: right;">203.0</td>
-<td style="text-align: right;">231.0</td>
-<td style="text-align: right;">123</td>
+<td><pre><code>* unordered list
+    + sub-item 1
+    + sub-item 2
+        - sub-sub-item 1</code></pre></td>
+<td><ul>
+<li><p>unordered list</p>
+<ul>
+<li><p>sub-item 1</p></li>
+<li><p>sub-item 2</p>
+<ul>
+<li>sub-sub-item 1</li>
+</ul></li>
+</ul></li>
+</ul></td>
 </tr>
 </tbody>
 </table>
 </div>
-
-
-</div>
+<div class="footer">
+<p>Source: <a href="https://quarto.org/docs/authoring/markdown-basics.html">RStudio - Markdown basics</a></p>
 </div>
 </section>
-<section id="penguin-models" class="slide level2 smaller">
-<h2>Penguin models</h2>
-<div class="cell">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>penguins <span class="sc">|&gt;</span> </span>
-<span id="cb4-2"><a href="#cb4-2"></a>  <span class="fu">nest_by</span>(species, island) <span class="sc">|&gt;</span> </span>
-<span id="cb4-3"><a href="#cb4-3"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb4-4"><a href="#cb4-4"></a>    <span class="at">model =</span> <span class="fu">list</span>(<span class="fu">lm</span>(bill_length_mm <span class="sc">~</span> bill_depth_mm,</span>
-<span id="cb4-5"><a href="#cb4-5"></a>                    <span class="at">data =</span> data)),</span>
-<span id="cb4-6"><a href="#cb4-6"></a>    <span class="at">table =</span> <span class="fu">list</span>(broom<span class="sc">::</span><span class="fu">tidy</span>(model))</span>
-<span id="cb4-7"><a href="#cb4-7"></a>  ) <span class="sc">|&gt;</span> </span>
-<span id="cb4-8"><a href="#cb4-8"></a>  <span class="fu">unnest</span>(table) <span class="sc">|&gt;</span> </span>
-<span id="cb4-9"><a href="#cb4-9"></a>  <span class="fu">select</span>(<span class="sc">-</span>model, <span class="sc">-</span>data) <span class="sc">|&gt;</span> </span>
-<span id="cb4-10"><a href="#cb4-10"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb4-11"><a href="#cb4-11"></a>    <span class="at">term =</span> <span class="fu">str_replace_all</span>(term, <span class="st">"_"</span>, <span class="st">" "</span>)</span>
-<span id="cb4-12"><a href="#cb4-12"></a>  ) <span class="sc">|&gt;</span> </span>
-<span id="cb4-13"><a href="#cb4-13"></a>  <span class="fu">kable</span>(<span class="at">booktabs =</span> <span class="cn">TRUE</span>, <span class="at">digits =</span> <span class="dv">3</span>,) <span class="sc">|&gt;</span> </span>
-<span id="cb4-14"><a href="#cb4-14"></a>  <span class="fu">kable_classic</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb4-15"><a href="#cb4-15"></a>  <span class="fu">add_footnote</span>(<span class="st">"Models were run independently on data from the different island and species."</span>,</span>
-<span id="cb4-16"><a href="#cb4-16"></a>               <span class="at">notation =</span> <span class="st">"none"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb4-17"><a href="#cb4-17"></a>  <span class="fu">collapse_rows</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output-display">
-<div id="tbl-models">
-<table class="lightable-classic" data-quarto-postprocess="true" style="font-family: &quot;Arial Narrow&quot;, &quot;Source Sans Pro&quot;, sans-serif; margin-left: auto; margin-right: auto;">
-<caption>Table&nbsp;2: Predicting bill length by bill depth, split by species and island.</caption>
+<section id="lists-1" class="slide level2 center">
+<h2>Lists</h2>
+<div>
+<table style="width:86%;">
+<colgroup>
+<col style="width: 45%">
+<col style="width: 40%">
+</colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;" data-quarto-table-cell-role="th">species</th>
-<th style="text-align: left;" data-quarto-table-cell-role="th">island</th>
-<th style="text-align: left;" data-quarto-table-cell-role="th">term</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">estimate</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">std.error</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">statistic</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">p.value</th>
+<th>Markdown Syntax</th>
+<th>Output</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">Adelie</td>
-<td style="text-align: left;">Biscoe</td>
-<td style="text-align: left;">(Intercept)</td>
-<td style="text-align: right;">21.026</td>
-<td style="text-align: right;">5.238</td>
-<td style="text-align: right;">4.014</td>
-<td style="text-align: right;">0.000</td>
+<td><pre><code>1. ordered list
+2. item 2
+    i) sub-item 1
+         A.  sub-sub-item 1</code></pre></td>
+<td><ol type="1">
+<li><p>ordered list</p></li>
+<li><p>item 2</p>
+<ol type="i">
+<li><p>sub-item 1</p>
+<ol type="A">
+<li>sub-sub-item 1</li>
+</ol></li>
+</ol></li>
+</ol></td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">Adelie</td>
-<td style="text-align: left;">Biscoe</td>
-<td style="text-align: left;">bill depth mm</td>
-<td style="text-align: right;">0.977</td>
-<td style="text-align: right;">0.285</td>
-<td style="text-align: right;">3.434</td>
-<td style="text-align: right;">0.001</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Adelie</td>
-<td style="text-align: left;">Dream</td>
-<td style="text-align: left;">(Intercept)</td>
-<td style="text-align: right;">18.343</td>
-<td style="text-align: right;">4.662</td>
-<td style="text-align: right;">3.935</td>
-<td style="text-align: right;">0.000</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Adelie</td>
-<td style="text-align: left;">Dream</td>
-<td style="text-align: left;">bill depth mm</td>
-<td style="text-align: right;">1.104</td>
-<td style="text-align: right;">0.255</td>
-<td style="text-align: right;">4.332</td>
-<td style="text-align: right;">0.000</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Adelie</td>
-<td style="text-align: left;">Torgersen</td>
-<td style="text-align: left;">(Intercept)</td>
-<td style="text-align: right;">28.588</td>
-<td style="text-align: right;">5.774</td>
-<td style="text-align: right;">4.951</td>
-<td style="text-align: right;">0.000</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Adelie</td>
-<td style="text-align: left;">Torgersen</td>
-<td style="text-align: left;">bill depth mm</td>
-<td style="text-align: right;">0.562</td>
-<td style="text-align: right;">0.313</td>
-<td style="text-align: right;">1.799</td>
-<td style="text-align: right;">0.078</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Chinstrap</td>
-<td style="text-align: left;">Dream</td>
-<td style="text-align: left;">(Intercept)</td>
-<td style="text-align: right;">13.428</td>
-<td style="text-align: right;">5.057</td>
-<td style="text-align: right;">2.655</td>
-<td style="text-align: right;">0.010</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Chinstrap</td>
-<td style="text-align: left;">Dream</td>
-<td style="text-align: left;">bill depth mm</td>
-<td style="text-align: right;">1.922</td>
-<td style="text-align: right;">0.274</td>
-<td style="text-align: right;">7.015</td>
-<td style="text-align: right;">0.000</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Gentoo</td>
-<td style="text-align: left;">Biscoe</td>
-<td style="text-align: left;">(Intercept)</td>
-<td style="text-align: right;">17.230</td>
-<td style="text-align: right;">3.282</td>
-<td style="text-align: right;">5.250</td>
-<td style="text-align: right;">0.000</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Gentoo</td>
-<td style="text-align: left;">Biscoe</td>
-<td style="text-align: left;">bill depth mm</td>
-<td style="text-align: right;">2.021</td>
-<td style="text-align: right;">0.219</td>
-<td style="text-align: right;">9.245</td>
-<td style="text-align: right;">0.000</td>
-</tr>
-</tbody><tfoot>
-<tr class="odd">
-<td style="text-align: left; padding: 0; border: 0;"><sup></sup> Models were run independently on data from the different island and species.</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-</tr>
-</tfoot>
-
+</tbody>
 </table>
 </div>
-
-
+<div class="footer">
+<p>Source: <a href="https://quarto.org/docs/authoring/markdown-basics.html">RStudio - Markdown basics</a></p>
+</div>
+</section>
+<section id="tables" class="slide level2 center">
+<h2>Tables</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h4 id="markdown-syntax">Markdown Syntax</h4>
+<pre><code>| Right | Left | Default | Center |
+|------:|:-----|---------|:------:|
+|   12  |  12  |    12   |    12  |
+|  123  |  123 |   123   |   123  |
+|    1  |    1 |     1   |     1  |</code></pre>
+</div><div class="column" style="width:50%;">
+<h4 id="output">Output</h4>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Right</th>
+<th style="text-align: left;">Left</th>
+<th>Default</th>
+<th style="text-align: center;">Center</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">12</td>
+<td style="text-align: left;">12</td>
+<td>12</td>
+<td style="text-align: center;">12</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">123</td>
+<td style="text-align: left;">123</td>
+<td>123</td>
+<td style="text-align: center;">123</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">1</td>
+<td>1</td>
+<td style="text-align: center;">1</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
+<div class="footer">
+<p>Source: <a href="https://quarto.org/docs/authoring/markdown-basics.html">RStudio - Markdown basics</a></p>
+</div>
+</section>
+<section id="equations" class="slide level2 center">
+<h2>Equations</h2>
+<table style="width:67%;">
+<colgroup>
+<col style="width: 43%">
+<col style="width: 23%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Markdown Syntax</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><pre><code>inline math: $E = mc^{2}$</code></pre></td>
+<td><span class="math inline">\(E=mc^{2}\)</span></td>
+</tr>
+<tr class="even">
+<td><pre><code>display math:
 
-<div class="footer footer-default">
-
+$$E = mc^{2}$$</code></pre></td>
+<td><span class="math display">\[E = mc^{2}\]</span></td>
+</tr>
+</tbody>
+</table>
+<div class="footer">
+<p>Source: <a href="https://quarto.org/docs/authoring/markdown-basics.html">RStudio - Markdown basics</a></p>
+</div>
+</section>
+<section id="blocks" class="slide level2 center">
+<h2>Blocks</h2>
+<table style="width:78%;">
+<colgroup>
+<col style="width: 40%">
+<col style="width: 37%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Markdown Syntax</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><pre><code>&gt; Blockquote</code></pre></td>
+<td><blockquote>
+<p>Blockquote</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td><pre><code>| Line Block
+|   Spaces and newlines
+|   are preserved</code></pre></td>
+<td><p>Line Block<br>
+&nbsp;&nbsp;&nbsp;Spaces and newlines<br>
+&nbsp;&nbsp;&nbsp;are preserved</p></td>
+</tr>
+</tbody>
+</table>
+<div class="footer">
+<p>Source: <a href="https://quarto.org/docs/authoring/markdown-basics.html">RStudio - Markdown basics</a></p>
+</div>
+</section>
+<section id="links-images" class="slide level2 center">
+<h2>Links &amp; Images</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Markdown Syntax</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><pre><code>&lt;https://oslobrains.no&gt;</code></pre></td>
+<td><a href="https://oslobrains.no" class="uri">https://oslobrains.no</a></td>
+</tr>
+<tr class="even">
+<td><pre><code>[LCBC](https://oslobrains.no)</code></pre></td>
+<td><a href="https://oslobrains.no">LCBC</a></td>
+</tr>
+<tr class="odd">
+<td><pre><code>![Caption](images/lcbc_logo_wide.png)</code></pre></td>
+<td><img data-src="images/lcbc_logo_wide.png" alt="Caption"></td>
+</tr>
+<tr class="even">
+<td><pre><code>[![Caption](images/lcbc_logo_wide.png)](https://oslobrains.no)</code></pre></td>
+<td><a href="https://oslobrains.no"><img data-src="images/lcbc_logo_wide.png" alt="Caption"></a></td>
+</tr>
+</tbody>
+</table>
+<div class="footer">
+<p>Source: <a href="https://quarto.org/docs/authoring/markdown-basics.html">RStudio - Markdown basics</a></p>
+</div>
+</section>
+<section id="specials" class="slide level2 center">
+<h2>Specials</h2>
+<div>
+<table style="width:49%;">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 23%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Markdown Syntax</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><pre><code>endash: --</code></pre></td>
+<td>endash: –</td>
+</tr>
+<tr class="even">
+<td><pre><code>emdash: ---</code></pre></td>
+<td>emdash: —</td>
+</tr>
+<tr class="odd">
+<td><pre><code>term
+: definition</code></pre></td>
+<td><dl>
+<dt>term</dt>
+<dd>
+<p>definition</p>
+</dd>
+</dl></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="footer">
+<p>Source: <a href="https://quarto.org/docs/authoring/markdown-basics.html">RStudio - Markdown basics</a></p>
 </div>
 </section></section>
+<section>
+<section id="the-header-yaml" class="title-slide slide level1 center">
+<h1>The header yaml</h1>
 
+</section>
+<section id="setting-up-the-document" class="slide level2">
+<h2>Setting up the document</h2>
+<div class="columns">
+<div class="column" style="width:32%;">
+<div class="sourceCode" id="cb25"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb25-1"><a href="#cb25-1"></a><span class="pp">---</span></span>
+<span id="cb25-2"><a href="#cb25-2"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Document title"</span></span>
+<span id="cb25-3"><a href="#cb25-3"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">"Your Name"</span></span>
+<span id="cb25-4"><a href="#cb25-4"></a><span class="fu">execute</span><span class="kw">:</span></span>
+<span id="cb25-5"><a href="#cb25-5"></a><span class="at">  </span><span class="fu">echo</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb25-6"><a href="#cb25-6"></a><span class="fu">format</span><span class="kw">:</span><span class="at"> html</span></span>
+<span id="cb25-7"><a href="#cb25-7"></a><span class="pp">--- </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb26-1"><a href="#cb26-1"></a><span class="pp">---</span></span>
+<span id="cb26-2"><a href="#cb26-2"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Document title"</span></span>
+<span id="cb26-3"><a href="#cb26-3"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">"Your Name"</span></span>
+<span id="cb26-4"><a href="#cb26-4"></a><span class="fu">execute</span><span class="kw">:</span></span>
+<span id="cb26-5"><a href="#cb26-5"></a><span class="at">  </span><span class="fu">echo</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb26-6"><a href="#cb26-6"></a><span class="fu">format</span><span class="kw">:</span><span class="at"> pdf</span></span>
+<span id="cb26-7"><a href="#cb26-7"></a><span class="pp">--- </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb27-1"><a href="#cb27-1"></a><span class="pp">---</span></span>
+<span id="cb27-2"><a href="#cb27-2"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Document title"</span></span>
+<span id="cb27-3"><a href="#cb27-3"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">"Your Name"</span></span>
+<span id="cb27-4"><a href="#cb27-4"></a><span class="fu">execute</span><span class="kw">:</span></span>
+<span id="cb27-5"><a href="#cb27-5"></a><span class="at">  </span><span class="fu">echo</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb27-6"><a href="#cb27-6"></a><span class="fu">format</span><span class="kw">:</span><span class="at"> revealjs</span></span>
+<span id="cb27-7"><a href="#cb27-7"></a><span class="pp">--- </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:10%;">
+
+</div><div class="column" style="width:58%;">
+<ul>
+<li class="fragment">Set up important document settings</li>
+<li class="fragment">Changing format is easy
+<ul>
+<li class="fragment">some settings might not work</li>
+</ul></li>
+<li class="fragment">Many more options
+<ul>
+<li class="fragment">some depending on output format</li>
+<li class="fragment">some depending on template</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</section></section>
+<section id="break" class="title-slide slide level1 center">
+<h1>Break</h1>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_d6fa2589" data-warn-when="30" data-update-every="1" data-play-sound="true" tabindex="0" style="top:50%;right:0;left:0;margin:10%;padding:50px;font-size:4em;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
+
+
+<img src="./images/lcbc_logo_wide.png" class="slide-logo r-stretch"><div class="footer footer-default">
+
+</div>
+</section>
     </div>
   </div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="../site_libs/revealjs/dist/reveal.js"></script>
+  <script src="site_libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="../site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
-  <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="site_libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="../site_libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="../site_libs/revealjs/plugin/search/search.js"></script>
-  <script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="../site_libs/revealjs/plugin/math/math.js"></script>
+  <script src="site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="site_libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
@@ -817,8 +838,7 @@ Athanasia Mo Mowinckel
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
-'chalkboard': {"buttons":true},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -989,7 +1009,7 @@ Athanasia Mo Mowinckel
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
 
           RevealMath,
           RevealNotes,
