@@ -3,7 +3,7 @@ project:
   output-dir: docs
   render: 
     - "index.qmd"
-    - "slides/*.qmd"
+    - "[0-9]*.qmd"
     - "example_files/*qmd"
 
 website:
@@ -29,16 +29,18 @@ website:
         text: Home
       - text: Workshop slides
         menu: 
-        - href: slides/00_intro.qmd
+        - href: 00_intro.qmd
           text: Introduction
-        - href: slides/01_elements.qmd
+        - href: 01_elements.qmd
           text: Markdown elements
-        - href: slides/02_presentation.qmd
-          text: Workshop
+        - href: 02_presentation.qmd
+          text: Workshop slides
       - text: Collaborative docs
         menu:
         - href: https://hackmd.io/@AWu8JfbKRr6CxA2o1ph1JQ/ryl9zeo9i/edit
-          text: 2022-01-13 DSD UiO
+          text: DSD UiO 2022-01-13 
+        - href: https://hackmd.io/@AWu8JfbKRr6CxA2o1ph1JQ/ryl9zeo9i/edit
+          text: DSD UiO 2024-01-10
     right:
       - href: https://github.com/drmowinckels
         icon: github

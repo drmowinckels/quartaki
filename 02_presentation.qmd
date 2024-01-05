@@ -50,12 +50,7 @@ Source: [RStudio - HTML Basics](https://quarto.org/docs/output-formats/html-code
 :::
 
 ::: notes
-Divs start with a fence containing at least three consecutive colons plus some attributes.
-The attributes may optionally be followed by another string of consecutive colons.
-The Div ends with another line containing a string of at least three consecutive colons.
-The Div should be separated by blank lines from preceding and following blocks.
-Divs may also be nested.
-For example
+Divs start with a fence containing at least three consecutive colons plus some attributes. The attributes may optionally be followed by another string of consecutive colons. The Div ends with another line containing a string of at least three consecutive colons. The Div should be separated by blank lines from preceding and following blocks. Divs may also be nested. For example
 :::
 
 ## Divs {.center}
@@ -95,9 +90,7 @@ Source: [RStudio - Markdown basics](https://quarto.org/docs/authoring/markdown-b
 :::
 
 ::: notes
-Fences without attributes are always closing fences.
-Unlike with fenced code blocks, the number of colons in the closing fence need not match the number in the opening fence.
-However, it can be helpful for visual clarity to use fences of different lengths to distinguish nested divs from their parents.
+Fences without attributes are always closing fences. Unlike with fenced code blocks, the number of colons in the closing fence need not match the number in the opening fence. However, it can be helpful for visual clarity to use fences of different lengths to distinguish nested divs from their parents.
 :::
 
 ## css and filters {.center}
@@ -126,11 +119,9 @@ Source: [RStudio - HTML Basics](https://quarto.org/docs/output-formats/html-code
 ## Exercise
 
 ::: nonincremental
--   Write a little bit about your self.
-    A sentence or two about your background and education.
+-   Write a little bit about your self. A sentence or two about your background and education.
 
--   Create a list in your document, listing your favourite foods, at least the top three.
-    Render it.
+-   Create a list in your document, listing your favourite foods, at least the top three. Render it.
 
 -   Make the list *ordered.* Render it.
 
@@ -243,8 +234,7 @@ countdown::countdown(
 
 -   Add a horizontal rule
 
--   Add a comment.
-    What does that look like?
+-   Add a comment. What does that look like?
 
 ```{r}
 #| echo: false
@@ -296,8 +286,7 @@ countdown::countdown(
 | Theorem      | thm-         |
 
 ::: notes
-When adding cross-references, its important to have in mind the prefixes necessary to make the cross-referencing work.
-Thankfully, these are fairly straight forward, but still do require some cognitive load on our part to learn them.
+When adding cross-references, its important to have in mind the prefixes necessary to make the cross-referencing work. Thankfully, these are fairly straight forward, but still do require some cognitive load on our part to learn them.
 :::
 
 ## Go to RStudio
@@ -351,21 +340,31 @@ Have a look at @fig-counter.
 
 ## Citation control
 
-+--------------------------------------------------+--------------------------------------------------------------+
-| Markdown Format                                  | Output (author-date format)                                  |
-+==================================================+==============================================================+
-|     Blip blop bloop [see @biswal2010, pp. 33-35; | Blip blop bloop [see @biswal2010, pp. 33-35; also , chap. 1] |
-|     also @ggseg, chap. 1]                        |                                                              |
-+--------------------------------------------------+--------------------------------------------------------------+
-|     Blip blop bloop [@biswal2010, pp. 33-35,     | Blip blop bloop [@biswal2010, pp. 33-35, 38-39 and passim]   |
-|     38-39 and passim]                            |                                                              |
-+--------------------------------------------------+--------------------------------------------------------------+
-|     Blip blop bloop [@ggseg; @biswal2010].       | Blip blop bloop [@ggseg; @biswal2010].                       |
-+--------------------------------------------------+--------------------------------------------------------------+
-|     Mowinckel says blah [-@ggseg]                | Mowinckel says blah [-@ggseg]                                |
-+--------------------------------------------------+--------------------------------------------------------------+
-|     @biswal2010 says bloop.                      | @biswal2010 says bloop.                                      |
-+--------------------------------------------------+--------------------------------------------------------------+
++----------------------------------------------+--------------------------------------------------------------+
+| Markdown Format                              | Output (author-date format)                                  |
++==============================================+==============================================================+
+| ```                                          | Blip blop bloop [see @biswal2010, pp. 33-35; also , chap. 1] |
+| Blip blop bloop [see @biswal2010, pp. 33-35; |                                                              |
+| also @ggseg, chap. 1]                        |                                                              |
+| ```                                          |                                                              |
++----------------------------------------------+--------------------------------------------------------------+
+| ```                                          | Blip blop bloop [@biswal2010, pp. 33-35, 38-39 and passim]   |
+| Blip blop bloop [@biswal2010, pp. 33-35,     |                                                              |
+| 38-39 and passim]                            |                                                              |
+| ```                                          |                                                              |
++----------------------------------------------+--------------------------------------------------------------+
+| ```                                          | Blip blop bloop [@ggseg; @biswal2010].                       |
+| Blip blop bloop [@ggseg; @biswal2010].       |                                                              |
+| ```                                          |                                                              |
++----------------------------------------------+--------------------------------------------------------------+
+| ```                                          | Mowinckel says blah [-@ggseg]                                |
+| Mowinckel says blah [-@ggseg]                |                                                              |
+| ```                                          |                                                              |
++----------------------------------------------+--------------------------------------------------------------+
+| ```                                          | @biswal2010 says bloop.                                      |
+| @biswal2010 says bloop.                      |                                                              |
+| ```                                          |                                                              |
++----------------------------------------------+--------------------------------------------------------------+
 
 ## yaml settings
 
@@ -396,8 +395,10 @@ Currently, only Zotero is supported as a connected reference manager.
 
 <br>
 
-    ::: {#refs}
-    :::
+```         
+::: {#refs}
+:::
+```
 
 <br>
 
@@ -637,44 +638,48 @@ countdown::countdown(
 
 ## Slides are made by adding headlines
 
-    ---
-    title: "9 to 5"
-    author: "Dolly Parton"
-    format: revealjs
-    ---
+```         
+---
+title: "9 to 5"
+author: "Dolly Parton"
+format: revealjs
+---
 
-    # Tumble out of bed 
+# Tumble out of bed 
 
-    - I stumble to the kitchen
-    - Pour myself a cup of ambition
-    - yawn and stretch and try to come to life
+- I stumble to the kitchen
+- Pour myself a cup of ambition
+- yawn and stretch and try to come to life
 
-    ## Jump in the shower 
+## Jump in the shower 
 
-    - the blood starts pumpin'
-    - Out on the street
-    - the traffic starts jumpin'
+- the blood starts pumpin'
+- Out on the street
+- the traffic starts jumpin'
+```
 
 ## Or adding horizontal rules (no header)
 
-    ---
-    title: "9 to 5"
-    author: "Dolly Parton"
-    format: revealjs
-    ---
+```         
+---
+title: "9 to 5"
+author: "Dolly Parton"
+format: revealjs
+---
 
-    # Tumble out of bed 
+# Tumble out of bed 
 
-    - I stumble to the kitchen
-    - Pour myself a cup of ambition
-    - yawn and stretch and try to come to life
+- I stumble to the kitchen
+- Pour myself a cup of ambition
+- yawn and stretch and try to come to life
 
-    ---
+---
 
-    - Jump in the shower 
-    - the blood starts pumpin'
-    - Out on the street
-    - the traffic starts jumpin'
+- Jump in the shower 
+- the blood starts pumpin'
+- Out on the street
+- the traffic starts jumpin'
+```
 
 ## Go to RStudio
 
