@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Quartaki - Helper’s Document</title>
+<title>Quartaki - Helpers’ Document</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -94,6 +94,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 
 
+<meta name="twitter:title" content="Quartaki - Helpers’ Document">
+<meta name="twitter:description" content="">
+<meta name="twitter:card" content="summary">
 </head>
 
 <body class="nav-fixed">
@@ -123,15 +126,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-workshop-slides">    
         <li>
-    <a class="dropdown-item" href="./00_intro.html" rel="" target="">
+    <a class="dropdown-item" href="./slides/00_intro.html" rel="" target="">
  <span class="dropdown-text">Introduction</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./01_elements.html" rel="" target="">
+    <a class="dropdown-item" href="./slides/01_elements.html" rel="" target="">
  <span class="dropdown-text">Markdown elements</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./02_presentation.html" rel="" target="">
+    <a class="dropdown-item" href="./slides/02_presentation.html" rel="" target="">
  <span class="dropdown-text">Workshop slides</span></a>
   </li>  
     </ul>
@@ -182,16 +185,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#open-tabs" id="toc-open-tabs" class="nav-link active" data-scroll-target="#open-tabs">Open tabs</a></li>
   <li><a href="#schedule" id="toc-schedule" class="nav-link" data-scroll-target="#schedule">Schedule</a></li>
+  <li><a href="#frequently-seen-issues" id="toc-frequently-seen-issues" class="nav-link" data-scroll-target="#frequently-seen-issues">Frequently seen issues</a>
+  <ul class="collapse">
+  <li><a href="#markdown-formatting-is-not-being-applied" id="toc-markdown-formatting-is-not-being-applied" class="nav-link" data-scroll-target="#markdown-formatting-is-not-being-applied">Markdown formatting is not being applied</a></li>
+  </ul></li>
   <li><a href="#workshop-progression" id="toc-workshop-progression" class="nav-link" data-scroll-target="#workshop-progression">Workshop progression</a>
   <ul class="collapse">
   <li><a href="#intro" id="toc-intro" class="nav-link" data-scroll-target="#intro">Intro</a></li>
-  </ul></li>
   <li><a href="#markdown-elements" id="toc-markdown-elements" class="nav-link" data-scroll-target="#markdown-elements">Markdown elements</a></li>
-  <li><a href="#presentation---live-demos" id="toc-presentation---live-demos" class="nav-link" data-scroll-target="#presentation---live-demos">Presentation - live demos</a>
-  <ul class="collapse">
-  <li><a href="#html" id="toc-html" class="nav-link" data-scroll-target="#html">HTML</a></li>
-  <li><a href="#pdf" id="toc-pdf" class="nav-link" data-scroll-target="#pdf">PDF</a></li>
-  <li><a href="#presentations" id="toc-presentations" class="nav-link" data-scroll-target="#presentations">Presentations</a></li>
+  <li><a href="#presentation---live-demos" id="toc-presentation---live-demos" class="nav-link" data-scroll-target="#presentation---live-demos">Presentation - live demos</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/drmowinckels/quartaki/edit/main/helper.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/drmowinckels/quartaki/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
@@ -201,7 +203,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Helper’s Document</h1>
+<h1 class="title">Helpers’ Document</h1>
 </div>
 
 
@@ -237,13 +239,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p>Making our first presentation ( ~ 45 minutes)</p></li>
 </ul>
 </section>
+<section id="frequently-seen-issues" class="level2">
+<h2 class="anchored" data-anchor-id="frequently-seen-issues">Frequently seen issues</h2>
+<section id="markdown-formatting-is-not-being-applied" class="level3">
+<h3 class="anchored" data-anchor-id="markdown-formatting-is-not-being-applied">Markdown formatting is not being applied</h3>
+<ul>
+<li>Make sure the file is saved as .qmd, not .md</li>
+<li>When in the visual editor, if typing in markdown syntax, the editor add an <a href="https://www.wikiwand.com/en/Escape_character">escape character</a> to the markdown, which will not be rendered. - To see this, have them switch to the <code>source</code> editor in stead, and look for stray backslashes (<code>\</code>) in the markdown, this is the escape character. Have them delete that and try again. Once fixed, that can switch back to the visual editor. - If the learner knows a lot of plain markdown, they can also just use the source editor, but I find that the visual editor is a good way to get started. I usually switch between the two a lot.</li>
+</ul>
+</section>
+</section>
 <section id="workshop-progression" class="level2">
 <h2 class="anchored" data-anchor-id="workshop-progression">Workshop progression</h2>
 <p>In this section, we have anything that is related to the workshop as it is progressing. Each section has its own subtitle here, and these should also match sections in the collaborative document. This way, helpers can easily navigate to the relevant section in the helper document.</p>
 <section id="intro" class="level3">
 <h3 class="anchored" data-anchor-id="intro">Intro</h3>
+<p>Slides: <a href="https://drmowinckels.io/quartaki/00_intro.html#/title-slide">https://drmowinckels.io/quartaki/00_intro.html#/title-slide</a></p>
 <p>The intro section does not contain any exercises or code to copy. This part is mainly information and links to further resources for the learners.</p>
-<p><strong>What you should be doing</strong></p>
+<section id="what-you-should-be-doing" class="level4">
+<h4 class="anchored" data-anchor-id="what-you-should-be-doing">What you should be doing</h4>
 <ul>
 <li><p>Look out for questions in the collaborative doc</p></li>
 <li><p>Help me notice raised hands I might not see</p></li>
@@ -251,26 +265,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 </section>
 </section>
-<section id="markdown-elements" class="level2">
-<h2 class="anchored" data-anchor-id="markdown-elements">Markdown elements</h2>
+<section id="markdown-elements" class="level3">
+<h3 class="anchored" data-anchor-id="markdown-elements">Markdown elements</h3>
+<p>Slides: <a href="https://drmowinckels.io/quartaki/01_elements.html#/title-slide">https://drmowinckels.io/quartaki/01_elements.html#/title-slide</a></p>
 <p>This section also has no exercise, it is another very quick information run down. This is intended as a very brief glimpse into plain markdown formatting, and we will not spend time on this as lecture, but will be doing it in practice together later. It is meant as a quick reference for the learners in the workshop, for later exercises.</p>
-<p><strong>What you should be doing</strong></p>
+<section id="what-you-should-be-doing-1" class="level4">
+<h4 class="anchored" data-anchor-id="what-you-should-be-doing-1">What you should be doing</h4>
 <ul>
 <li><p>Look out for questions in the collaborative doc</p></li>
 <li><p>Help me notice raised hands I might not see</p></li>
 <li><p>Help paste urls and resources asked for in the collaborative doc</p></li>
 </ul>
 </section>
-<section id="presentation---live-demos" class="level2">
-<h2 class="anchored" data-anchor-id="presentation---live-demos">Presentation - live demos</h2>
+</section>
+<section id="presentation---live-demos" class="level3">
+<h3 class="anchored" data-anchor-id="presentation---live-demos">Presentation - live demos</h3>
+<p>Slides: <a href="https://drmowinckels.io/quartaki/02_presentation.html#/title-slide">https://drmowinckels.io/quartaki/02_presentation.html#/title-slide</a></p>
 <p>This section is where we start live coding and working together on a document. The documents we are working towards can be found in their entirety in <a href="./example_files">/example_files</a> of this repository.</p>
 <p>We start with html, then pdf, and lastly html presentations at the end.</p>
-<section id="html" class="level3">
-<h3 class="anchored" data-anchor-id="html">HTML</h3>
-<section id="section" class="level4">
-<h4 class="anchored" data-anchor-id="section">1</h4>
-<section id="live-demo-section-lists" class="level5">
-<h5 class="anchored" data-anchor-id="live-demo-section-lists">Live demo section Lists</h5>
+<section id="html" class="level4">
+<h4 class="anchored" data-anchor-id="html">HTML</h4>
+<section id="section" class="level5">
+<h5 class="anchored" data-anchor-id="section">1</h5>
+<section id="live-demo-section-lists" class="level6">
+<h6 class="anchored" data-anchor-id="live-demo-section-lists">Live demo section Lists</h6>
 <div class="notes">
 <ul>
 <li>File &gt; New File &gt; Quarto Document</li>
@@ -282,8 +300,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 </div>
 </section>
-<section id="exercise-section" class="level5">
-<h5 class="anchored" data-anchor-id="exercise-section">Exercise section</h5>
+<section id="exercise-section" class="level6">
+<h6 class="anchored" data-anchor-id="exercise-section">Exercise section</h6>
 <ul>
 <li><p>Write a little bit about your self. A sentence or two about your background and education.</p>
 <ul>
@@ -300,10 +318,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 </section>
 </section>
-<section id="section-1" class="level4">
-<h4 class="anchored" data-anchor-id="section-1">2</h4>
-<section id="live-demo-section" class="level5">
-<h5 class="anchored" data-anchor-id="live-demo-section">Live demo section</h5>
+<section id="section-1" class="level5">
+<h5 class="anchored" data-anchor-id="section-1">2</h5>
+<section id="live-demo-section" class="level6">
+<h6 class="anchored" data-anchor-id="live-demo-section">Live demo section</h6>
 <div class="notes">
 <ul>
 <li>Add toc</li>
@@ -312,8 +330,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 </div>
 </section>
-<section id="exercise-section-1" class="level5">
-<h5 class="anchored" data-anchor-id="exercise-section-1">Exercise section</h5>
+<section id="exercise-section-1" class="level6">
+<h6 class="anchored" data-anchor-id="exercise-section-1">Exercise section</h6>
 <p>Here, learners should learn to explore what can be done in the yaml section, so that they get an idea of what is possible and how to explore the possibilities.</p>
 <div class="tip">
 <p>One helpful thing here is that RStudio can provide suggestions once they type in three characters in the yaml, and then they can flip through the possible suggestions. It will also provide suggestions for values that are possible for that option. Learners can use <a href="https://quarto.org/docs/output-formats/html-basics.html">html guide</a> for possible alternatives</p>
@@ -338,10 +356,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 </section>
 </section>
-<section id="section-2" class="level4">
-<h4 class="anchored" data-anchor-id="section-2">3</h4>
-<section id="live-demo-section-1" class="level5">
-<h5 class="anchored" data-anchor-id="live-demo-section-1">Live demo section</h5>
+<section id="section-2" class="level5">
+<h5 class="anchored" data-anchor-id="section-2">3</h5>
+<section id="live-demo-section-1" class="level6">
+<h6 class="anchored" data-anchor-id="live-demo-section-1">Live demo section</h6>
 <div class="notes">
 <ul>
 <li>Show visual editor shortcuts and inserts</li>
@@ -368,8 +386,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span>
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="exercise-section-2" class="level5">
-<h5 class="anchored" data-anchor-id="exercise-section-2">Exercise section</h5>
+<section id="exercise-section-2" class="level6">
+<h6 class="anchored" data-anchor-id="exercise-section-2">Exercise section</h6>
 <ul>
 <li><p>Add a call out block with a tip about your favourite drink</p>
 <ul>
@@ -387,10 +405,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 </section>
 </section>
-<section id="section-3" class="level4">
-<h4 class="anchored" data-anchor-id="section-3">4</h4>
-<section id="live-demo-section-2" class="level5">
-<h5 class="anchored" data-anchor-id="live-demo-section-2">Live demo section</h5>
+<section id="section-3" class="level5">
+<h5 class="anchored" data-anchor-id="section-3">4</h5>
+<section id="live-demo-section-2" class="level6">
+<h6 class="anchored" data-anchor-id="live-demo-section-2">Live demo section</h6>
 <p>Showing how we add cross references to figures and tables</p>
 <ul>
 <li>Add cross-refs to tabs and figs</li>
@@ -445,8 +463,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>and reference with <code>@tbl-penguins</code></p>
 </section>
-<section id="exercise-section-3" class="level5">
-<h5 class="anchored" data-anchor-id="exercise-section-3">Exercise section</h5>
+<section id="exercise-section-3" class="level6">
+<h6 class="anchored" data-anchor-id="exercise-section-3">Exercise section</h6>
 <ul>
 <li>Take a screenshot of something on your screen, and add the image to your document.
 <ul>
@@ -463,10 +481,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 </section>
 </section>
-<section id="section-4" class="level4">
-<h4 class="anchored" data-anchor-id="section-4">5</h4>
-<section id="live-demo-section-3" class="level5">
-<h5 class="anchored" data-anchor-id="live-demo-section-3">Live demo section</h5>
+<section id="section-4" class="level5">
+<h5 class="anchored" data-anchor-id="section-4">5</h5>
+<section id="live-demo-section-3" class="level6">
+<h6 class="anchored" data-anchor-id="live-demo-section-3">Live demo section</h6>
 <ul>
 <li><p>Show the insert citation tool</p></li>
 <li><p>Search for doi <code>10.1177/2515245920928009</code></p></li>
@@ -474,8 +492,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <p>inform about zotero and better bibtex integration</p>
 </section>
-<section id="exercise-section-4" class="level5">
-<h5 class="anchored" data-anchor-id="exercise-section-4">Exercise section</h5>
+<section id="exercise-section-4" class="level6">
+<h6 class="anchored" data-anchor-id="exercise-section-4">Exercise section</h6>
 <ul>
 <li>Add a citation to an important paper in your field searching for its DOI</li>
 <li>Cite it in text using three different ways of controlling citation appearance
@@ -488,20 +506,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 </section>
 </section>
-<section id="pdf" class="level3">
-<h3 class="anchored" data-anchor-id="pdf">PDF</h3>
-<section id="section-5" class="level4">
-<h4 class="anchored" data-anchor-id="section-5">6</h4>
-<section id="live-demo-section-4" class="level5">
-<h5 class="anchored" data-anchor-id="live-demo-section-4">Live demo section</h5>
+<section id="pdf" class="level4">
+<h4 class="anchored" data-anchor-id="pdf">PDF</h4>
+<section id="section-5" class="level5">
+<h5 class="anchored" data-anchor-id="section-5">6</h5>
+<section id="live-demo-section-4" class="level6">
+<h6 class="anchored" data-anchor-id="live-demo-section-4">Live demo section</h6>
 <ul>
 <li>Change html document to pdf</li>
 <li>Try to render</li>
 <li>What are differences?</li>
 </ul>
 </section>
-<section id="exercise-section-5" class="level5">
-<h5 class="anchored" data-anchor-id="exercise-section-5">Exercise section</h5>
+<section id="exercise-section-5" class="level6">
+<h6 class="anchored" data-anchor-id="exercise-section-5">Exercise section</h6>
 <ul>
 <li>Add some headers, what does that do?
 <ul>
@@ -515,12 +533,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 </section>
 </section>
-<section id="presentations" class="level3">
-<h3 class="anchored" data-anchor-id="presentations">Presentations</h3>
-<section id="section-6" class="level4">
-<h4 class="anchored" data-anchor-id="section-6">7</h4>
-<section id="live-demo-section-5" class="level5">
-<h5 class="anchored" data-anchor-id="live-demo-section-5">Live demo section</h5>
+<section id="presentations" class="level4">
+<h4 class="anchored" data-anchor-id="presentations">Presentations</h4>
+<section id="section-6" class="level5">
+<h5 class="anchored" data-anchor-id="section-6">7</h5>
+<section id="live-demo-section-5" class="level6">
+<h6 class="anchored" data-anchor-id="live-demo-section-5">Live demo section</h6>
 <ul>
 <li>use html document as basis, convert to revealjs</li>
 <li>render</li>
@@ -528,8 +546,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>show tabset</li>
 </ul>
 </section>
-<section id="exercise-section-6" class="level5">
-<h5 class="anchored" data-anchor-id="exercise-section-6">Exercise section</h5>
+<section id="exercise-section-6" class="level6">
+<h6 class="anchored" data-anchor-id="exercise-section-6">Exercise section</h6>
 <ul>
 <li>Adapt the remaining of the document so that you have distinct slides for all content
 <ul>
@@ -546,6 +564,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 
 
+</section>
 </section>
 </section>
 </section>
