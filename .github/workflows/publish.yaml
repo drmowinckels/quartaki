@@ -26,6 +26,12 @@ jobs:
 
       - name: Set up renv
         uses: r-lib/actions/setup-renv@v2
+        
+      - uses: r-lib/actions/setup-tinytex@v2
+        name: Set up TinyTeX
+        
+      - run: tlmgr --version
+        name: Check tlmgr version
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
