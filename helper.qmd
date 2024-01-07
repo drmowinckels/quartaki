@@ -1,5 +1,6 @@
 ---
 title: "Helpers' Document"
+form<t: html
 ---
 
 In this file, all the code bits that need pasting into the collaborative doc will be, as well as some helpful tips to the helpers for this workshop. After a workshop has run, I'd greatly appreciate any help in improving the helper doc for future workshops, so if you have ideas let me know. If you are comfortable with GitHub, a PR directly to this repo with suggestions is highly appreciated.
@@ -23,12 +24,9 @@ During the workshop, I think its a good idea for helpers to have on their comput
 ## Frequently seen issues
 
 ### Markdown formatting is not being applied
-  -   Make sure the file is saved as .qmd, not .md
-  -   When in the visual editor, if typing in markdown syntax, the editor add an [escape character](https://www.wikiwand.com/en/Escape_character) to the markdown, which will not be rendered.
-    - To see this, have them switch to the `source` editor in stead, and look for stray backslashes (`\`) in the markdown, this is the escape character. Have them delete that and try again. Once fixed, that can switch back to the visual editor.
-    - If the learner knows a lot of plain markdown, they can also just use the source editor, but I find that the visual editor is a good way to get started. I usually switch between the two a lot.
-  
-    
+
+-   Make sure the file is saved as .qmd, not .md
+-   When in the visual editor, if typing in markdown syntax, the editor add an [escape character](https://www.wikiwand.com/en/Escape_character) to the markdown, which will not be rendered. - To see this, have them switch to the `source` editor in stead, and look for stray backslashes (`\`) in the markdown, this is the escape character. Have them delete that and try again. Once fixed, that can switch back to the visual editor. - If the learner knows a lot of plain markdown, they can also just use the source editor, but I find that the visual editor is a good way to get started. I usually switch between the two a lot.
 
 ## Workshop progression
 
@@ -36,7 +34,7 @@ In this section, we have anything that is related to the workshop as it is progr
 
 ### Intro
 
-Slides: [https://drmowinckels.io/quartaki/00_intro.html#/title-slide](https://drmowinckels.io/quartaki/00_intro.html#/title-slide)
+Slides: <https://drmowinckels.io/quartaki/00_intro.html#/title-slide>
 
 The intro section does not contain any exercises or code to copy. This part is mainly information and links to further resources for the learners.
 
@@ -50,7 +48,7 @@ The intro section does not contain any exercises or code to copy. This part is m
 
 ### Markdown elements
 
-Slides: [https://drmowinckels.io/quartaki/01_elements.html#/title-slide](https://drmowinckels.io/quartaki/01_elements.html#/title-slide)
+Slides: <https://drmowinckels.io/quartaki/01_elements.html#/title-slide>
 
 This section also has no exercise, it is another very quick information run down. This is intended as a very brief glimpse into plain markdown formatting, and we will not spend time on this as lecture, but will be doing it in practice together later. It is meant as a quick reference for the learners in the workshop, for later exercises.
 
@@ -64,7 +62,7 @@ This section also has no exercise, it is another very quick information run down
 
 ### Presentation - live demos
 
-Slides: [https://drmowinckels.io/quartaki/02_presentation.html#/title-slide](https://drmowinckels.io/quartaki/02_presentation.html#/title-slide)
+Slides: <https://drmowinckels.io/quartaki/02_presentation.html#/title-slide>
 
 This section is where we start live coding and working together on a document. The documents we are working towards can be found in their entirety in [/example_files](/example_files) of this repository.
 
@@ -311,3 +309,4 @@ inform about zotero and better bibtex integration
     -   adding three `---` where a new slide should start
 -   Make a slide with two columns of content
     -   best done with visual editor looking for `/columns` in the insert menu
+
