@@ -1,12 +1,7 @@
 ---
 title: "Quarto"
 subtitle: "--- enables you to weave together content and executable code into a finished document --- "
-format:
-  revealjs: 
-    theme: [default, capro_revealjs.scss]
-    slide-number: c/t
-    incremental: true
-    embed-resources: true
+format: revealjs
 ---
 
 ## Next generation R Markdown {.center}

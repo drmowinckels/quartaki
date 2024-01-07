@@ -1,11 +1,9 @@
 project:
   type: website
-  output-dir: docs
+  output-dir: "_site"
   render: 
-    - "index.qmd"
-    - "helper.qmd"
-    - "example_files/*qmd"
-    - "slides/*qmd"
+    - "*.qmd"
+    - "!child_docs/"
 
 website:
   page-navigation: true
@@ -53,12 +51,25 @@ format:
   html:
     theme:
       - default
-      - capro_quarto.scss
+      - scss/capro_quarto.scss
     toc: true
     code-copy: true
     code-overflow: scroll
+    callout-appearance: simple
+  pdf:
+    documentclass: report
+  revealjs:
+    height: 900
+    width: 1600
+    theme:
+      - night
+      - scss/capro_revealjs.scss
+    highlight-style: github-dark
+    transition: fade
+    chalkboard: true
+    slide-number: c/t
+    incremental: true
 
-callout-appearance: simple
 
 editor: visual
 

@@ -1,12 +1,7 @@
 ---
 title: "Quarto"
 subtitle: "markdown elementals"
-format:
-  revealjs: 
-    theme: [default, capro_revealjs.scss]
-    slide-number: c/t
-    embed-resources: true
-    incremental: true
+format: revealjs
 ---
 
 # Markdown elements

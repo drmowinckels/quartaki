@@ -1,12 +1,7 @@
 ---
 title: "Quarto"
 subtitle: "--- Creating documents ---"
-format:
-  revealjs: 
-    theme: [default, capro_revealjs.scss]
-    slide-number: c/t
-    incremental: true
-    embed-resources: true
+format: revealjs
 bibliography: references.bib
 ---
 
@@ -661,4 +656,3 @@ countdown::countdown(
 [{{< fa brands twitter >}}](https://twitter.com/DrMowinckels) [{{< fa brands github >}}](https://github.com/DrMowinckels) [{{< fa globe >}}](https://drmowinckels.io/) DrMowinckels
 :::
 :::
-

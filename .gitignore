@@ -6,3 +6,5 @@
 /.quarto/
 docs/
 helper_files/
+_site/
+site_libs/
