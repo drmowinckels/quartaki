@@ -51,12 +51,13 @@ website:
 
 format:
   html:
-    theme: [cosmo, capro_quarto.scss]
+    theme:
+      - default
+      - capro_quarto.scss
     toc: true
     code-copy: true
     code-overflow: scroll
-    highlight-style: a11y
-    
+
 callout-appearance: simple
 
 editor: visual
