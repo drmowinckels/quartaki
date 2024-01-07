@@ -3,10 +3,10 @@ title: "Quarto"
 subtitle: "--- enables you to weave together content and executable code into a finished document --- "
 format:
   revealjs: 
-    theme: [default, lcbc-styles.scss]
-    logo: /images/lcbc_logo_wide.png
+    theme: [default, capro_revealjs.scss]
     slide-number: c/t
     incremental: true
+    embed-resources: true
 ---
 
 ## Next generation R Markdown {.center}
@@ -69,7 +69,7 @@ Extensions are a powerful way to modify and extend the behavior of Quarto.
 
 ::: nonincremental
 ```{r}
-#| child: child_docs/schedule.qmd
+#| child: ../child_docs/schedule.qmd
 ```
 :::
 

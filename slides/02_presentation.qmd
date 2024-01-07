@@ -3,10 +3,10 @@ title: "Quarto"
 subtitle: "--- Creating documents ---"
 format:
   revealjs: 
-    theme: [default, lcbc-styles.scss]
-    logo: /images/lcbc_logo_wide.png
+    theme: [default, capro_revealjs.scss]
     slide-number: c/t
     incremental: true
+    embed-resources: true
 bibliography: references.bib
 ---
 
@@ -528,7 +528,6 @@ countdown::countdown(
 )
 ```
 
-
 # Presentations
 
 ## Formats
@@ -662,3 +661,4 @@ countdown::countdown(
 [{{< fa brands twitter >}}](https://twitter.com/DrMowinckels) [{{< fa brands github >}}](https://github.com/DrMowinckels) [{{< fa globe >}}](https://drmowinckels.io/) DrMowinckels
 :::
 :::
+

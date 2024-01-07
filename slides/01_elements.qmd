@@ -3,9 +3,9 @@ title: "Quarto"
 subtitle: "markdown elementals"
 format:
   revealjs: 
-    theme: [default, lcbc-styles.scss]
-    logo: /images/lcbc_logo_wide.png
+    theme: [default, capro_revealjs.scss]
     slide-number: c/t
+    embed-resources: true
     incremental: true
 ---
 

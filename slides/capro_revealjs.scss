@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Karla:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&family=Space+Grotesk:wght@600&family=Space+Mono:wght@400;700&family=Victor+Mono:wght@200&display=swap');
+
+//font-family: 'Cormorant Garamond', serif;
+//font-family: 'Space Grotesk', sans-serif;
+//font-family: 'Space Mono', monospace;
+
+/*-- scss:defaults --*/
+// Base document colors
+$body-bg: #20242b;
+$body-color: #c0c2c4;
+$link-color: #CC4C4C;
+$font-family-serif: 'Cormorant Garamond', serif;
+$font-family-sans-serif: 'Space Grotesk', sans-serif;
+$font-family-monospace: 'Victor Mono', monospace;
+
+// Code blocks
+$code-block-bg-alpha: -.8;
+
+nav:after{
+  display: block;
+  content: ' ';
+  background-image: url('https://www.capro.dev/images/capro_logo_dark.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 80%;
+  height: 100px;
+}
+
+
+.reveal .slide ul li::marker{
+  color: $link-color;
+}
+
+.reveal .slide code,
+.reveal code,
+code {
+ color: #86bebf;
+  }

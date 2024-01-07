@@ -76,13 +76,13 @@ If you find these instructions too technical, please contact me as indicated at 
 
 The best way to confirm that everything is installed correctly, is to create a test quarto document. In RStudio, go to `File -> New file -> Quarto document`
 
-![](images/image-698515572.png)\
+![](images/quarto_new.png)\
 
 Fill in the title, and choose to create a PDF document (this will also verify tinytex installation is successful). Click on `Create`.
 
 RStudio should open a document for you, which is the test document you will render. Don't think about the content just now, but find the `Render` button at the top of the document. Click it and you should see some action in a new tab called "Background jobs". It will call on latex and maybe install some latex packages to create your document. If it is successful, the RStudio Viewer window should come into focus and you will see a preview of a PDF document with the title "Test document". This means everything went fine and you are ready!
 
-![](images/image-676971779.png)
+![](images/quarto_test.png)
 
 ## Troubleshooting
 

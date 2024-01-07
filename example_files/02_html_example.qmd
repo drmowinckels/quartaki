@@ -9,7 +9,6 @@ format:
     toc-title: Contents
     toc-location: left
     html-math-method: katex
-    css: lcbc-styles.scss
     anchor-sections: true
     smooth-scroll: true
     code-fold: true

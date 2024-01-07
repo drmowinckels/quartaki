@@ -1,5 +1,5 @@
 ---
-title: "Helper's Document"
+title: "Helpers' Document"
 ---
 
 In this file, all the code bits that need pasting into the collaborative doc will be, as well as some helpful tips to the helpers for this workshop. After a workshop has run, I'd greatly appreciate any help in improving the helper doc for future workshops, so if you have ideas let me know. If you are comfortable with GitHub, a PR directly to this repo with suggestions is highly appreciated.
@@ -20,15 +20,27 @@ During the workshop, I think its a good idea for helpers to have on their comput
 #| child: child_docs/schedule.qmd
 ```
 
+## Frequently seen issues
+
+### Markdown formatting is not being applied
+  -   Make sure the file is saved as .qmd, not .md
+  -   When in the visual editor, if typing in markdown syntax, the editor add an [escape character](https://www.wikiwand.com/en/Escape_character) to the markdown, which will not be rendered.
+    - To see this, have them switch to the `source` editor in stead, and look for stray backslashes (`\`) in the markdown, this is the escape character. Have them delete that and try again. Once fixed, that can switch back to the visual editor.
+    - If the learner knows a lot of plain markdown, they can also just use the source editor, but I find that the visual editor is a good way to get started. I usually switch between the two a lot.
+  
+    
+
 ## Workshop progression
 
 In this section, we have anything that is related to the workshop as it is progressing. Each section has its own subtitle here, and these should also match sections in the collaborative document. This way, helpers can easily navigate to the relevant section in the helper document.
 
 ### Intro
 
+Slides: [https://drmowinckels.io/quartaki/00_intro.html#/title-slide](https://drmowinckels.io/quartaki/00_intro.html#/title-slide)
+
 The intro section does not contain any exercises or code to copy. This part is mainly information and links to further resources for the learners.
 
-**What you should be doing**
+#### What you should be doing
 
 -   Look out for questions in the collaborative doc
 
@@ -36,11 +48,13 @@ The intro section does not contain any exercises or code to copy. This part is m
 
 -   Help paste urls and resources asked for in the collaborative doc
 
-## Markdown elements
+### Markdown elements
+
+Slides: [https://drmowinckels.io/quartaki/01_elements.html#/title-slide](https://drmowinckels.io/quartaki/01_elements.html#/title-slide)
 
 This section also has no exercise, it is another very quick information run down. This is intended as a very brief glimpse into plain markdown formatting, and we will not spend time on this as lecture, but will be doing it in practice together later. It is meant as a quick reference for the learners in the workshop, for later exercises.
 
-**What you should be doing**
+#### What you should be doing
 
 -   Look out for questions in the collaborative doc
 
@@ -48,17 +62,19 @@ This section also has no exercise, it is another very quick information run down
 
 -   Help paste urls and resources asked for in the collaborative doc
 
-## Presentation - live demos
+### Presentation - live demos
+
+Slides: [https://drmowinckels.io/quartaki/02_presentation.html#/title-slide](https://drmowinckels.io/quartaki/02_presentation.html#/title-slide)
 
 This section is where we start live coding and working together on a document. The documents we are working towards can be found in their entirety in [/example_files](/example_files) of this repository.
 
 We start with html, then pdf, and lastly html presentations at the end.
 
-### HTML
+#### HTML
 
-#### 1
+##### 1
 
-##### Live demo section Lists
+###### Live demo section Lists
 
 ::: notes
 -   File \> New File \> Quarto Document
@@ -69,7 +85,7 @@ We start with html, then pdf, and lastly html presentations at the end.
 -   Alter chunk code to see difference
 :::
 
-##### Exercise section
+###### Exercise section
 
 -   Write a little bit about your self. A sentence or two about your background and education.
 
@@ -83,9 +99,9 @@ We start with html, then pdf, and lastly html presentations at the end.
 
     -   This means changing the markdown syntax for lists to an ordered list. Learners can use [markdown guide](https://quarto.org/docs/authoring/markdown-basics.html#lists) or look at the slides from the markdown elements session to see how to do that.
 
-#### 2
+##### 2
 
-##### Live demo section
+###### Live demo section
 
 ::: notes
 -   Add toc
@@ -93,7 +109,7 @@ We start with html, then pdf, and lastly html presentations at the end.
 -   Switch back to html format
 :::
 
-##### Exercise section
+###### Exercise section
 
 Here, learners should learn to explore what can be done in the yaml section, so that they get an idea of what is possible and how to explore the possibilities.
 
@@ -117,9 +133,9 @@ One helpful thing here is that RStudio can provide suggestions once they type in
 
     -   This is done through the `smooth-scroll: true` option
 
-#### 3
+##### 3
 
-##### Live demo section
+###### Live demo section
 
 ::: notes
 -   Show visual editor shortcuts and inserts
@@ -148,7 +164,7 @@ ggplot(penguins,
   theme_minimal()
 ```
 
-##### Exercise section
+###### Exercise section
 
 -   Add a call out block with a tip about your favourite drink
 
@@ -164,9 +180,9 @@ ggplot(penguins,
 
     -   text comments are `<!-- text -->`
 
-#### 4
+##### 4
 
-##### Live demo section
+###### Live demo section
 
 Showing how we add cross references to figures and tables
 
@@ -228,7 +244,7 @@ penguins |>
 
 and reference with `@tbl-penguins`
 
-##### Exercise section
+###### Exercise section
 
 -   Take a screenshot of something on your screen, and add the image to your document.
     -   They can copy+paste an image straight into the visual editor
@@ -239,9 +255,9 @@ and reference with `@tbl-penguins`
     -   This means adding a caption to the image, and then referencing it with `@fig-label`
     -   caption can be added either as markdown, or through double clicking the image and adding it in the visual editor
 
-#### 5
+##### 5
 
-##### Live demo section
+###### Live demo section
 
 -   Show the insert citation tool
 
@@ -251,7 +267,7 @@ and reference with `@tbl-penguins`
 
 inform about zotero and better bibtex integration
 
-##### Exercise section
+###### Exercise section
 
 -   Add a citation to an important paper in your field searching for its DOI
 -   Cite it in text using three different ways of controlling citation appearance
@@ -259,35 +275,35 @@ inform about zotero and better bibtex integration
     2.  name & year in parentheses
     3.  year only
 
-### PDF
+#### PDF
 
-#### 6
+##### 6
 
-##### Live demo section
+###### Live demo section
 
 -   Change html document to pdf
 -   Try to render
 -   What are differences?
 
-##### Exercise section
+###### Exercise section
 
 -   Add some headers, what does that do?
     -   Adding headers either in the markdown (`##`) or in the visual editor
 -   Add section numbering, what does that do?
     -   Adding section numbering in the yaml `number-sections: true`
 
-### Presentations
+#### Presentations
 
-#### 7
+##### 7
 
-##### Live demo section
+###### Live demo section
 
 -   use html document as basis, convert to revealjs
 -   render
 -   start adapting to make slides
 -   show tabset
 
-##### Exercise section
+###### Exercise section
 
 -   Adapt the remaining of the document so that you have distinct slides for all content
     -   this is done by making more headers

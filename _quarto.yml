@@ -4,20 +4,21 @@ project:
   render: 
     - "index.qmd"
     - "helper.qmd"
-    - "[0-9]*.qmd"
     - "example_files/*qmd"
+    - "slides/*qmd"
 
 website:
   page-navigation: true
   title: "Quartaki"
   description: "Workshop materials for 1 day workshop on Quarto"
   site-url: https://drmowinckels.io/quartaki/
-
+# favicon: https://www.capro.dev/images/favicon.png
+  twitter-card: true
+  
   repo-url: https://github.com/drmowinckels/quartaki
   repo-actions: [edit, issue]
   
   navbar:
-    background: "#2e3d3d"
     pinned: true
     align: center
     tools:
@@ -26,15 +27,15 @@ website:
         text: GitHub
     style: docked
     left:
-      - href: index.qmd
+      - href: index.html
         text: Home
       - text: Workshop slides
         menu: 
-        - href: 00_intro.qmd
+        - href: slides/00_intro.html
           text: Introduction
-        - href: 01_elements.qmd
+        - href: slides/01_elements.html
           text: Markdown elements
-        - href: 02_presentation.qmd
+        - href: slides/02_presentation.html
           text: Workshop slides
       - text: Collaborative docs
         menu:
