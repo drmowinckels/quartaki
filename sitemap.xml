@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://drmowinckels.io/quartaki/index.html</loc>
+    <lastmod>2024-01-08T15:35:47.939Z</lastmod>
+  </url>
+  <url>
     <loc>https://drmowinckels.io/quartaki/slides/02_presentation.html</loc>
-    <lastmod>2024-01-07T21:43:44.982Z</lastmod>
+    <lastmod>2024-01-08T15:35:42.375Z</lastmod>
   </url>
   <url>
     <loc>https://drmowinckels.io/quartaki/slides/00_intro.html</loc>
-    <lastmod>2024-01-07T21:43:30.534Z</lastmod>
+    <lastmod>2024-01-08T15:35:36.987Z</lastmod>
   </url>
   <url>
     <loc>https://drmowinckels.io/quartaki/example_files/02_html_example.html</loc>
-    <lastmod>2024-01-07T21:41:50.310Z</lastmod>
-  </url>
-  <url>
-    <loc>https://drmowinckels.io/quartaki/index.html</loc>
-    <lastmod>2024-01-07T21:41:41.982Z</lastmod>
-  </url>
-  <url>
-    <loc>https://drmowinckels.io/quartaki/helper.html</loc>
-    <lastmod>2024-01-07T21:41:44.746Z</lastmod>
+    <lastmod>2024-01-08T15:33:48.311Z</lastmod>
   </url>
   <url>
     <loc>https://drmowinckels.io/quartaki/example_files/05_revealjs_example.html</loc>
-    <lastmod>2024-01-07T21:43:23.402Z</lastmod>
+    <lastmod>2024-01-08T15:35:34.571Z</lastmod>
   </url>
   <url>
     <loc>https://drmowinckels.io/quartaki/slides/01_elements.html</loc>
-    <lastmod>2024-01-07T21:43:37.218Z</lastmod>
+    <lastmod>2024-01-08T15:35:39.403Z</lastmod>
+  </url>
+  <url>
+    <loc>https://drmowinckels.io/quartaki/helper.html</loc>
+    <lastmod>2024-01-08T15:35:45.187Z</lastmod>
   </url>
 </urlset>

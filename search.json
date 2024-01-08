@@ -1,5 +1,47 @@
 [
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Quartaki",
+    "section": "",
+    "text": "There are increasing demands on scientific staff in preparing reports for governmental and public dissemination, as well as scientific dissemination. Creating reports is a time-consuming task, as it often requires switching between programs for writing, doing analyses and creating tables and figures, as well as other graphical and textual programs. Learning efficient tools in combining programming and report generation are becoming increasingly important to alleviate the manual and burdensome process of switching programs. Quarto is a second generation report framework based on the popular markdown plain text format. Combining writing in markdown with the ability to run code to format, analyse, and visualise data, all in the same place, creates a seamless environment for the researchers to produce reports. While this workshop will focus on using Quarto with R, it also has native abilities to interact with python, observable.js and Julia, without needing R installed. This makes Quarto a great tool to learn, no matter which language you focus on."
+  },
+  {
+    "objectID": "index.html#schedule",
+    "href": "index.html#schedule",
+    "title": "Quartaki",
+    "section": "Schedule",
+    "text": "Schedule\n\nElements of a qmd ( ~ 45 minutes)\nMaking our first html report ( ~ 45 minutes)\nCitations & cross-references ( ~ 45 minutes)\nLunch ( ~ 60 minutes)\nMaking our first pdf report (~ 45 minutes)\nMaking our first presentation ( ~ 45 minutes)"
+  },
+  {
+    "objectID": "index.html#r-packages",
+    "href": "index.html#r-packages",
+    "title": "Quartaki",
+    "section": "R packages",
+    "text": "R packages\nIn addition to Quarto, a series of R packages will also be needed to show-case the ways we can use Quarto to generate reports.\n# Run in R\ninstall.packages(c(\n  \"tinytex\",       # for pdf rendering\n  \"rmarkdown\",     # rendering everything\n  \"tidyverse\",     # data-wrangling\n  \"knitr\",         # table printing\n  \"kableExtra\",    # pretty table printing\n  \"palmerpenguins\" # dataset\n))"
+  },
+  {
+    "objectID": "index.html#tinytex",
+    "href": "index.html#tinytex",
+    "title": "Quartaki",
+    "section": "Tinytex",
+    "text": "Tinytex\nWhen creating PDFs from Quarto, we need to have LaTeX installed for that conversion to happen. We will use the tinytex package to get a light-weight latex distribution installed on your computer.\nOpen RStudio, and find the section called “Console”.\n\ntinytex::install_tinytex()\ntinytex:::install_yihui_pkgs()\n\n\n\n\n\n\n\nNon-R participants\n\n\n\nIf you are joining the course using another language than R, you will need to install tinytex in another way. Open your terminal application and run the following command\nquarto install tinytex\n\n\n\n\n\n\n\n\nTinytex install issues\n\n\n\nIf you are struggling to get tinytex installed via RStudio, or because your work administers your computer and you need IT help to get things installed, we have additional resources for you.\n\n\nYihui, the creator of tinytex, has a great post about installing tinytex. It is somewhat on the technical side, so it is great for pointing your IT department to for help in installing.\n\n\nIf you find these instructions too technical, please contact me as indicated at the bottom of this section."
+  },
+  {
+    "objectID": "index.html#check-the-install",
+    "href": "index.html#check-the-install",
+    "title": "Quartaki",
+    "section": "Check the install",
+    "text": "Check the install\nThe best way to confirm that everything is installed correctly, is to create a test quarto document. In RStudio, go to File -&gt; New file -&gt; Quarto document\n\n\nFill in the title, and choose to create a PDF document (this will also verify tinytex installation is successful). Click on Create.\nRStudio should open a document for you, which is the test document you will render. Don’t think about the content just now, but find the Render button at the top of the document. Click it and you should see some action in a new tab called “Background jobs”. It will call on latex and maybe install some latex packages to create your document. If it is successful, the RStudio Viewer window should come into focus and you will see a preview of a PDF document with the title “Test document”. This means everything went fine and you are ready!"
+  },
+  {
+    "objectID": "index.html#troubleshooting",
+    "href": "index.html#troubleshooting",
+    "title": "Quartaki",
+    "section": "Troubleshooting",
+    "text": "Troubleshooting\nIf the PDF generation fails with a message containing:\n\n{! LaTeX Error: File `pdfcol.sty' not found.}\nThis is an extra LaTeX package we will need to get installed. To do that, open RStudio and locate a tab called “Terminal”. Run the following command:\n\n\ntlmgr install pdfcol\n\n\n\n\n\n\n\nI can’t see the terminal!\n\n\n\nIf the terminal is not visible next to the console, you need to enable it. Go to Tools -&gt; Terminal -&gt; Move focus to Terminal and it should pop up.\nOn macOS or Linux, you may also do this in the Terminal application directly (rather than through RStudio).\n\n\nIf you still have problems getting things installed, please contact me on email or through a GitHub issue, and I will try help you get sorted.\n\nWhen everything else fails\nIf you cannot get Quarto installed correctly or get a pdf to be generated, we will unfortunately need to resort to using Posit Cloud so you can follow along.\nThe downside to this is that you will not have Quarto ready to use on your own system, and will thus need help to get that working later."
+  },
+  {
     "objectID": "slides/02_presentation.html#divs",
     "href": "slides/02_presentation.html#divs",
     "title": "Quarto",
@@ -245,83 +287,6 @@
     "text": "Footnotes\n\n\nwhich can be very convenient↩︎\nwithout us really needing to keep it all in mind.↩︎"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Quartaki",
-    "section": "",
-    "text": "There are increasing demands on scientific staff in preparing reports for governmental and public dissemination, as well as scientific dissemination. Creating reports is a time-consuming task, as it often requires switching between programs for writing, doing analyses and creating tables and figures, as well as other graphical and textual programs. Learning efficient tools in combining programming and report generation are becoming increasingly important to alleviate the manual and burdensome process of switching programs. Quarto is a second generation report framework based on the popular markdown plain text format. Combining writing in markdown with the ability to run code to format, analyse, and visualise data, all in the same place, creates a seamless environment for the researchers to produce reports. While this workshop will focus on using Quarto with R, it also has native abilities to interact with python, observable.js and Julia, without needing R installed. This makes Quarto a great tool to learn, no matter which language you focus on."
-  },
-  {
-    "objectID": "index.html#schedule",
-    "href": "index.html#schedule",
-    "title": "Quartaki",
-    "section": "Schedule",
-    "text": "Schedule\n\nElements of a qmd ( ~ 45 minutes)\nMaking our first html report ( ~ 45 minutes)\nCitations & cross-references ( ~ 45 minutes)\nLunch ( ~ 60 minutes)\nMaking our first pdf report (~ 45 minutes)\nMaking our first presentation ( ~ 45 minutes)"
-  },
-  {
-    "objectID": "index.html#r-packages",
-    "href": "index.html#r-packages",
-    "title": "Quartaki",
-    "section": "R packages",
-    "text": "R packages\nIn addition to Quarto, a series of R packages will also be needed to show-case the ways we can use Quarto to generate reports.\n# Run in R\ninstall.packages(c(\n  \"tinytex\",       # for pdf rendering\n  \"rmarkdown\",     # rendering everything\n  \"tidyverse\",     # data-wrangling\n  \"knitr\",         # table printing\n  \"kableExtra\",    # pretty table printing\n  \"palmerpenguins\" # dataset\n))"
-  },
-  {
-    "objectID": "index.html#tinytex",
-    "href": "index.html#tinytex",
-    "title": "Quartaki",
-    "section": "Tinytex",
-    "text": "Tinytex\nWhen creating PDFs from Quarto, we need to have LaTeX installed for that conversion to happen. We will use the tinytex package to get a light-weight latex distribution installed on your computer.\nOpen RStudio, and find the section called “Console”.\n\ntinytex::install_tinytex()\ntinytex:::install_yihui_pkgs()\n\n\n\n\n\n\n\nNon-R participants\n\n\n\nIf you are joining the course using another language than R, you will need to install tinytex in another way. Open your terminal application and run the following command\nquarto install tinytex\n\n\n\n\n\n\n\n\nTinytex install issues\n\n\n\nIf you are struggling to get tinytex installed via RStudio, or because your work administers your computer and you need IT help to get things installed, we have additional resources for you.\n\n\nYihui, the creator of tinytex, has a great post about installing tinytex. It is somewhat on the technical side, so it is great for pointing your IT department to for help in installing.\n\n\nIf you find these instructions too technical, please contact me as indicated at the bottom of this section."
-  },
-  {
-    "objectID": "index.html#check-the-install",
-    "href": "index.html#check-the-install",
-    "title": "Quartaki",
-    "section": "Check the install",
-    "text": "Check the install\nThe best way to confirm that everything is installed correctly, is to create a test quarto document. In RStudio, go to File -&gt; New file -&gt; Quarto document\n\n\nFill in the title, and choose to create a PDF document (this will also verify tinytex installation is successful). Click on Create.\nRStudio should open a document for you, which is the test document you will render. Don’t think about the content just now, but find the Render button at the top of the document. Click it and you should see some action in a new tab called “Background jobs”. It will call on latex and maybe install some latex packages to create your document. If it is successful, the RStudio Viewer window should come into focus and you will see a preview of a PDF document with the title “Test document”. This means everything went fine and you are ready!"
-  },
-  {
-    "objectID": "index.html#troubleshooting",
-    "href": "index.html#troubleshooting",
-    "title": "Quartaki",
-    "section": "Troubleshooting",
-    "text": "Troubleshooting\nIf the PDF generation fails with a message containing:\n\n{! LaTeX Error: File `pdfcol.sty' not found.}\nThis is an extra LaTeX package we will need to get installed. To do that, open RStudio and locate a tab called “Terminal”. Run the following command:\n\n\ntlmgr install pdfcol\n\n\n\n\n\n\n\nI can’t see the terminal!\n\n\n\nIf the terminal is not visible next to the console, you need to enable it. Go to Tools -&gt; Terminal -&gt; Move focus to Terminal and it should pop up.\nOn macOS or Linux, you may also do this in the Terminal application directly (rather than through RStudio).\n\n\nIf you still have problems getting things installed, please contact me on email or through a GitHub issue, and I will try help you get sorted.\n\nWhen everything else fails\nIf you cannot get Quarto installed correctly or get a pdf to be generated, we will unfortunately need to resort to using Posit Cloud so you can follow along.\nThe downside to this is that you will not have Quarto ready to use on your own system, and will thus need help to get that working later."
-  },
-  {
-    "objectID": "helper.html",
-    "href": "helper.html",
-    "title": "Helpers’ Document",
-    "section": "",
-    "text": "In this file, all the code bits that need pasting into the collaborative doc will be, as well as some helpful tips to the helpers for this workshop. After a workshop has run, I’d greatly appreciate any help in improving the helper doc for future workshops, so if you have ideas let me know. If you are comfortable with GitHub, a PR directly to this repo with suggestions is highly appreciated."
-  },
-  {
-    "objectID": "helper.html#open-tabs",
-    "href": "helper.html#open-tabs",
-    "title": "Helpers’ Document",
-    "section": "Open tabs",
-    "text": "Open tabs\nDuring the workshop, I think its a good idea for helpers to have on their computers certain tabs open at all times, so you can easily navigate to them at need\n\nthe collaborative document\nthe workshop website\nthe slides the instructor is currently running through"
-  },
-  {
-    "objectID": "helper.html#schedule",
-    "href": "helper.html#schedule",
-    "title": "Helpers’ Document",
-    "section": "Schedule",
-    "text": "Schedule\n\nElements of a qmd ( ~ 45 minutes)\nMaking our first html report ( ~ 45 minutes)\nCitations & cross-references ( ~ 45 minutes)\nLunch ( ~ 60 minutes)\nMaking our first pdf report (~ 45 minutes)\nMaking our first presentation ( ~ 45 minutes)"
-  },
-  {
-    "objectID": "helper.html#frequently-seen-issues",
-    "href": "helper.html#frequently-seen-issues",
-    "title": "Helpers’ Document",
-    "section": "Frequently seen issues",
-    "text": "Frequently seen issues\n\nMarkdown formatting is not being applied\n\nMake sure the file is saved as .qmd, not .md\nWhen in the visual editor, if typing in markdown syntax, the editor add an escape character to the markdown, which will not be rendered. - To see this, have them switch to the source editor in stead, and look for stray backslashes (\\) in the markdown, this is the escape character. Have them delete that and try again. Once fixed, that can switch back to the visual editor. - If the learner knows a lot of plain markdown, they can also just use the source editor, but I find that the visual editor is a good way to get started. I usually switch between the two a lot."
-  },
-  {
-    "objectID": "helper.html#workshop-progression",
-    "href": "helper.html#workshop-progression",
-    "title": "Helpers’ Document",
-    "section": "Workshop progression",
-    "text": "Workshop progression\nIn this section, we have anything that is related to the workshop as it is progressing. Each section has its own subtitle here, and these should also match sections in the collaborative document. This way, helpers can easily navigate to the relevant section in the helper document.\n\nIntro\nSlides: https://drmowinckels.io/quartaki/00_intro.html#/title-slide\nThe intro section does not contain any exercises or code to copy. This part is mainly information and links to further resources for the learners.\n\nWhat you should be doing\n\nLook out for questions in the collaborative doc\nHelp me notice raised hands I might not see\nHelp paste urls and resources asked for in the collaborative doc\n\n\n\n\nMarkdown elements\nSlides: https://drmowinckels.io/quartaki/01_elements.html#/title-slide\nThis section also has no exercise, it is another very quick information run down. This is intended as a very brief glimpse into plain markdown formatting, and we will not spend time on this as lecture, but will be doing it in practice together later. It is meant as a quick reference for the learners in the workshop, for later exercises.\n\nWhat you should be doing\n\nLook out for questions in the collaborative doc\nHelp me notice raised hands I might not see\nHelp paste urls and resources asked for in the collaborative doc\n\n\n\n\nPresentation - live demos\nSlides: https://drmowinckels.io/quartaki/02_presentation.html#/title-slide\nThis section is where we start live coding and working together on a document. The documents we are working towards can be found in their entirety in /example_files of this repository.\nWe start with html, then pdf, and lastly html presentations at the end.\n\nHTML\n\n1\n\nLive demo section Lists\n\n\nFile &gt; New File &gt; Quarto Document\nHave a look at its components\nRender\nRender on save\nRun chunk by chunk\nAlter chunk code to see difference\n\n\n\n\nExercise section\n\nWrite a little bit about your self. A sentence or two about your background and education.\n\nThey should just write some simple sentences in the document. There is a  at the bottom of the collaborative doc, if people want to test a large bulk of text.\n\nCreate a list in your document, listing your favourite foods, at least the top three. Render it.\n\nMaking a list means using the markdown syntax for lists. Learners can use markdown guide or look at the slides from the markdown elements session to see how to do that.\n\nMake the list ordered Render it.\n\nThis means changing the markdown syntax for lists to an ordered list. Learners can use markdown guide or look at the slides from the markdown elements session to see how to do that.\n\n\n\n\n\n2\n\nLive demo section\n\n\nAdd toc\nAlter output format\nSwitch back to html format\n\n\n\n\nExercise section\nHere, learners should learn to explore what can be done in the yaml section, so that they get an idea of what is possible and how to explore the possibilities.\n\nOne helpful thing here is that RStudio can provide suggestions once they type in three characters in the yaml, and then they can flip through the possible suggestions. It will also provide suggestions for values that are possible for that option. Learners can use html guide for possible alternatives\n\n\nChange the title of the Table of Contents.\n\nThis means changing the yaml option for the title of the toc-title.\n\nChange the location of the Table of Contents.\n\nThis is done through the toc-location option\n\nTurn on Anchored sections, what did that do?\n\nThis is done through the anchor-sections: true option\n\nTurn on smooth-scroll, what did that do?\n\nThis is done through the smooth-scroll: true option\n\n\n\n\n\n3\n\nLive demo section\n\n\nShow visual editor shortcuts and inserts\nStart adding penguins stuff\nAdd columns\n\n\nCode chunks we will be adding during this demo section\n```{r}\nlibrary(palmerpenguins)\nlibrary(knitr)\nlibrary(kableExtra)\nlibrary(tidyverse)\npenguins &lt;- penguins\n\n```\n```{r}\nggplot(penguins,\n       aes(x = bill_length_mm,\n           y = bill_depth_mm)) +\n  geom_point(aes(colour = species)) +\n  geom_smooth(method = \"lm\", \n              color = \"black\") +\n  theme_minimal()\n```\n\n\nExercise section\n\nAdd a call out block with a tip about your favourite drink\n\nThis means adding a block with the ::: tip option\n\nAdd a horizontal rule\n\nThis means adding a block with the --- option\n\nAdd a comment to the code AND in the text. What does that look like?\n\ncode comments are normal #\ntext comments are &lt;!-- text --&gt;\n\n\n\n\n\n4\n\nLive demo section\nShowing how we add cross references to figures and tables\n\nAdd cross-refs to tabs and figs\n\nWe add the necessary pieces of information to the plot code chunk\n```{r}\n#| label: fig-penguin-smooth\n#| fig-cap: Penguin bill length and depth ratio by species\n\nggplot(penguins,\n       aes(x = bill_length_mm,\n           y = bill_depth_mm)) +\n  geom_point(aes(colour = species)) +\n  geom_smooth(method = \"lm\", \n              color = \"black\") +\n  theme_minimal()\n```\nand reference with @fig-penguin-smooth\n```{r}\n#| label: fig-penguin-density\n#| fig-cap: Penguin density\n\npenguins |&gt; \n  ggplot(aes(x = bill_length_mm,\n             fill = species)) + \n  geom_density() +\n  theme_minimal()\n```\nand reference with @fig-penguin-density\n```{r}\n#| label: tbl-penguins\n#| tbl-cap: Penguin summary\n\npenguins |&gt; \n  pivot_longer(contains(\"_\"),\n               values_drop_na = TRUE) |&gt; \n  group_by(name, species) |&gt; \n  summarise(across(value, \n                   list(Mean = mean, \n                        SD = sd,\n                        Min = min,\n                        Max = max,\n                        N = length),\n                   .names = \"{.fn}\")) |&gt; \n  mutate(\n    name = str_replace_all(name, \"_\", \" \")\n  ) |&gt; \n  kable(booktabs = TRUE, digits = 3,) |&gt; \n  kable_classic() |&gt; \n  add_header_above(c(\" \" = 4, \"Range\" = 2, \" \" = 1)) |&gt; \n  collapse_rows(1)\n```\nand reference with @tbl-penguins\n\n\nExercise section\n\nTake a screenshot of something on your screen, and add the image to your document.\n\nThey can copy+paste an image straight into the visual editor\nThey can also use the Insert button in the visual editor to add an image\nThey can also use the markdown syntax for images to add an image\nto give this a label they need to give it a “label” (or an ID) either in the markdown code, or through the attributes in the visual editor\n\nGive the image a caption, and reference it in a piece of text.\n\nThis means adding a caption to the image, and then referencing it with @fig-label\ncaption can be added either as markdown, or through double clicking the image and adding it in the visual editor\n\n\n\n\n\n5\n\nLive demo section\n\nShow the insert citation tool\nSearch for doi 10.1177/2515245920928009\nSearch pubmed\n\ninform about zotero and better bibtex integration\n\n\nExercise section\n\nAdd a citation to an important paper in your field searching for its DOI\nCite it in text using three different ways of controlling citation appearance\n\nstandard\nname & year in parentheses\nyear only\n\n\n\n\n\n\nPDF\n\n6\n\nLive demo section\n\nChange html document to pdf\nTry to render\nWhat are differences?\n\n\n\nExercise section\n\nAdd some headers, what does that do?\n\nAdding headers either in the markdown (##) or in the visual editor\n\nAdd section numbering, what does that do?\n\nAdding section numbering in the yaml number-sections: true\n\n\n\n\n\n\nPresentations\n\n7\n\nLive demo section\n\nuse html document as basis, convert to revealjs\nrender\nstart adapting to make slides\nshow tabset\n\n\n\nExercise section\n\nAdapt the remaining of the document so that you have distinct slides for all content\n\nthis is done by making more headers\n\nMake a slide without a header\n\nadding three --- where a new slide should start\n\nMake a slide with two columns of content\n\nbest done with visual editor looking for /columns in the insert menu"
-  },
-  {
     "objectID": "example_files/05_revealjs_example.html#text",
     "href": "example_files/05_revealjs_example.html#text",
     "title": "Palmer penguins",
@@ -432,5 +397,40 @@
     "title": "Quarto",
     "section": "Setting up the document",
     "text": "Setting up the document\n\n\n---\ntitle: \"Document title\"\nauthor: \"Your Name\"\nexecute:\n  echo: false\nformat: html\n--- \n---\ntitle: \"Document title\"\nauthor: \"Your Name\"\nexecute:\n  echo: false\nformat: pdf\n--- \n---\ntitle: \"Document title\"\nauthor: \"Your Name\"\nexecute:\n  echo: false\nformat: revealjs\n--- \n\n\n\n\nSet up important document settings\nChanging format is easy\n\nsome settings might not work\n\nMany more options\n\nsome depending on output format\nsome depending on template"
+  },
+  {
+    "objectID": "helper.html",
+    "href": "helper.html",
+    "title": "Helpers’ Document",
+    "section": "",
+    "text": "In this file, all the code bits that need pasting into the collaborative doc will be, as well as some helpful tips to the helpers for this workshop. After a workshop has run, I’d greatly appreciate any help in improving the helper doc for future workshops, so if you have ideas let me know. If you are comfortable with GitHub, a PR directly to this repo with suggestions is highly appreciated."
+  },
+  {
+    "objectID": "helper.html#open-tabs",
+    "href": "helper.html#open-tabs",
+    "title": "Helpers’ Document",
+    "section": "Open tabs",
+    "text": "Open tabs\nDuring the workshop, I think its a good idea for helpers to have on their computers certain tabs open at all times, so you can easily navigate to them at need\n\nthe collaborative document\nthe workshop website\nthe slides the instructor is currently running through"
+  },
+  {
+    "objectID": "helper.html#schedule",
+    "href": "helper.html#schedule",
+    "title": "Helpers’ Document",
+    "section": "Schedule",
+    "text": "Schedule\n\nElements of a qmd ( ~ 45 minutes)\nMaking our first html report ( ~ 45 minutes)\nCitations & cross-references ( ~ 45 minutes)\nLunch ( ~ 60 minutes)\nMaking our first pdf report (~ 45 minutes)\nMaking our first presentation ( ~ 45 minutes)"
+  },
+  {
+    "objectID": "helper.html#frequently-seen-issues",
+    "href": "helper.html#frequently-seen-issues",
+    "title": "Helpers’ Document",
+    "section": "Frequently seen issues",
+    "text": "Frequently seen issues\n\nMarkdown formatting is not being applied\n\nMake sure the file is saved as .qmd, not .md\nWhen in the visual editor, if typing in markdown syntax, the editor add an escape character to the markdown, which will not be rendered. - To see this, have them switch to the source editor in stead, and look for stray backslashes (\\) in the markdown, this is the escape character. Have them delete that and try again. Once fixed, that can switch back to the visual editor. - If the learner knows a lot of plain markdown, they can also just use the source editor, but I find that the visual editor is a good way to get started. I usually switch between the two a lot."
+  },
+  {
+    "objectID": "helper.html#workshop-progression",
+    "href": "helper.html#workshop-progression",
+    "title": "Helpers’ Document",
+    "section": "Workshop progression",
+    "text": "Workshop progression\nIn this section, we have anything that is related to the workshop as it is progressing. Each section has its own subtitle here, and these should also match sections in the collaborative document. This way, helpers can easily navigate to the relevant section in the helper document.\n\nIntro\nSlides: https://drmowinckels.io/quartaki/00_intro.html#/title-slide\nThe intro section does not contain any exercises or code to copy. This part is mainly information and links to further resources for the learners.\n\nWhat you should be doing\n\nLook out for questions in the collaborative doc\nHelp me notice raised hands I might not see\nHelp paste urls and resources asked for in the collaborative doc\n\n\n\n\nMarkdown elements\nSlides: https://drmowinckels.io/quartaki/01_elements.html#/title-slide\nThis section also has no exercise, it is another very quick information run down. This is intended as a very brief glimpse into plain markdown formatting, and we will not spend time on this as lecture, but will be doing it in practice together later. It is meant as a quick reference for the learners in the workshop, for later exercises.\n\nWhat you should be doing\n\nLook out for questions in the collaborative doc\nHelp me notice raised hands I might not see\nHelp paste urls and resources asked for in the collaborative doc\n\n\n\n\nPresentation - live demos\nSlides: https://drmowinckels.io/quartaki/02_presentation.html#/title-slide\nThis section is where we start live coding and working together on a document. The documents we are working towards can be found in their entirety in /example_files of this repository.\nWe start with html, then pdf, and lastly html presentations at the end.\n\nHTML\n\n1\n\nLive demo section Lists\n\n\nFile &gt; New File &gt; Quarto Document\nHave a look at its components\nRender\nRender on save\nRun chunk by chunk\nAlter chunk code to see difference\n\n\n\n\nExercise section\n\nWrite a little bit about your self. A sentence or two about your background and education.\n\nThey should just write some simple sentences in the document. There is a  at the bottom of the collaborative doc, if people want to test a large bulk of text.\n\nCreate a list in your document, listing your favourite foods, at least the top three. Render it.\n\nMaking a list means using the markdown syntax for lists. Learners can use markdown guide or look at the slides from the markdown elements session to see how to do that.\n\nMake the list ordered Render it.\n\nThis means changing the markdown syntax for lists to an ordered list. Learners can use markdown guide or look at the slides from the markdown elements session to see how to do that.\n\n\n\n\n\n2\n\nLive demo section\n\n\nAdd toc\nAlter output format\nSwitch back to html format\n\n\n\n\nExercise section\nHere, learners should learn to explore what can be done in the yaml section, so that they get an idea of what is possible and how to explore the possibilities.\n\nOne helpful thing here is that RStudio can provide suggestions once they type in three characters in the yaml, and then they can flip through the possible suggestions. It will also provide suggestions for values that are possible for that option. Learners can use html guide for possible alternatives\n\n\nChange the title of the Table of Contents.\n\nThis means changing the yaml option for the title of the toc-title.\n\nChange the location of the Table of Contents.\n\nThis is done through the toc-location option\n\nTurn on Anchored sections, what did that do?\n\nThis is done through the anchor-sections: true option\n\nTurn on smooth-scroll, what did that do?\n\nThis is done through the smooth-scroll: true option\n\n\n\n\n\n3\n\nLive demo section\n\n\nShow visual editor shortcuts and inserts\nStart adding penguins stuff\nAdd columns\n\n\nCode chunks we will be adding during this demo section\n```{r}\nlibrary(palmerpenguins)\nlibrary(knitr)\nlibrary(kableExtra)\nlibrary(tidyverse)\npenguins &lt;- penguins\n\n```\n```{r}\nggplot(penguins,\n       aes(x = bill_length_mm,\n           y = bill_depth_mm)) +\n  geom_point(aes(colour = species)) +\n  geom_smooth(method = \"lm\", \n              color = \"black\") +\n  theme_minimal()\n```\n\n\nExercise section\n\nAdd a call out block with a tip about your favourite drink\n\nThis means adding a block with the ::: tip option\n\nAdd a horizontal rule\n\nThis means adding a block with the --- option\n\nAdd a comment to the code AND in the text. What does that look like?\n\ncode comments are normal #\ntext comments are &lt;!-- text --&gt;\n\n\n\n\n\n4\n\nLive demo section\nShowing how we add cross references to figures and tables\n\nAdd cross-refs to tabs and figs\n\nWe add the necessary pieces of information to the plot code chunk\n```{r}\n#| label: fig-penguin-smooth\n#| fig-cap: Penguin bill length and depth ratio by species\n\nggplot(penguins,\n       aes(x = bill_length_mm,\n           y = bill_depth_mm)) +\n  geom_point(aes(colour = species)) +\n  geom_smooth(method = \"lm\", \n              color = \"black\") +\n  theme_minimal()\n```\nand reference with @fig-penguin-smooth\n```{r}\n#| label: fig-penguin-density\n#| fig-cap: Penguin density\n\npenguins |&gt; \n  ggplot(aes(x = bill_length_mm,\n             fill = species)) + \n  geom_density() +\n  theme_minimal()\n```\nand reference with @fig-penguin-density\n```{r}\n#| label: tbl-penguins\n#| tbl-cap: Penguin summary\n\npenguins |&gt; \n  pivot_longer(contains(\"_\"),\n               values_drop_na = TRUE) |&gt; \n  group_by(name, species) |&gt; \n  summarise(across(value, \n                   list(Mean = mean, \n                        SD = sd,\n                        Min = min,\n                        Max = max,\n                        N = length),\n                   .names = \"{.fn}\")) |&gt; \n  mutate(\n    name = str_replace_all(name, \"_\", \" \")\n  ) |&gt; \n  kable(booktabs = TRUE, digits = 3,) |&gt; \n  kable_classic() |&gt; \n  add_header_above(c(\" \" = 4, \"Range\" = 2, \" \" = 1)) |&gt; \n  collapse_rows(1)\n```\nand reference with @tbl-penguins\n\n\nExercise section\n\nTake a screenshot of something on your screen, and add the image to your document.\n\nThey can copy+paste an image straight into the visual editor\nThey can also use the Insert button in the visual editor to add an image\nThey can also use the markdown syntax for images to add an image\nto give this a label they need to give it a “label” (or an ID) either in the markdown code, or through the attributes in the visual editor\n\nGive the image a caption, and reference it in a piece of text.\n\nThis means adding a caption to the image, and then referencing it with @fig-label\ncaption can be added either as markdown, or through double clicking the image and adding it in the visual editor\n\n\n\n\n\n5\n\nLive demo section\n\nShow the insert citation tool\nSearch for doi 10.1177/2515245920928009\nSearch pubmed\n\ninform about zotero and better bibtex integration\n\n\nExercise section\n\nAdd a citation to an important paper in your field searching for its DOI\nCite it in text using three different ways of controlling citation appearance\n\nstandard\nname & year in parentheses\nyear only\n\n\n\n\n\n\nPDF\n\n6\n\nLive demo section\n\nChange html document to pdf\nTry to render\nWhat are differences?\n\n\n\nExercise section\n\nAdd some headers, what does that do?\n\nAdding headers either in the markdown (##) or in the visual editor\n\nAdd section numbering, what does that do?\n\nAdding section numbering in the yaml number-sections: true\n\n\n\n\n\n\nPresentations\n\n7\n\nLive demo section\n\nuse html document as basis, convert to revealjs\nrender\nstart adapting to make slides\nshow tabset\n\n\n\nExercise section\n\nAdapt the remaining of the document so that you have distinct slides for all content\n\nthis is done by making more headers\n\nMake a slide without a header\n\nadding three --- where a new slide should start\n\nMake a slide with two columns of content\n\nbest done with visual editor looking for /columns in the insert menu"
   }
 ]
