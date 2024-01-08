@@ -2,8 +2,10 @@ project:
   type: website
   output-dir: "_site"
   render: 
-    - "*.qmd"
-    - "!child_docs/"
+    - "example_files/*qmd"
+    - "slides/*qmd"
+    - "helper.qmd"
+    - "index.qmd"
 
 website:
   page-navigation: true
@@ -25,8 +27,6 @@ website:
         text: GitHub
     style: docked
     left:
-      - href: index.html
-        text: Home
       - text: Workshop slides
         menu: 
         - href: slides/00_intro.html

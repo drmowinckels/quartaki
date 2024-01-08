@@ -1,6 +1,6 @@
 ---
 title: "Helpers' Document"
-form<t: html
+format: html
 ---
 
 In this file, all the code bits that need pasting into the collaborative doc will be, as well as some helpful tips to the helpers for this workshop. After a workshop has run, I'd greatly appreciate any help in improving the helper doc for future workshops, so if you have ideas let me know. If you are comfortable with GitHub, a PR directly to this repo with suggestions is highly appreciated.
