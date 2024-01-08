@@ -309,4 +309,3 @@ inform about zotero and better bibtex integration
     -   adding three `---` where a new slide should start
 -   Make a slide with two columns of content
     -   best done with visual editor looking for `/columns` in the insert menu
-
