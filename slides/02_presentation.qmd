@@ -108,7 +108,7 @@ Source: [RStudio - HTML Basics](https://quarto.org/docs/output-formats/html-code
 
 ::: nonincremental
 {{< include ../child_docs/exercises/01_make-list.qmd >}}
-
+ 
 ```{r}
 #| echo: false
 countdown::countdown(
