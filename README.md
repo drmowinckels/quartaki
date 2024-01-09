@@ -164,7 +164,7 @@ The [course website](https://drmowinckels.github.io/quartaki/) should
 contain most of the materials for learners to follow along presentations
 and the schedule.
 
-The output examples are found in their [own folder](example_files/), and
+The output examples are found in their [own folder](examples/), and
 have the entire code for the final outputs, after all parts of their
 respective section has been covered.
 

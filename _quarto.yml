@@ -2,7 +2,7 @@ project:
   type: website
   output-dir: "_site"
   render: 
-    - "example_files/*qmd"
+    - "examples/*qmd"
     - "slides/*qmd"
     - "helper.qmd"
     - "index.qmd"
