@@ -1,0 +1,9 @@
+```{{r}}
+ggplot(penguins,
+       aes(x = bill_length_mm,
+           y = bill_depth_mm)) +
+  geom_point(aes(colour = species)) +
+  geom_smooth(method = "lm", 
+              color = "black") +
+  theme_minimal()
+```

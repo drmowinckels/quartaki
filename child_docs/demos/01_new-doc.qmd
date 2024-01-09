@@ -1,0 +1,9 @@
+
+::: notes
+-   File \> New File \> Quarto Document
+-   Have a look at its components
+-   Render
+-   Render on save
+-   Run chunk by chunk
+-   Alter chunk code to see difference
+:::

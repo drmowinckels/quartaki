@@ -1,0 +1,5 @@
+::: notes
+-   Add toc
+-   Alter output format
+-   Switch back to html format
+:::

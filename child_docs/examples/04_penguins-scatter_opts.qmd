@@ -1,0 +1,12 @@
+```{{r}}
+#| label: fig-penguin-smooth
+#| fig-cap: Penguin bill length and depth ratio by species
+
+ggplot(penguins,
+       aes(x = bill_length_mm,
+           y = bill_depth_mm)) +
+  geom_point(aes(colour = species)) +
+  geom_smooth(method = "lm", 
+              color = "black") +
+  theme_minimal()
+```

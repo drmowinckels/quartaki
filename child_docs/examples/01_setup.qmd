@@ -1,0 +1,8 @@
+```{{r}}
+library(palmerpenguins)
+library(knitr)
+library(kableExtra)
+library(tidyverse)
+penguins <- penguins
+
+```

@@ -1,5 +1,3 @@
-# Ignore everything
-*
-
-# Except files ending with qmd
-!*.qmd
+*html
+*_files
+*pdf

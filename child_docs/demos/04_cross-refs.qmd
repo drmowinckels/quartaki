@@ -1,0 +1,3 @@
+::: notes
+-   Add cross-refs to tabs and figs
+:::

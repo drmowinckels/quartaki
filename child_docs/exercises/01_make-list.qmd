@@ -1,0 +1,6 @@
+1. Write a little bit about your self. A sentence or two about your background and education.
+
+1. Create a list in your document, listing your favourite foods, at least the top three. Render it.
+
+1. Make the list *ordered* Render it.
+

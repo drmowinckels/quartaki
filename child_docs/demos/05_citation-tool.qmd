@@ -1,0 +1,7 @@
+::: notes
+-   Show the insert citation tool
+
+-   Search for doi `10.1177/2515245920928009`
+
+-   Search pubmed
+:::

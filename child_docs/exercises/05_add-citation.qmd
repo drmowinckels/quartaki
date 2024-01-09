@@ -1,0 +1,6 @@
+1.   Add a citation to an important paper in your field searching for its DOI
+1.   Cite it in text using three different ways of controlling citation appearance
+    -  standard
+    -  extra page information
+    -  year only
+    

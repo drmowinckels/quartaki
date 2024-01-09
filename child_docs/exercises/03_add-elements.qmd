@@ -1,0 +1,4 @@
+
+1. Add a call out block with a tip about your favourite drink
+1. Add a horizontal rule
+1. Add a comment to the code AND in the text. What does that look like?

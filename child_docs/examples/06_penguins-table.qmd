@@ -1,0 +1,23 @@
+```{{r}}
+#| label: tbl-penguins
+#| tbl-cap: Penguin summary
+
+penguins |> 
+  pivot_longer(contains("_"),
+               values_drop_na = TRUE) |> 
+  group_by(name, species) |> 
+  summarise(across(value, 
+                   list(Mean = mean, 
+                        SD = sd,
+                        Min = min,
+                        Max = max,
+                        N = length),
+                   .names = "{.fn}")) |> 
+  mutate(
+    name = str_replace_all(name, "_", " ")
+  ) |> 
+  kable(booktabs = TRUE, digits = 3,) |> 
+  kable_classic() |> 
+  add_header_above(c(" " = 4, "Range" = 2, " " = 1)) |> 
+  collapse_rows(1)
+```
