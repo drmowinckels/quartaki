@@ -4,6 +4,29 @@ subtitle: "--- enables you to weave together content and executable code into a 
 format: revealjs
 ---
 
+# CAPRO
+
+We specialize in data processing and capture of large life science data for social sciences and humanities
+
+::: footer
+<https://www.capro.dev/>
+:::
+
+# CAPRO
+
+::: {style="text-align: right;"}
+-   Data flow and processing
+
+-   Data capture
+
+-   Project data management
+
+-   Registry data handling
+
+-   HPC analyses
+:::
+
+
 ## Next generation R Markdown {.center}
 
 > Quarto is a multi-language, [next-generation](https://quarto.org/docs/faq/rmarkdown.html) version of R Markdown from Posit, and includes dozens of new features and capabilities while at the same being able to render most existing Rmd files without modification.

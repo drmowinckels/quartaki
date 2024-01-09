@@ -102,23 +102,12 @@ Source: [RStudio - HTML Basics](https://quarto.org/docs/output-formats/html-code
 
 # Go to RStudio
 
-::: notes
--   File \> New File \> Quarto Document
--   Have a look at its components
--   Render
--   Render on save
--   Run chunk by chunk
--   Alter chunk code to see difference
-:::
+{{< include ../child_docs/demos/01_new-doc.qmd >}}
 
 ## Exercise
 
 ::: nonincremental
--   Write a little bit about your self. A sentence or two about your background and education.
-
--   Create a list in your document, listing your favourite foods, at least the top three. Render it.
-
--   Make the list *ordered* Render it.
+{{< include ../child_docs/exercises/01_make-list.qmd >}}
 
 ```{r}
 #| echo: false
@@ -179,22 +168,12 @@ More: [RStudio - HTML yaml](https://quarto.org/docs/output-formats/html-code.htm
 
 # Go to RStudio
 
-::: notes
--   Add toc
--   Alter output format
--   Switch back to html format
-:::
+{{< include ../child_docs/demos/02_yaml-test.qmd >}}
 
 ## Exercise
 
 ::: nonincremental
--   Change the title of the Table of Contents.
-
--   Change the location of the Table of Contents.
-
--   Turn on Anchored sections, what did that do?
-
--   Turn on smooth-scroll, what did that do?
+{{< include ../child_docs/exercises/02_alter-yaml.qmd >}}
 
 ```{r}
 #| echo: false
@@ -216,20 +195,12 @@ countdown::countdown(
 
 ## Go to RStudio
 
-::: notes
--   Show visual editor shortcuts and inserts
--   Start adding penguins stuff
--   Add columns
-:::
+{{< include ../child_docs/demos/03_visual-ed.qmd >}}
 
 ## Exercise
 
 ::: nonincremental
--   Add a call out block with a tip about your favourite drink
-
--   Add a horizontal rule
-
--   Add a comment. What does that look like?
+{{< include ../child_docs/exercises/03_add-elements.qmd >}}
 
 ```{r}
 #| echo: false
@@ -286,16 +257,12 @@ When adding cross-references, its important to have in mind the prefixes necessa
 
 ## Go to RStudio
 
-::: notes
--   Add cross-refs to tabs and figs
-:::
+{{< include ../child_docs/demos/04_cross-refs.qmd >}}
 
 ## Exercise
 
 ::: nonincremental
--   Take a screenshot of something on your screen, and add the image to your document.
-
--   Give the image a caption, and reference it in a piece of text.
+{{< include ../child_docs/exercises/04_add-image.qmd >}}
 
 ```{r, echo = FALSE}
 countdown::countdown(
@@ -404,18 +371,12 @@ Currently, only Zotero is supported as a connected reference manager.
 
 # Go to RStudio
 
-::: notes
--   Show the insert citation tool
--   Search for doi [**10.1177/2515245920928009**](https://doi.org/10.1177/2515245920928009)
--   Search pubmed
--   inform about zotero and better bibtex integration
-:::
+{{< include ../child_docs/demos/05_citation-tool.qmd >}}
 
 ## Exercise
 
 ::: nonincremental
--   Add a citation to an important paper in your field searching for its DOI
--   Cite it in text using three different ways of controlling citation appearance (1. standard, 2. name & year in parentheses, 3. year only)tion to a specific spot in your document
+{{< include ../child_docs/exercises/05_add-citation.qmd >}}
 
 ```{r, echo = FALSE}
 countdown::countdown(
@@ -476,17 +437,12 @@ Source: RStudio - [Quarto PDF basics](https://quarto.org/docs/output-formats/pdf
 
 # Go to RStudio
 
-::: notes
--   Change html document to pdf
--   Try to render
--   What are differences?
-:::
+{{< include ../child_docs/demos/06_to-pdf.qmd >}}
 
 # Exercise
 
 ::: nonincremental
--   Add some headers, what does that do?
--   Add section numbering, what does that do?
+{{< include ../child_docs/exercises/06_pdf-yaml.qmd >}}
 
 ```{r, echo = FALSE}
 countdown::countdown(
@@ -580,18 +536,12 @@ format: revealjs
 
 ## Go to RStudio
 
-::: notes
--   use html document as basis, convert to revealjs
--   render
--   start adapting to make slides
--   show tabset
-:::
+{{< include ../child_docs/demos/07_to-reveal.qmd >}}
 
 ## Exercise
 
--   Adapt the remaining of the document so that you have distinct slides for all content
--   Make a slide without a header
--   Make a slide with two columns of content
+::: nonincremental
+{{< include ../child_docs/exercises/07_to-reveal.qmd >}}
 
 ```{r, echo = FALSE}
 countdown::countdown(
@@ -608,6 +558,7 @@ countdown::countdown(
   warn_when = 30
 )
 ```
+:::
 
 # Break
 

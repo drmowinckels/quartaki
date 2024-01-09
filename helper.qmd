@@ -111,23 +111,16 @@ One helpful thing here is that RStudio can provide suggestions once they type in
 
 ###### Live demo section
 
-```{r}
-#| child: child_docs/demos/03_visual-ed.qmd
-```
+{{< include child_docs/demos/03_visual-ed.qmd >}}
 
 Code chunks we will be adding during this demo section
 
-```{r}
-#| child: child_docs/examples/01_setup.qmd
-```
+{{< include child_docs/examples/01_setup.qmd >}}
 
-```{r}
-#| child: child_docs/examples/02_penguins-scatter.qmd
-```
+{{< include child_docs/examples/02_penguins-scatter.qmd >}}
 
-```{r}
-#| child: child_docs/examples/03_penguins-density.qmd
-```
+{{< include child_docs/examples/03_penguins-density.qmd >}}
+
 
 ###### Exercise section
 
@@ -203,9 +196,8 @@ inform about zotero and better bibtex integration
 
 ###### Live demo section
 
-```{r}
-#| child: child_docs/demos/06_to-pdf.qmd
-```
+{{< include child_docs/demos/06_to-pdf.qmd >}}
+
 
 ###### Exercise section
 

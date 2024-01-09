@@ -69,6 +69,7 @@ format:
     chalkboard: true
     slide-number: c/t
     incremental: true
+    logo: https://www.capro.dev/images/capro_logo_dark.png
 
 
 editor: visual
