@@ -1,3 +1,2 @@
-
-1. Add some headers, what does that do?
-1. Add section numbering, what does that do?
+1.  Add some headers, what does that do?
+2.  Add section numbering, what does that do?

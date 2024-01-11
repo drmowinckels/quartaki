@@ -1,5 +1,4 @@
-
-1. Change the title of the Table of Contents.
-1. Change the location of the Table of Contents.
-1. Turn on Anchored sections, what did that do?
-1. Turn on smooth-scroll, what did that do?
+1.  Change the **title** of the Table of Contents.
+2.  Change the **location** of the Table of Contents.
+3.  Turn off **Anchored** sections, what did that do?
+4.  Turn on **smooth-scroll**, what did that do?

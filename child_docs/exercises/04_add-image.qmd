@@ -1,3 +1,2 @@
-
-1. Take a screenshot of something on your screen, and add the image to your document.
-1. Give the image a caption, and reference it in a piece of text.
+1.  Take a screenshot of something on your screen, and add the image to your document.
+2.  Give the image a caption, and reference it in a piece of text.

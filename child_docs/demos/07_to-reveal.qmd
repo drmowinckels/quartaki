@@ -1,4 +1,4 @@
-:::notes
+::: notes
 -   use html document as basis, convert to revealjs
 -   render
 -   start adapting to make slides

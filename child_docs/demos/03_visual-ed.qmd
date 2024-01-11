@@ -1,5 +1,5 @@
 ::: notes
 -   Show visual editor shortcuts and inserts
 -   Start adding penguins stuff
--   Add columns
+-   Show silencing setup chunk
 :::

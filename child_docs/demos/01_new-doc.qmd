@@ -1,6 +1,5 @@
-
 ::: notes
--   File \> New File \> Quarto Document
+-   `File > New File > Quarto Document`
 -   Have a look at its components
 -   Render
 -   Render on save

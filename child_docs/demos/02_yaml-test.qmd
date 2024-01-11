@@ -1,5 +1,5 @@
 ::: notes
--   Add toc
+-   Add Table Of Contents (toc)
 -   Alter output format
 -   Switch back to html format
 :::

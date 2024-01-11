@@ -4,5 +4,4 @@ library(knitr)
 library(kableExtra)
 library(tidyverse)
 penguins <- penguins
-
 ```

@@ -127,10 +127,17 @@ Code chunks we will be adding during this demo section
 {{< include child_docs/exercises/03_add-elements.qmd >}}
 
 **Notes**   
+
 1. This means adding a block with the `::: tip` option  
+  - `/` search for callout
+  - change from "note" to tip
 1. This means adding a block with the `---` option  
+  - with the insert tool, look for "horizontal rule"
+  - with the `/` visual editor option, search for "horizontal line"
 1. code comments are normal `#` comments  
     - text comments are `<!-- text -->`  
+    - both are added with the same keyboard shortcut
+      `cmd/ctrl/` + `shift` + `c`
 
 ##### 4
 
@@ -164,7 +171,7 @@ and reference with `@tbl-penguins`
 1. They can copy+paste an image straight into the visual editor  
     -   They can also use the `Insert` button in the visual editor to add an image  
     -   They can also use the markdown syntax for images to add an image  
-    -   To give this a label they need to give it a "label" (or an ID) either in the markdown code, or through the attributes in the visual editor  
+    -   To give this a label they need to give it a "label" (or an ID) either in the markdown code, or through the *attributes* in the visual editor  
 
 1. This means adding a caption to the image, and then referencing it with `@fig-label`  
     -   caption can be added either as markdown, or through double clicking the image and adding it in the visual editor  
@@ -223,5 +230,5 @@ inform about zotero and better bibtex integration
 **Notes**   
 
 1. this is done by making more headers  
-1. adding three `---` where a new slide should start  
+1. adding three `---` or a horizontal rule where a new slide should start  
 1. best done with visual editor looking for `/columns` in the insert menu  
