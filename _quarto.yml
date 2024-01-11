@@ -2,10 +2,10 @@ project:
   type: website
   output-dir: "_site"
   render: 
-    - "examples/*qmd"
-    - "slides/*qmd"
-    - "helper.qmd"
-    - "index.qmd"
+    - "/examples/*qmd"
+    - "/slides/*qmd"
+    - "/helper.qmd"
+    - "/index.qmd"
 
 website:
   page-navigation: true
